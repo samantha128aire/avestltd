@@ -54,10 +54,21 @@ imsg history --chat-id 1 --limit 50
 
 ## TTS (Text-to-Speech)
 
-**Status**: Configured  
-**Provider**: *(needs verification - likely ElevenLabs or OpenAI)*
+**Status**: ✅ Configured  
+**Provider**: Microsoft Edge TTS (free, no API key needed)
+**Voice**: en-US-AriaNeural
 
-Use the `tts` tool in OpenClaw for voice messages.
+### Usage
+OpenClaw TTS tool or manual generation:
+```bash
+edge-tts --voice en-US-AriaNeural --text "Your text here" --write-media output.mp3
+```
+
+### Available Voices
+- `en-US-AriaNeural` (current - friendly, natural female)
+- `en-US-JennyNeural` (warm, conversational female)
+- `en-US-GuyNeural` (friendly male)
+- `en-US-ChristopherNeural` (professional male)
 
 ---
 
