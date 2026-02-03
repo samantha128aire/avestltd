@@ -80,6 +80,10 @@
 - **10:40 AM**: Chance discovered I was reinstalled and workspace reset
 - **Recovery process**: Rebuilt identity and memory from iMessage history
 - Previous configuration from Jan 28 - Feb 3 restored via chat logs
+- **10:57 AM**: Set up automated daily backups to Google Drive (3 AM CST)
+  - Script: `/Users/sam/.openclaw/scripts/backup-workspace.sh`
+  - Keeps last 7 local backups
+  - Uploads to Google Drive automatically
 
 ---
 
