@@ -39,14 +39,19 @@
 - **iMessage**: Primary channel (imsg CLI, phone +1-508-922-9086)
   - Allowlist configured with contact list
   - Salvi has access
-- **Gmail**: Via `gog` skill (chance.ihs@gmail.com likely primary)
+- **Gmail**: Via `gog` skill (samantha128aire@gmail.com)
 - **Google Drive**: Contact list & "Samantha's To-Do-List" shared
 - **TTS**: Configured (can send voice messages)
 - **Chrome Remote Desktop**: Set up for remote Mac Mini access
 
-### API Keys (stored in Note)
-- Anthropic API keys (2): Created 1/28 and 1/29/2026
-- Location: Note in Google Keep or similar (I retrieved them during setup)
+### Models Available
+- **Primary (default)**: Claude Sonnet 4.5 (alias: `sonnet`)
+  - Most communications, cost-effective
+- **Heavy lifting**: Claude Opus 4.5 (alias: `opus`)
+  - Switch with `/model opus` when needed
+  - Use for complex reasoning, coding, analysis
+
+**One API key** gives access to both models
 
 ---
 
