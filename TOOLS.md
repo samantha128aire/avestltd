@@ -56,19 +56,20 @@ imsg history --chat-id 1 --limit 50
 
 **Status**: ✅ Configured  
 **Provider**: Microsoft Edge TTS (free, no API key needed)
-**Voice**: en-US-JennyNeural (warm, conversational)
+**Voice**: en-US-AvaNeural (expressive, caring, pleasant)
 
 ### Usage
 OpenClaw TTS tool or manual generation:
 ```bash
-edge-tts --voice en-US-JennyNeural --text "Your text here" --write-media output.mp3
+edge-tts --voice en-US-AvaNeural --text "Your text here" --write-media output.mp3
 ```
 
 ### Available Voices
-- `en-US-JennyNeural` (current - warm, conversational female)
-- `en-US-AriaNeural` (friendly, natural female)
-- `en-US-GuyNeural` (friendly male)
-- `en-US-ChristopherNeural` (professional male)
+- `en-US-AvaNeural` (current - expressive, caring, pleasant, friendly)
+- `en-US-JennyNeural` (warm, conversational female)
+- `en-US-EmmaNeural` (cheerful, clear, conversational)
+- `en-US-AriaNeural` (positive, confident)
+- `en-US-MichelleNeural` (friendly, pleasant)
 
 ---
 
