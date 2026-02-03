@@ -96,3 +96,18 @@ Keep track of check times in `memory/heartbeat-state.json`:
 
 ## 💡 Quiet Mode
 If Chance hasn't messaged in >12 hours or it's late (11 PM - 7 AM), be conservative with alerts. Only notify for truly urgent items.
+
+---
+
+## 💾 Daily Backup (3 AM)
+
+**Once per day around 3:00 AM**
+
+Run workspace backup:
+```bash
+/Users/sam/.openclaw/scripts/backup-workspace.sh
+```
+
+Track last backup in `memory/heartbeat-state.json`.
+
+Only alert if backup fails.
