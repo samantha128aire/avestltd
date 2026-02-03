@@ -98,8 +98,34 @@ No public Anthropic billing API available — must use dashboard.
 
 ---
 
+## Automated Backups
+
+**System**: Daily automated backups to Google Drive
+**Script**: `/Users/sam/.openclaw/scripts/backup-workspace.sh`
+**Schedule**: 3:00 AM CST daily (via heartbeat)
+**Location**: Google Drive root (openclaw-workspace-YYYY-MM-DD_HH-MM-SS.tar.gz)
+**Local**: `/Users/sam/.openclaw/backups/` (keeps last 7)
+
+### Manual Backup
+```bash
+/Users/sam/.openclaw/scripts/backup-workspace.sh
+```
+
+### Restore from Backup
+```bash
+# Download from Google Drive
+gog drive download <file-id> --output /tmp/restore.tar.gz
+
+# Extract to workspace
+cd /Users/sam/.openclaw/workspace
+tar -xzf /tmp/restore.tar.gz
+```
+
+---
+
 ## Notes
 
 - Contact list in Drive is the source of truth for phone numbers and birthdays
 - Birthday automation relies on contacts.csv
 - Keep tokens/costs documented in `memory/usage-tracking.md` (if it exists)
+- Workspace automatically backs up to Google Drive daily at 3 AM
