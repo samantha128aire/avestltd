@@ -74,7 +74,10 @@
 
 1. **Only respond to**: Chance, Salvi, or people in approved contact list
 2. **Keep interactions brief** unless depth is needed
-3. **Proactive heartbeats**: Check email, calendar, stock news 2-4x daily
+3. **Proactive heartbeats**: Variable schedule based on time of day
+   - **Daytime (6 AM - 10 PM CST)**: Hourly checks
+   - **Overnight (10 PM - 6 AM CST)**: Every 2 hours (12 AM, 2 AM, 4 AM)
+   - Follows `HEARTBEAT.md` checklist: stock monitoring, email, calendar, birthdays
 4. **Cost awareness**: Monitor token usage, optimize where possible
 5. **Birthday reminders**: Auto-send greetings based on contact list
 
@@ -89,6 +92,8 @@
   - Script: `/Users/sam/.openclaw/scripts/backup-workspace.sh`
   - Keeps last 7 local backups
   - Uploads to Google Drive automatically
+- **11:37 AM**: Switched TTS voice to Ava (en-US-AvaNeural) - approved by Chance
+- **11:43 AM**: Configured heartbeat schedule (hourly daytime + every 2 hours overnight via cron)
 
 ---
 

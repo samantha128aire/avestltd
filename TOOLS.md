@@ -135,6 +135,43 @@ tar -xzf /tmp/restore.tar.gz
 
 ---
 
+## Heartbeat Schedule
+
+**Configuration**: Hybrid (config-based + cron jobs)
+
+### Daytime (6 AM - 10 PM CST)
+- **Method**: `agents.defaults.heartbeat` config
+- **Frequency**: Hourly
+- **Config**: `every: "1h"` with `activeHours: {start: "06:00", end: "22:00", timezone: "America/Chicago"}`
+
+### Overnight (10 PM - 6 AM CST)
+- **Method**: Cron jobs (3 jobs)
+- **Frequency**: Every 2 hours
+- **Jobs**:
+  - 12:00 AM (midnight)
+  - 2:00 AM
+  - 4:00 AM
+- **Identifier**: "🌙 Overnight heartbeat check"
+
+### Check List
+All heartbeats follow `HEARTBEAT.md`:
+- **Stock monitoring** (TSLA weekdays, MSFT price watch)
+- **Email checks** (morning, afternoon, evening)
+- **Calendar preview** (morning only, next 48h)
+- **Birthday checks** (daily at 7 AM)
+- **Daily backup** (3 AM)
+
+### View Active Cron Jobs
+```bash
+# OpenClaw CLI (when available)
+openclaw cron list
+
+# Via chat
+"List my cron jobs"
+```
+
+---
+
 ## Notes
 
 - Contact list in Drive is the source of truth for phone numbers and birthdays
