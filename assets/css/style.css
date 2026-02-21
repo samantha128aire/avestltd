@@ -505,6 +505,55 @@ nav {
   margin: 0;
 }
 
+/* Use Cases Section */
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.use-case-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.use-case-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 8px 20px rgba(0, 168, 232, 0.15);
+  transform: translateY(-4px);
+}
+
+.use-case-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.use-case-card h3 {
+  font-size: 21px;
+  color: var(--dark-gray);
+  margin-bottom: 12px;
+}
+
+.use-case-description {
+  color: var(--dark-gray);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.use-case-result {
+  color: var(--primary-blue);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
 /* Footer */
 footer {
   background-color: var(--dark-gray);
@@ -677,6 +726,11 @@ footer {
 
   /* Steps */
   .steps {
+    grid-template-columns: 1fr;
+  }
+
+  /* Use Cases Grid */
+  .use-cases-grid {
     grid-template-columns: 1fr;
   }
 
