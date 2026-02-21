@@ -165,7 +165,7 @@ nav {
 }
 
 .hero-logo {
-  max-width: 200px;
+  max-width: 400px;
   margin: 0 auto 40px;
 }
 
@@ -701,7 +701,7 @@ footer {
   }
 
   .hero-logo {
-    max-width: 150px;
+    max-width: 300px;
   }
 
   .cta-buttons {
@@ -761,7 +761,7 @@ footer {
   }
 
   .hero-logo {
-    max-width: 120px;
+    max-width: 250px;
   }
 
   .btn {
