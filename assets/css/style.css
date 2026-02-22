@@ -816,3 +816,95 @@ select:focus {
 html {
   scroll-behavior: smooth;
 }
+
+/* Local vs Cloud Privacy Section */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.comparison-card {
+  border-radius: 16px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.comparison-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-card ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.comparison-card ul li:last-child {
+  border-bottom: none;
+}
+
+.comparison-cloud {
+  border: 1px solid rgba(255, 100, 100, 0.35);
+}
+
+.comparison-cloud h3 {
+  color: #ff6b6b;
+}
+
+.comparison-avestai {
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.comparison-avestai h3 {
+  color: #60a5fa;
+}
+
+.security-promise {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.security-promise h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.security-promise p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.security-promise p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .local-vs-cloud h2 {
+    font-size: 1.6rem !important;
+  }
+  .security-promise {
+    padding: 25px 20px;
+  }
+}
