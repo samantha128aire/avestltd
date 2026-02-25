@@ -55,7 +55,48 @@
             <img src="assets/images/logo-transparent-512.png" alt="AvestAI Logo" class="hero-logo" width="400" height="400">
             <h1>Personal AI for Business Owners<br>Who Value Their Time</h1>
             <p class="subheading">We configure your AI assistant on a Mac Mini, test everything, and provide 30 days of hand-holding support. US-based, security-vetted, personal service.</p>
-            <div class="cta-buttons">
+
+            <!-- Audio Player -->
+            <div style="margin: 30px auto 10px; max-width: 420px;">
+                <div style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 50px; padding: 14px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer;" onclick="toggleAudio()" id="audioPlayer">
+                    <button id="playPauseBtn" aria-label="Play" style="background: white; border: none; border-radius: 50%; width: 44px; height: 44px; min-width: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                        <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0078d4"><polygon points="5,3 19,12 5,21"/></svg>
+                        <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0078d4" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                    </button>
+                    <div style="flex:1;">
+                        <div style="color: white; font-weight: 600; font-size: 15px; letter-spacing: 0.5px;">🎧 Listen</div>
+                        <div style="background: rgba(255,255,255,0.25); border-radius: 4px; height: 4px; margin-top: 6px; position: relative;">
+                            <div id="progressBar" style="background: white; border-radius: 4px; height: 4px; width: 0%; transition: width 0.5s linear;"></div>
+                        </div>
+                    </div>
+                    <div id="audioTimer" style="color: rgba(255,255,255,0.8); font-size: 13px; min-width: 36px; text-align: right;">0:00</div>
+                </div>
+                <audio id="avestaiAudio" src="assets/audio/avestai-intro.mp3" preload="none"></audio>
+            </div>
+            <script>
+                const audio = document.getElementById('avestaiAudio');
+                const playIcon = document.getElementById('playIcon');
+                const pauseIcon = document.getElementById('pauseIcon');
+                const progressBar = document.getElementById('progressBar');
+                const audioTimer = document.getElementById('audioTimer');
+                function toggleAudio() {
+                    if (audio.paused) { audio.play(); playIcon.style.display='none'; pauseIcon.style.display='block'; }
+                    else { audio.pause(); playIcon.style.display='block'; pauseIcon.style.display='none'; }
+                }
+                audio.addEventListener('timeupdate', function() {
+                    if (audio.duration) {
+                        progressBar.style.width = (audio.currentTime / audio.duration * 100) + '%';
+                        const m = Math.floor(audio.currentTime/60);
+                        const s = Math.floor(audio.currentTime%60).toString().padStart(2,'0');
+                        audioTimer.textContent = m + ':' + s;
+                    }
+                });
+                audio.addEventListener('ended', function() {
+                    playIcon.style.display='block'; pauseIcon.style.display='none'; progressBar.style.width='0%'; audioTimer.textContent='0:00';
+                });
+            </script>
+
+            <div class="cta-buttons" style="margin-top: 20px;">
                 <a href="contact.html" class="btn btn-primary">Get Started</a>
                 <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
             </div>
