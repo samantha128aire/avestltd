@@ -1,0 +1,35 @@
+│
+◇  Doctor warnings ──────────────────────────────────────────────────────╮
+│                                                                        │
+│  - channels.imessage.groupPolicy is "allowlist" but groupAllowFrom is  │
+│    empty — this channel does not fall back to allowFrom, so all group  │
+│    messages will be silently dropped. Add sender IDs to                │
+│    channels.imessage.groupAllowFrom, or set groupPolicy to "open".     │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+OpenClaw security audit
+Summary: 0 critical · 3 warn · 2 info
+Run deeper: openclaw security audit --deep
+
+WARN
+gateway.trusted_proxies_missing Reverse proxy headers are not trusted
+  gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.
+  Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.
+models.weak_tier Some configured models are below recommended tiers
+  Smaller/older models are generally more susceptible to prompt injection and tool misuse.
+- anthropic/claude-haiku-4-5 (Haiku tier (smaller model)) @ agents.defaults.model.fallbacks
+  Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.
+gateway.probe_failed Gateway probe failed (deep)
+  missing scope: operator.read
+  Fix: Run "openclaw status --all" to debug connectivity/auth, then re-run "openclaw security audit --deep".
+
+INFO
+summary.attack_surface Attack surface summary
+  groups: open=0, allowlist=1
+tools.elevated: enabled
+hooks.webhooks: disabled
+hooks.internal: enabled
+browser control: enabled
+trust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway
+gateway.http.session_key_override_enabled HTTP API session-key override is enabled
+  /v1/chat/completions accept x-openclaw-session-key for per-request session routing. Treat API credential holders as trusted principals.

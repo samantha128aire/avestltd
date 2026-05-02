@@ -1,180 +1,60 @@
 # TOOLS.md - Local Notes
 
-## Google Integration (gog)
+## Active Integrations
 
-**Account**: samantha128aire@gmail.com  
-**Services**: calendar, contacts, docs, drive, gmail, sheets  
-**Setup**: OAuth configured, credentials active
+**Google (gog)** - samantha128aire@gmail.com
+- Services: gmail, calendar, drive, docs, contacts, sheets
+- **Always share Drive files with chance.ihs@gmail.com**
+- contacts.csv: Drive ID 1KJiCRTOBPNJj9xVveKzCSZSEAgedZudt
+- **Business email:** samantha@avestltd.com forwards to Gmail, replies sent from professional address
 
-### Key Files
-- **contacts.csv** (Drive ID: 1KJiCRTOBPNJj9xVveKzCSZSEAgedZudt)
-  - Full contact list with names, phones, emails, birthdays
-  - Downloaded to: `memory/contacts.csv`
-  - Used for iMessage allowlist configuration
+**Zoom**
+- Account: chance@goihs.com
+- Credentials: `~/.openclaw/credentials/zoom.env`
+- Can create/read/manage meetings via REST API
+- Business phone: (936) 444-2869 (Zoom Phone)
 
-- **Samantha's Tax Recommendation** (Drive ID: 1UVX3WoZYkRCu0WXWb0YfVabjUkWPdJvde6AfKlIv-r0)
-  - Tax-related document
+**AvestAI Business Tools**
+- **Calendly:** https://calendly.com/samantha128aire/avestai-discovery-call (30 min discovery calls)
+- **Phone:** (936) 444-2869 (Zoom phone - shared across all Avest businesses)
+- **Email:** samantha@avestltd.com (professional customer-facing address)
+- **Website:** https://avestltd.com (live, GitHub Pages)
+- **GitHub:** https://github.com/samantha128aire/avestltd
+- **Google Analytics:** G-PBL118DSSX
+- **Pricing:** $695 (Basic), $1,295 (Standard), $1,795 (Premium) - 100% upfront
+- **Support:** $100/month or $150/hour post-30-day period
 
-### Common Gmail Operations
-```bash
-# Check inbox
-gog gmail search 'is:unread' --max 10
+**WhatsApp (wacli)**
+- Auth: linked to Chance's WhatsApp (QR scan done Mar 2, 2026)
+- Store: `~/.wacli`
+- **IMPORTANT: Use JID format, NOT +1 phone format**
+  - ✅ `wacli send text --to "15089229086@s.whatsapp.net" --message "..."`
+  - ❌ `wacli send text --to "+15089229086" --message "..."` (times out)
+- Find JIDs: `wacli chats list --limit 20`
+- Known contacts:
+  - Chance: `15089229086@s.whatsapp.net`
+- **⚠️ Always include in WhatsApp messages:** "Note: I can't receive replies here — reach me via iMessage at (936) 577-2048"
 
-# Send email
-gog gmail send --to someone@example.com --subject "Subject" --body "Message"
-
-# Check calendar (next 7 days)
-gog calendar events primary --from $(date -Iseconds) --to $(date -v+7d -Iseconds)
-```
-
----
-
-## iMessage (imsg)
-
-**CLI**: `imsg` (Homebrew installed)  
-**Primary Chat**: Chat ID 1 = Chance (+1-508-922-9086)
-
-### Allowlist
-- Configured with contact list phone numbers
+**iMessage (imsg)**
+- Chat 1 = Chance (+1-508-922-9086)
 - Salvi (+1-351-209-2847) has access
-- Only approved contacts can message
+- **Samantha's iPhone:** (936) 577-2048 — real mobile number, iMessage active, screen mirroring enabled
 
-### Common Operations
-```bash
-# List chats
-imsg chats --limit 10
+**TTS** - en-US-AvaNeural (Microsoft Edge TTS, free)
 
-# View history
-imsg history --chat-id 1 --limit 50
-
-# Send message (use OpenClaw message tool instead)
-```
+**Remote Access** - Chrome Remote Desktop (chance.ihs@gmail.com)
 
 ---
 
-## TTS (Text-to-Speech)
+## Monitoring
 
-**Status**: ✅ Configured  
-**Provider**: Microsoft Edge TTS (free, no API key needed)
-**Voice**: en-US-AvaNeural (expressive, caring, pleasant)
+**TSLA** - Daily weekday check (pre-market 7-9 AM), using Sonnet
 
-### Usage
-OpenClaw TTS tool or manual generation:
-```bash
-edge-tts --voice en-US-AvaNeural --text "Your text here" --write-media output.mp3
-```
+~~**MSFT** - Watch $390 level for bull call spread opportunity~~ (dropped Apr 9, 2026)
 
-### Available Voices
-- `en-US-AvaNeural` (current - expressive, caring, pleasant, friendly)
-- `en-US-JennyNeural` (warm, conversational female)
-- `en-US-EmmaNeural` (cheerful, clear, conversational)
-- `en-US-AriaNeural` (positive, confident)
-- `en-US-MichelleNeural` (friendly, pleasant)
+**Costs** - Manual screenshot weekly, ~$200/month budget, $14.33/day burn (as of Feb 3)
 
 ---
 
-## Stock Monitoring
-
-### TSLA
-- **Frequency**: Daily (weekdays via heartbeat)
-- **Purpose**: Check for significant news/price movements
-- **Method**: Web search + news analysis
-- **Model**: Currently Sonnet (considering Haiku for cost reduction)
-
-### MSFT
-- **Watch Level**: $390
-- **Strategy**: Bull call spread when price reaches target
-- **Status**: Trade NOT executed as of Feb 2
-- **Context**: Thin structure from April down to ~$390 level
-
----
-
-## Remote Access
-
-**Chrome Remote Desktop**: Configured  
-**URL**: https://remotedesktop.google.com/access  
-**Account**: chance.ihs@gmail.com (likely)
-
-Allows remote Mac Mini access from any device.
-
----
-
-## Cost Monitoring
-
-**Method**: Manual screenshot from Anthropic dashboard  
-**Frequency**: Weekly (Monday mornings)  
-**Budget**: ~$200/month  
-**Current Burn**: $14.33/day (as of Feb 3)
-
-No public Anthropic billing API available — must use dashboard.
-
----
-
-## Automated Backups
-
-**System**: Daily automated backups to Google Drive
-**Script**: `/Users/sam/.openclaw/scripts/backup-workspace.sh`
-**Schedule**: 3:00 AM CST daily (via heartbeat)
-**Location**: Google Drive root (openclaw-workspace-YYYY-MM-DD_HH-MM-SS.tar.gz)
-**Local**: `/Users/sam/.openclaw/backups/` (keeps last 7)
-
-### Manual Backup
-```bash
-/Users/sam/.openclaw/scripts/backup-workspace.sh
-```
-
-### Restore from Backup
-```bash
-# Download from Google Drive
-gog drive download <file-id> --output /tmp/restore.tar.gz
-
-# Extract to workspace
-cd /Users/sam/.openclaw/workspace
-tar -xzf /tmp/restore.tar.gz
-```
-
----
-
-## Heartbeat Schedule
-
-**Configuration**: Hybrid (config-based + cron jobs)
-
-### Daytime (6 AM - 10 PM CST)
-- **Method**: `agents.defaults.heartbeat` config
-- **Frequency**: Hourly
-- **Config**: `every: "1h"` with `activeHours: {start: "06:00", end: "22:00", timezone: "America/Chicago"}`
-
-### Overnight (10 PM - 6 AM CST)
-- **Method**: Cron jobs (3 jobs)
-- **Frequency**: Every 2 hours
-- **Jobs**:
-  - 12:00 AM (midnight)
-  - 2:00 AM
-  - 4:00 AM
-- **Identifier**: "🌙 Overnight heartbeat check"
-
-### Check List
-All heartbeats follow `HEARTBEAT.md`:
-- **Stock monitoring** (TSLA weekdays, MSFT price watch)
-- **Email checks** (morning, afternoon, evening)
-- **Calendar preview** (morning only, next 48h)
-- **Birthday checks** (daily at 7 AM)
-- **Daily backup** (3 AM)
-
-### View Active Cron Jobs
-```bash
-# OpenClaw CLI (when available)
-openclaw cron list
-
-# Via chat
-"List my cron jobs"
-```
-
----
-
-## Notes
-
-- Contact list in Drive is the source of truth for phone numbers and birthdays
-- Birthday automation relies on contacts.csv
-- Keep tokens/costs documented in `memory/usage-tracking.md` (if it exists)
-- Workspace automatically backs up to Google Drive daily at 3 AM
+## Backups
+Daily 3 AM to Google Drive via `/Users/sam/.openclaw/scripts/backup-workspace.sh`
