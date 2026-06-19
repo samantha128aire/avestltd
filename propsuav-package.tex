@@ -1,0 +1,444 @@
+\documentclass[11pt,letter]{article}
+\usepackage[utf-8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\definecolor{darkblue}{RGB}{0, 51, 102}
+\definecolor{mediumblue}{RGB}{51, 102, 153}
+\definecolor{lightblue}{RGB}{232, 244, 248}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{PropsUAV Platform Design Package}
+\lfoot{\small Design completed: May 2026}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\title{
+  {\Huge \textbf{\textcolor{darkblue}{PropsUAV Drone Launch Platform}}} \\
+  {\Large Design Package -- Complete Technical Documentation} \\
+  {\normalsize May 2026}
+}
+\author{\textbf{Prepared for:} Avest Ltd \\ \textbf{Status:} Complete -- Ready for Fabrication}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{\textcolor{darkblue}{EXECUTIVE SUMMARY}}
+
+PropsUAV Drone Launch Platform is a complete, buildable system for operating high-capacity agricultural spray drones from a mobile trailer-based launch facility. All technical specifications, drawings, and documentation are included in this package.
+
+\subsection*{Key Specifications}
+\begin{itemize}
+  \item \textbf{Platform Elevation:} 30-36'' above existing roof
+  \item \textbf{Liquid Storage:} 550 gallons (400-450 gal recommended operating)
+  \item \textbf{Trailer Dimensions:} 163'' + 23'' V-nose, 84'' wide, 83'' interior height
+  \item \textbf{Payload Capacity:} 4,700 lbs available
+  \item \textbf{Build Timeline:} 9-14 weeks
+  \item \textbf{Cost Estimate:} \$11,770--\$20,400 (fabrication + installation only)
+\end{itemize}
+
+\subsection*{Design Highlights}
+\begin{itemize}
+  \item [\checkmark] Full 84'' platform width for stable drone launch/landing
+  \item [\checkmark] Elevated pilot station with optimal visibility (120-126'' eye level)
+  \item [\checkmark] Integrated 550-gallon storage (400-450 gal recommended operating volume)
+  \item [\checkmark] Welded steel construction (low maintenance, high durability)
+  \item [\checkmark] Protected pilot area (railing + mesh screen)
+  \item [\checkmark] Quick-access fill system (center-front nozzle)
+  \item [\checkmark] Detailed fabrication drawings ready for fabricator quotes
+\end{itemize}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{PROJECT OVERVIEW}
+
+Mobile drone spraying platform mounted on enclosed trailer with integrated liquid storage, generator power, and elevated pilot control station.
+
+\textbf{Status:} Design Complete --- Ready for fabrication quotes and build planning
+
+\subsection{Design Deliverables}
+
+\subsubsection{Technical Drawings (6 High-Resolution Views)}
+\begin{enumerate}
+  \item \textbf{Isometric 3D View} - Complete assembly showing platform, stairs, interior tanks, generator, and drone
+  \item \textbf{Top-Down Plan View} - Interior layout with tank placement, generator position, beam framing
+  \item \textbf{Side Elevation (Left/Driver Side)} - Stairs, platform height, fender profile, safety railing
+  \item \textbf{Front Elevation View} - Full platform width (84''), pilot position, mesh protection
+  \item \textbf{Detailed Stair Section} - Welded steel frame, 9'' width, 7'' rise/10'' run
+  \item \textbf{Interior Layout Detail} - Tank dimensions, pump system, generator exhaust routing
+\end{enumerate}
+
+\section{TRAILER SPECIFICATIONS}
+
+\subsection{Exterior Dimensions}
+\begin{verbatim}
+Total Length:    186" (163" + 23" V-nose)
+Exterior Width:  84"
+Interior Height: 83"
+Payload:         4,700 lbs available
+\end{verbatim}
+
+\subsection{Structural Components}
+\begin{itemize}
+  \item \textbf{Frame Material:} Steel tube frame (welded construction)
+  \item \textbf{Interior Framing:} 1'' × 1.5'' steel beams, spaced 24'' on-center
+  \item \textbf{Roof:} Composite structure (existing)
+  \item \textbf{Fenders:} Steel, 58-62'' between fenders, 9'' protrusion
+  \item \textbf{Tires:} 205/75R15 (dual rear axle configuration)
+\end{itemize}
+
+\section{INTERIOR LAYOUT}
+
+\subsection{Liquid Storage System}
+
+\subsubsection{Primary Storage (Two IBC Tanks)}
+\begin{itemize}
+  \item Position: Over rear and mid axles (side-by-side)
+  \item Capacity Each: 275 gallons
+  \item Dimensions Each: \textasciitilde{}48''L × 40''W × 46''H
+  \item Material: Plastic IBC containers with steel frames
+  \item Weight Each: \textasciitilde{}300 lbs (empty), \textasciitilde{}2,300 lbs (full)
+\end{itemize}
+
+\subsubsection{Mixing/Application Tank}
+\begin{itemize}
+  \item Capacity: 60-75 gallons
+  \item Type: Cone-bottom tank with drain valve
+  \item Position: Front area (left side, forward of V-nose generator)
+  \item Dimensions: \textasciitilde{}36''H × 24'' diameter
+  \item Material: Polyethylene or similar
+  \item Purpose: Secondary mixing and metering
+\end{itemize}
+
+\subsection{Power System}
+
+\subsubsection{Generator}
+\begin{itemize}
+  \item Location: V-nose compartment (front-left)
+  \item Type: Gasoline/propane portable generator
+  \item Power Output: 5-7 kW recommended (for pump + accessories)
+  \item Exhaust Routing: Through right-side wall (away from operator)
+  \item Battery Charging: Integrated charger, 120V outlet access
+\end{itemize}
+
+\subsubsection{Electrical System}
+\begin{itemize}
+  \item Primary Outlets: Two 120V duplex outlets on platform
+  \item Pump Power: Dedicated 240V or 120V circuit
+  \item Lighting: LED work lights on platform (optional)
+  \item Cable Routing: Through conduit along interior beams
+\end{itemize}
+
+\section{LAUNCH PLATFORM ASSEMBLY}
+
+\subsection{Platform Structure}
+
+\subsubsection{Overall Dimensions}
+\begin{itemize}
+  \item Length: 84'' (exterior trailer width)
+  \item Width: 60-72'' (usable platform depth)
+  \item Height Above Roof: 30-36'' (pilot standing height reference)
+  \item Material: Aluminum extrusion frame (lightweight structural)
+  \item Decking: Aluminum or composite grating (non-slip)
+\end{itemize}
+
+\section{STAIR ASSEMBLY}
+
+\subsection{Specifications}
+\begin{itemize}
+  \item Width: 9'' (between stringers)
+  \item Height per Step: 7'' rise
+  \item Depth per Step: 10'' run (minimum)
+  \item Number of Steps: 8-10 steps
+  \item Material: ASTM A36 structural steel, fully welded
+  \item Handrail: 1.5'' diameter steel pipe, 36'' above treads
+  \item Attachment: Fully welded to trailer fender and frame base
+\end{itemize}
+
+\subsection{Structural Tubes}
+\begin{itemize}
+  \item Stringers (both sides): 2''×4'' rectangular tube, 3/16'' wall
+  \item Treads: 3/8'' thick steel plate or expanded metal
+  \item Handrail: 1.5'' diameter steel pipe, Schedule 40
+  \item Welds: Full penetration, FCAW or SMAW process
+  \item Paint/Finish: Powder coat or epoxy enamel (rust protection)
+\end{itemize}
+
+\section{WEIGHT \& CAPACITY ANALYSIS}
+
+\subsection{Component Weights}
+\begin{tabular}{lrrp{3cm}}
+\toprule
+\textbf{Component} & \textbf{Empty} & \textbf{Full} & \textbf{Notes} \\
+\midrule
+IBC Tank \#1 & 300 lbs & 2,300 lbs & @ 7.5 lbs/gal water \\
+IBC Tank \#2 & 300 lbs & 2,300 lbs & @ 7.5 lbs/gal water \\
+Cone-bottom Tank & 100 lbs & 625 lbs & Additional mixing \\
+Platform Frame & 800 lbs & --- & Aluminum structure \\
+Stairs & 400 lbs & --- & Welded steel \\
+Generator & 300 lbs & --- & 6 kW gasoline \\
+Protective Box & 200 lbs & --- & Aluminum + panels \\
+Drone (typical) & 50-100 lbs & --- & DJI Agras or similar \\
+\textbf{TOTALS} & \textbf{2,450 lbs} & \textbf{5,225+ lbs} & \textbf{Exceeds 4,700 at full} \\
+\bottomrule
+\end{tabular}
+
+\textbf{\textcolor{red}{⚠ CRITICAL NOTE:}} Full liquid capacity (550 gallons) exceeds payload. \textbf{Recommend operating at 400-450 gallons maximum} to maintain safe payload margin.
+
+\subsection{Recommended Operating Configuration}
+\begin{itemize}
+  \item \textbf{Maximum Liquid Volume:} 400-450 gallons (\textasciitilde{}3,500 lbs)
+  \item \textbf{Distribution:} 200 gal in each IBC, 50-75 gal in mixing tank
+  \item \textbf{Total Payload:} \textasciitilde{}4,500 lbs (safe operating margin)
+  \item \textbf{Tongue Weight:} 10-12\% of total (\textasciitilde{}450-500 lbs)
+\end{itemize}
+
+\section{MATERIALS SUMMARY}
+
+\subsection{Structural Steel}
+\begin{itemize}
+  \item Trailer Frame Beams: 1'' × 1.5'' ASTM A36
+  \item Stair Stringers: 2'' × 4'' rectangular tube, 3/16'' wall
+  \item Handrails: 1.5'' diameter Schedule 40 pipe
+  \item Gusset Plates: 1/2'' thick ASTM A36 plate
+  \item All Welds: E7018 (SMAW) or ER70S-6 (FCAW)
+\end{itemize}
+
+\subsection{Platform Frame}
+\begin{itemize}
+  \item Extrusions: 2'' × 4'' aluminum (6061-T6 alloy)
+  \item Fasteners: Stainless steel bolts/rivets (corrosion resistance)
+  \item Decking: Aluminum safety grating or composite deck plate
+  \item Finish: Powder coat (satin or textured, UV-resistant)
+\end{itemize}
+
+\section{ASSEMBLY SEQUENCE}
+
+\subsection{Phase 1: Trailer Preparation}
+\begin{enumerate}
+  \item Clean and prepare roof surface
+  \item Mark attachment points (four corners)
+  \item Install backing plates if needed
+\end{enumerate}
+
+\subsection{Phase 2: Platform Frame Fabrication (Off-Site)}
+\begin{enumerate}
+  \item Cut and fit aluminum extrusion
+  \item Assemble main frame (rectangular base)
+  \item Weld gusset plates at attachment points
+  \item Install decking and safety railing
+  \item Powder coat all components
+\end{enumerate}
+
+\subsection{Phase 3: Stair Fabrication (Off-Site)}
+\begin{enumerate}
+  \item Cut and bend steel tube for stringers
+  \item Fit and tack all step treads
+  \item Full penetration welds on all connections
+  \item Verify step rise/run tolerance (\textpm{}1/4'')
+  \item Fabricate and weld mounting brackets
+\end{enumerate}
+
+\subsection{Phase 4: Platform Installation}
+\begin{enumerate}
+  \item Lift platform frame onto trailer roof (crane required)
+  \item Align four corner attachment points
+  \item Tack-weld gusset plates to roof beams
+  \item Perform final alignment (level check)
+  \item Full penetration welds on all four corners
+  \item Mount and weld stair assembly
+  \item Install safety railing and mesh screens
+\end{enumerate}
+
+\subsection{Phase 5: Utilities Integration}
+\begin{enumerate}
+  \item Install generator in V-nose compartment
+  \item Route and secure exhaust pipe
+  \item Install pump and plumbing connections
+  \item Pressure test all hose connections (50 PSI minimum)
+  \item Install fill nozzle on platform
+  \item Route electrical conduit for power
+\end{enumerate}
+
+\subsection{Phase 6: Testing \& Safety Verification}
+\begin{enumerate}
+  \item Static load test on platform (500 lbs minimum)
+  \item Full system test with water at operating pressure
+  \item Generator operation and exhaust isolation check
+  \item Stair integrity and load rating verification
+  \item Tie-down anchor strength verification
+\end{enumerate}
+
+\section{BUILD TIMELINE \& COST ESTIMATE}
+
+\subsection{Timeline}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Phase} & \textbf{Duration} & \textbf{Tasks} \\
+\midrule
+Design \& Drawings & 1-2 weeks & Complete (delivered) \\
+Material Procurement & 2-3 weeks & Order long-lead items \\
+Fabrication (Off-Site) & 4-6 weeks & Platform frame, stairs \\
+Paint/Finishing & 1 week & Powder coat or epoxy \\
+Installation (On-Site) & 1-2 weeks & Assembly, utilities \\
+Testing \& Commissioning & 1 week & Load tests, safety checks \\
+\textbf{TOTAL} & \textbf{9-14 weeks} & Can run in parallel \\
+\bottomrule
+\end{tabular}
+
+\subsection{Cost Estimate}
+
+\begin{tabular}{lllp{3cm}}
+\toprule
+\textbf{Category} & \textbf{Low} & \textbf{High} & \textbf{Notes} \\
+\midrule
+Materials & \$5,000 & \$8,000 & Steel, aluminum, fasteners, paint \\
+Fabrication Labor & \$3,000 & \$5,000 & Cutting, bending, fitting \\
+Welding \& Finishing & \$1,000 & \$2,000 & Labor, grinding, paint \\
+Installation Labor & \$1,000 & \$2,000 & Assembly, alignment \\
+Utilities \& Misc & \$700 & \$1,500 & Plumbing, electrical, hardware \\
+Contingency (10\%) & \$1,070 & \$1,900 & Unexpected issues \\
+\textbf{TOTAL PROJECT} & \textbf{\$11,770} & \textbf{\$20,400} & Fabrication + installation \\
+\bottomrule
+\end{tabular}
+
+\textbf{Additional One-Time Costs (Not Included):}
+\begin{itemize}
+  \item Generator: \$500--\$800
+  \item Pump: \$300--\$500
+  \item IBC Tanks (2×): \$200--\$400
+  \item Drone: \$10,000--\$50,000+ (customer's equipment)
+\end{itemize}
+
+\section{OPERATIONAL SAFETY NOTES}
+
+\textcolor{red}{\textbf{⚠ Confined Space Risk:}} Interior may accumulate toxic fumes. Generator exhaust MUST exit through right wall. Operator must use in open air only.
+
+\textcolor{red}{\textbf{⚠ Load Capacity:}} Platform is rated for pilot + drone (\textasciitilde{}200 lbs max additional equipment). Do NOT exceed designed weight.
+
+\textcolor{red}{\textbf{⚠ Electrical Hazard:}} All 120V/240V circuits must have proper GFCI protection. Generator bonding required.
+
+\textcolor{red}{\textbf{⚠ Wind Loading:}} Platform acts as a sail. DO NOT operate in sustained winds >20 mph.
+
+\textcolor{red}{\textbf{⚠ Tie-Down Requirements:}} Platform and drone MUST be secured during transport.
+
+\section{MAINTENANCE \& INSPECTION SCHEDULE}
+
+\begin{tabular}{lll}
+\toprule
+\textbf{Component} & \textbf{Interval} & \textbf{Task} \\
+\midrule
+Welds (stairs, platform) & Annual & Visual inspection, dye penetrant testing \\
+Fasteners & Annual & Torque verification, replacement if loose \\
+Mesh screen & 6 months & Check for corrosion, replace if needed \\
+Generator & Per mfg & Oil changes, filter replacement \\
+Hose/Fittings & Annual & Pressure test (50 PSI), replace if leaks \\
+Trailer tires & Annual & Pressure check, tread depth, alignment \\
+Protective box seals & 6 months & Check weather degradation, reseal \\
+\bottomrule
+\end{tabular}
+
+\section{COMPLIANCE \& STANDARDS}
+
+\subsection{Standards Referenced}
+\begin{itemize}
+  \item ASTM A36: Structural Steel specification
+  \item AWS D1.1: Structural Welding Code - Steel
+  \item NFPA 70: National Electrical Code (NEC)
+  \item ANSI A10.48: Criteria for Safety with Mobile Elevated Work Platforms
+\end{itemize}
+
+\subsection{Recommended Professional Inspections}
+\begin{itemize}
+  \item Structural Engineer Review: Verify gusset weld design and load path
+  \item Electrical Inspector: Validate GFCI protection, generator bonding
+  \item Welder Certification: Ensure AWS D1.1 certification (structural steel)
+  \item Hydraulic/Plumbing Inspector: Pressure test and certification
+\end{itemize}
+
+\section{NEXT STEPS \& RECOMMENDATIONS}
+
+\subsection{Phase 1: Pre-Construction (Weeks 1-2)}
+\begin{itemize}
+  \item Present design drawings and specifications to fabricators
+  \item Obtain detailed labor quotes
+  \item Verify trailer structural integrity
+  \item Identify local welding/fabrication shops
+  \item Confirm generator model and exhaust specifications
+\end{itemize}
+
+\subsection{Phase 2: Procurement (Weeks 2-3)}
+\begin{itemize}
+  \item Place orders for long-lead items
+  \item Arrange delivery schedule
+  \item Procure fasteners, paint, sealants, electrical components
+  \item Confirm generator and pump specifications
+\end{itemize}
+
+\subsection{Phase 3: Fabrication (Weeks 3-9)}
+\begin{itemize}
+  \item Fabricator begins platform frame assembly
+  \item Stair fabrication and welding
+  \item Schedule dye penetrant testing (PT) on welds
+  \item Powder coat or epoxy finish all components
+\end{itemize}
+
+\subsection{Phase 4: Installation (Weeks 9-11)}
+\begin{itemize}
+  \item Verify trailer level and on solid ground
+  \item Lift and position platform frame (crane required)
+  \item Align and tack-weld platform to roof beams
+  \item Attach stair assembly
+  \item Install railing and mesh screen
+  \item Route plumbing, electrical, exhaust
+\end{itemize}
+
+\subsection{Phase 5: Commissioning (Weeks 11-14)}
+\begin{itemize}
+  \item Static load test
+  \item Pressure test plumbing
+  \item Electrical safety check
+  \item Stair load rating verification
+  \item Full system test with water
+  \item Safety briefing and operator training
+\end{itemize}
+
+\section{CONCLUSION}
+
+This design provides a \textbf{complete, buildable solution} for PropsUAV's mobile drone spraying operation. The elevated platform offers optimal pilot positioning, the dual IBC storage system provides extended range, and the integrated power system enables autonomous operation.
+
+\subsection*{Key Strengths}
+\begin{itemize}
+  \item [\checkmark] Full 84'' platform width (stable drone launch/landing)
+  \item [\checkmark] Elevated pilot station (30-36'' above roof = superior visibility)
+  \item [\checkmark] Integrated 550-gallon storage (400-450 gal recommended)
+  \item [\checkmark] Welded construction (low maintenance, high durability)
+  \item [\checkmark] Protected pilot area (railing + mesh screen)
+  \item [\checkmark] Quick-access fill system (center-front nozzle)
+  \item [\checkmark] Detailed fabrication drawings (ready for quoted build)
+\end{itemize}
+
+\textbf{Build Cost:} \$11,770--\$20,400 (fabrication + installation, 9-14 weeks)
+
+\textbf{Next Action:} Distribute design package to 2-3 local fabricators for detailed labor quotes and timeline confirmation.
+
+\vspace{0.5in}
+
+\textit{Design completed: May 2026} \\
+\textit{Prepared for: Avest Ltd} \\
+\textit{Status: Complete -- Ready for Fabrication}
+
+\end{document}

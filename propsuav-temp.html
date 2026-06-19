@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Avest Ltd" />
+  <title>PropsUAV Drone Launch Platform Design Package</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PropsUAV Drone Launch Platform Design Package</h1>
+<p class="subtitle">Complete Technical Specifications &amp; Build
+Manual</p>
+<p class="author">Avest Ltd</p>
+<p class="date">May 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#propsuav-drone-launch-platform" id="toc-propsuav-drone-launch-platform"><span class="toc-section-number">1</span> PropsUAV Drone Launch Platform</a>
+<ul>
+<li><a href="#design-package-complete-technical-documentation" id="toc-design-package-complete-technical-documentation"><span class="toc-section-number">1.1</span> Design Package – Complete
+Technical Documentation</a></li>
+<li><a href="#table-of-contents" id="toc-table-of-contents"><span class="toc-section-number">1.2</span> TABLE OF CONTENTS</a></li>
+<li><a href="#executive-summary" id="toc-executive-summary"><span class="toc-section-number">1.3</span> EXECUTIVE SUMMARY</a></li>
+<li><a href="#project-overview" id="toc-project-overview"><span class="toc-section-number">1.4</span> PROJECT OVERVIEW</a></li>
+<li><a href="#trailer-specifications" id="toc-trailer-specifications"><span class="toc-section-number">1.5</span> TRAILER SPECIFICATIONS</a></li>
+<li><a href="#interior-layout" id="toc-interior-layout"><span class="toc-section-number">1.6</span> INTERIOR LAYOUT</a></li>
+<li><a href="#launch-platform-assembly" id="toc-launch-platform-assembly"><span class="toc-section-number">1.7</span> LAUNCH PLATFORM ASSEMBLY</a></li>
+<li><a href="#stair-assembly" id="toc-stair-assembly"><span class="toc-section-number">1.8</span> STAIR ASSEMBLY</a></li>
+<li><a href="#platform-superstructure" id="toc-platform-superstructure"><span class="toc-section-number">1.9</span> PLATFORM SUPERSTRUCTURE</a></li>
+<li><a href="#structural-integration-attachments" id="toc-structural-integration-attachments"><span class="toc-section-number">1.10</span> STRUCTURAL INTEGRATION &amp;
+ATTACHMENTS</a></li>
+<li><a href="#generator-exhaust-routing" id="toc-generator-exhaust-routing"><span class="toc-section-number">1.11</span> GENERATOR EXHAUST
+ROUTING</a></li>
+<li><a href="#weight-capacity-analysis" id="toc-weight-capacity-analysis"><span class="toc-section-number">1.12</span> WEIGHT &amp; CAPACITY
+ANALYSIS</a></li>
+<li><a href="#materials-summary" id="toc-materials-summary"><span class="toc-section-number">1.13</span> MATERIALS SUMMARY</a></li>
+<li><a href="#assembly-sequence-notes" id="toc-assembly-sequence-notes"><span class="toc-section-number">1.14</span> ASSEMBLY SEQUENCE &amp;
+NOTES</a></li>
+<li><a href="#dimensional-callouts-reference" id="toc-dimensional-callouts-reference"><span class="toc-section-number">1.15</span> DIMENSIONAL CALLOUTS &amp;
+REFERENCE</a></li>
+<li><a href="#operational-safety-notes" id="toc-operational-safety-notes"><span class="toc-section-number">1.16</span> OPERATIONAL SAFETY NOTES</a></li>
+<li><a href="#maintenance-inspection-schedule" id="toc-maintenance-inspection-schedule"><span class="toc-section-number">1.17</span> MAINTENANCE &amp; INSPECTION
+SCHEDULE</a></li>
+<li><a href="#build-timeline-cost-estimate" id="toc-build-timeline-cost-estimate"><span class="toc-section-number">1.18</span> BUILD TIMELINE &amp; COST
+ESTIMATE</a></li>
+</ul></li>
+<li><a href="#technical-diagrams" id="toc-technical-diagrams"><span class="toc-section-number">2</span> TECHNICAL DIAGRAMS</a>
+<ul>
+<li><a href="#diagram-1-complete-side-elevation-leftdriver-side" id="toc-diagram-1-complete-side-elevation-leftdriver-side"><span class="toc-section-number">2.1</span> DIAGRAM 1: COMPLETE SIDE ELEVATION
+(LEFT/DRIVER SIDE)</a></li>
+<li><a href="#diagram-2-top-down-plan-view-interior-layout" id="toc-diagram-2-top-down-plan-view-interior-layout"><span class="toc-section-number">2.2</span> DIAGRAM 2: TOP-DOWN PLAN VIEW
+(INTERIOR LAYOUT)</a></li>
+<li><a href="#diagram-3-stair-assembly-section-detail" id="toc-diagram-3-stair-assembly-section-detail"><span class="toc-section-number">2.3</span> DIAGRAM 3: STAIR ASSEMBLY SECTION
+DETAIL</a></li>
+<li><a href="#diagram-4-front-elevation-view" id="toc-diagram-4-front-elevation-view"><span class="toc-section-number">2.4</span> DIAGRAM 4: FRONT ELEVATION
+VIEW</a></li>
+<li><a href="#diagram-5-interior-plumbing-generator-routing" id="toc-diagram-5-interior-plumbing-generator-routing"><span class="toc-section-number">2.5</span> DIAGRAM 5: INTERIOR PLUMBING &amp;
+GENERATOR ROUTING</a></li>
+<li><a href="#diagram-6-weight-distribution-load-analysis" id="toc-diagram-6-weight-distribution-load-analysis"><span class="toc-section-number">2.6</span> DIAGRAM 6: WEIGHT DISTRIBUTION
+&amp; LOAD ANALYSIS</a></li>
+</ul></li>
+<li><a href="#build-summary-next-steps" id="toc-build-summary-next-steps"><span class="toc-section-number">3</span> BUILD SUMMARY &amp; NEXT STEPS</a>
+<ul>
+<li><a href="#project-status-design-complete" id="toc-project-status-design-complete"><span class="toc-section-number">3.1</span> Project Status: Design
+Complete</a></li>
+<li><a href="#design-assumptions-limitations" id="toc-design-assumptions-limitations"><span class="toc-section-number">3.2</span> Design Assumptions &amp;
+Limitations</a></li>
+<li><a href="#reference-documentation" id="toc-reference-documentation"><span class="toc-section-number">3.3</span> Reference Documentation</a></li>
+<li><a href="#professional-standards-compliance" id="toc-professional-standards-compliance"><span class="toc-section-number">3.4</span> Professional Standards &amp;
+Compliance</a></li>
+<li><a href="#conclusion" id="toc-conclusion"><span class="toc-section-number">3.5</span> Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 data-number="1" id="propsuav-drone-launch-platform"><span class="header-section-number">1</span> PropsUAV Drone Launch
+Platform</h1>
+<h2 data-number="1.1" id="design-package-complete-technical-documentation"><span class="header-section-number">1.1</span> Design Package – Complete
+Technical Documentation</h2>
+<hr />
+<h2 data-number="1.2" id="table-of-contents"><span class="header-section-number">1.2</span> TABLE OF CONTENTS</h2>
+<ol type="1">
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#project-overview">Project Overview</a></li>
+<li><a href="#trailer-specifications">Trailer Specifications</a></li>
+<li><a href="#interior-layout">Interior Layout</a></li>
+<li><a href="#launch-platform-assembly">Launch Platform
+Assembly</a></li>
+<li><a href="#stair-assembly">Stair Assembly</a></li>
+<li><a href="#platform-superstructure">Platform Superstructure</a></li>
+<li><a href="#structural-integration">Structural Integration</a></li>
+<li><a href="#generator-exhaust-routing">Generator Exhaust
+Routing</a></li>
+<li><a href="#weight--capacity-analysis">Weight &amp; Capacity
+Analysis</a></li>
+<li><a href="#materials-summary">Materials Summary</a></li>
+<li><a href="#assembly-sequence">Assembly Sequence</a></li>
+<li><a href="#dimensional-callouts">Dimensional Callouts</a></li>
+<li><a href="#operational-safety">Operational Safety</a></li>
+<li><a href="#maintenance-schedule">Maintenance Schedule</a></li>
+<li><a href="#build-timeline--cost">Build Timeline &amp; Cost</a></li>
+<li><a href="#technical-diagrams">Technical Diagrams</a></li>
+<li><a href="#build-summary--next-steps">Build Summary &amp; Next
+Steps</a></li>
+</ol>
+<hr />
+<h2 data-number="1.3" id="executive-summary"><span class="header-section-number">1.3</span> EXECUTIVE SUMMARY</h2>
+<p><strong>PropsUAV Drone Launch Platform</strong> is a complete,
+buildable system for operating high-capacity agricultural spray drones
+from a mobile trailer-based launch facility.</p>
+<h3 data-number="1.3.1" id="key-specifications"><span class="header-section-number">1.3.1</span> Key Specifications</h3>
+<ul>
+<li><strong>Platform Elevation:</strong> 30-36” above existing roof</li>
+<li><strong>Pilot Standing Area:</strong> Center-front, protected by
+safety railing &amp; mesh screen</li>
+<li><strong>Liquid Storage:</strong> 550 gallons (400-450 gal
+recommended operating volume)</li>
+<li><strong>Trailer Dimensions:</strong> 163” + 23” V-nose, 84” wide,
+83” interior height</li>
+<li><strong>Payload Capacity:</strong> 4,700 lbs available (550 gal
+liquid exceeds this; recommend max 450 gal)</li>
+<li><strong>Build Timeline:</strong> 9-14 weeks (design complete, ready
+for fabrication)</li>
+<li><strong>Cost Estimate:</strong> $11,770–$20,400 (fabrication +
+installation, excludes generator/pump/drone)</li>
+</ul>
+<h3 data-number="1.3.2" id="design-highlights"><span class="header-section-number">1.3.2</span> Design Highlights</h3>
+<p>✅ Full 84” platform width for stable drone launch/landing ✅
+Elevated pilot station with optimal visibility (120-126” eye level) ✅
+Dual IBC tanks positioned over axles for balanced weight distribution ✅
+Integrated 6 kW generator power system ✅ Quick-access fill nozzle
+(center-front platform) ✅ Welded steel stairs with safety railing &amp;
+drone protection mesh ✅ Professional technical drawings ready for
+fabricator quotes</p>
+<hr />
+<h2 data-number="1.4" id="project-overview"><span class="header-section-number">1.4</span> PROJECT OVERVIEW</h2>
+<p>Mobile drone spraying platform mounted on enclosed trailer with
+integrated liquid storage, generator power, and elevated pilot control
+station.</p>
+<p><strong>Status:</strong> Design Complete — Ready for fabrication
+quotes and build planning</p>
+<h3 data-number="1.4.1" id="design-deliverables"><span class="header-section-number">1.4.1</span> Design Deliverables</h3>
+<h4 data-number="1.4.1.1" id="technical-drawings-6-high-resolution-views"><span class="header-section-number">1.4.1.1</span> Technical Drawings (6
+High-Resolution Views)</h4>
+<ol type="1">
+<li><strong>Isometric 3D View</strong> - Complete assembly showing
+platform, stairs, interior tanks, generator, and drone</li>
+<li><strong>Top-Down Plan View</strong> - Interior layout with tank
+placement, generator position, beam framing, door locations</li>
+<li><strong>Side Elevation (Left/Driver Side)</strong> - Stairs,
+platform height (30-36” above roof), fender profile, safety railing</li>
+<li><strong>Front Elevation View</strong> - Full platform width (84”),
+pilot position, mesh protection, stair access</li>
+<li><strong>Detailed Stair Section</strong> - Welded steel frame, 9”
+width, 7” rise/10” run, handrail configuration</li>
+<li><strong>Interior Layout Detail</strong> - Tank dimensions, pump
+system, generator exhaust routing, fill nozzle access</li>
+</ol>
+<h4 data-number="1.4.1.2" id="comprehensive-technical-specification-document"><span class="header-section-number">1.4.1.2</span> Comprehensive Technical
+Specification Document</h4>
+<ul>
+<li><strong>Trailer Specifications:</strong> 163”L + 23” V-nose, 84”W,
+83”H interior, 4,700 lbs payload</li>
+<li><strong>Interior Layout:</strong> IBC tank placement (over axles),
+generator location, mixing tank, pump routing</li>
+<li><strong>Launch Platform:</strong> Aluminum frame, 84”W × ~60”D,
+elevated 30-36” above roof</li>
+<li><strong>Stair Assembly:</strong> 9” wide, 10 steps, 7” rise/10” run,
+welded steel, handrail included</li>
+<li><strong>Safety Features:</strong> Railing, mesh drone protection
+screen, anchor points for transport security</li>
+<li><strong>Utilities:</strong> Generator exhaust routing (through right
+wall), electrical system, water distribution</li>
+<li><strong>Structural Integration:</strong> Welded gusset connections,
+weight distribution, load analysis</li>
+</ul>
+<h4 data-number="1.4.1.3" id="ascii-technical-diagrams"><span class="header-section-number">1.4.1.3</span> ASCII Technical
+Diagrams</h4>
+<ul>
+<li>Side Elevation with stair integration</li>
+<li>Top-Down Plan with tank placement and beam layout</li>
+<li>Stair Section Details with rise/run dimensions</li>
+<li>Front Elevation with platform width and mesh screen</li>
+<li>Interior Plumbing diagram with pump routing</li>
+<li>Generator Exhaust Routing path</li>
+<li>Electrical System diagram</li>
+<li>Weight Distribution analysis</li>
+<li>Assembly Sequence (7 layers from foundation to drone)</li>
+<li>Standard Operating Sequence (preflight to post-flight)</li>
+</ul>
+<hr />
+<h2 data-number="1.5" id="trailer-specifications"><span class="header-section-number">1.5</span> TRAILER SPECIFICATIONS</h2>
+<h3 data-number="1.5.1" id="exterior-dimensions"><span class="header-section-number">1.5.1</span> Exterior Dimensions</h3>
+<pre><code>Total Length:    186&quot; (163&quot; + 23&quot; V-nose)
+Exterior Width:  84&quot;
+Interior Height: 83&quot;
+Payload:         4,700 lbs available</code></pre>
+<h3 data-number="1.5.2" id="structural-components"><span class="header-section-number">1.5.2</span> Structural Components</h3>
+<ul>
+<li><strong>Frame Material:</strong> Steel tube frame (welded
+construction)</li>
+<li><strong>Interior Framing:</strong> 1” × 1.5” steel beams, spaced 24”
+on-center</li>
+<li><strong>Roof:</strong> Composite structure (existing)</li>
+<li><strong>Fenders:</strong> Steel, 58-62” between fenders, 9”
+protrusion</li>
+<li><strong>Tires:</strong> 205/75R15 (dual rear axle
+configuration)</li>
+</ul>
+<h3 data-number="1.5.3" id="door-openings"><span class="header-section-number">1.5.3</span> Door Openings</h3>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Width</th>
+<th>Height</th>
+<th>Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rear</td>
+<td>76”</td>
+<td>80”</td>
+<td>Center rear</td>
+</tr>
+<tr>
+<td>Right Side</td>
+<td>32”</td>
+<td>68”</td>
+<td>15” from front</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 data-number="1.6" id="interior-layout"><span class="header-section-number">1.6</span> INTERIOR LAYOUT</h2>
+<h3 data-number="1.6.1" id="liquid-storage-system"><span class="header-section-number">1.6.1</span> Liquid Storage System</h3>
+<h4 data-number="1.6.1.1" id="primary-storage-two-ibc-tanks"><span class="header-section-number">1.6.1.1</span> Primary Storage (Two IBC
+Tanks)</h4>
+<pre><code>Position:         Over rear and mid axles (side-by-side)
+Capacity Each:    275 gallons
+Dimensions Each:  ~48&quot;L × 40&quot;W × 46&quot;H
+Material:         Plastic IBC containers with steel frames
+Weight Each:      ~300 lbs (empty), ~2,300 lbs (full)
+Total Weight:     ~4,600 lbs (full)</code></pre>
+<p><strong>IBC Tank Placement Layout (Top View):</strong></p>
+<pre><code>REAR (163&quot; mark)
++────────────────────────────────────────+
+│ IBC Tank #1      │      IBC Tank #2    │
+│  (Left/Rear)     │    (Right/Rear)     │
+│  275 gal         │     275 gal         │
+│  48×40×46&quot;       │     48×40×46&quot;       │
+│                  │                      │
+│  Over left axle  │   Over right axle   │
++────────────────────────────────────────+
+│                                         │
+│      V-Nose Section (23&quot;)               │
+│      Generator location (front-left)    │
+│                                         │
++────────────────────────────────────────+
+FRONT (V-nose)</code></pre>
+<h4 data-number="1.6.1.2" id="mixingapplication-tank"><span class="header-section-number">1.6.1.2</span> Mixing/Application
+Tank</h4>
+<ul>
+<li><strong>Capacity:</strong> 60-75 gallons</li>
+<li><strong>Type:</strong> Cone-bottom tank with drain valve</li>
+<li><strong>Position:</strong> Front area (left side, forward of V-nose
+generator)</li>
+<li><strong>Dimensions:</strong> ~36”H × 24” diameter</li>
+<li><strong>Material:</strong> Polyethylene or similar</li>
+<li><strong>Purpose:</strong> Secondary mixing and metering</li>
+</ul>
+<h3 data-number="1.6.2" id="power-system"><span class="header-section-number">1.6.2</span> Power System</h3>
+<h4 data-number="1.6.2.1" id="generator"><span class="header-section-number">1.6.2.1</span> Generator</h4>
+<ul>
+<li><strong>Location:</strong> V-nose compartment (front-left)</li>
+<li><strong>Type:</strong> Gasoline/propane portable generator</li>
+<li><strong>Power Output:</strong> 5-7 kW recommended (for pump +
+accessories)</li>
+<li><strong>Fuel Tank:</strong> Integrated or separate (check fuel
+space)</li>
+<li><strong>Exhaust Routing:</strong> Through right-side wall (away from
+operator)</li>
+<li><strong>Battery Charging:</strong> Integrated charger, 120V outlet
+access</li>
+</ul>
+<h4 data-number="1.6.2.2" id="electrical-system"><span class="header-section-number">1.6.2.2</span> Electrical System</h4>
+<ul>
+<li><strong>Primary Outlets:</strong> Two 120V duplex outlets on
+platform</li>
+<li><strong>Pump Power:</strong> Dedicated 240V or 120V circuit (verify
+pump specs)</li>
+<li><strong>Lighting:</strong> LED work lights on platform
+(optional)</li>
+<li><strong>Cable Routing:</strong> Through conduit along interior
+beams</li>
+</ul>
+<h3 data-number="1.6.3" id="pumping-distribution-system"><span class="header-section-number">1.6.3</span> Pumping &amp; Distribution
+System</h3>
+<h4 data-number="1.6.3.1" id="main-supply-pump"><span class="header-section-number">1.6.3.1</span> Main Supply Pump</h4>
+<ul>
+<li><strong>Type:</strong> Electric diaphragm or centrifugal pump</li>
+<li><strong>Flow Rate:</strong> 10-15 GPM (verify with spraying
+equipment)</li>
+<li><strong>Power:</strong> 120V or 240V (match generator capacity)</li>
+<li><strong>Suction:</strong> From lower port of primary IBC tanks (via
+check valve)</li>
+<li><strong>Discharge:</strong> To mixing tank or directly to spray
+nozzle</li>
+</ul>
+<h4 data-number="1.6.3.2" id="plumbing-overview"><span class="header-section-number">1.6.3.2</span> Plumbing Overview</h4>
+<pre><code>IBC Tank #1 (Left)  ─┐
+                      ├─→ [Check Valve] ──→ [Pump] ──→ Mixing Tank
+IBC Tank #2 (Right) ─┘                                    │
+                                                           ↓
+                                                    [Filter] ──→ [Fill Nozzle on Platform]
+                                                           ↓
+                                          [Spray System/Equipment]</code></pre>
+<h4 data-number="1.6.3.3" id="hose-specifications"><span class="header-section-number">1.6.3.3</span> Hose Specifications</h4>
+<ul>
+<li><strong>Fill Nozzle Location:</strong> Center-front of launch
+platform (accessible to pilot)</li>
+<li><strong>Hose Size:</strong> 1-1.5” diameter for supply line</li>
+<li><strong>Material:</strong> Food-grade, UV-resistant polyurethane or
+similar</li>
+<li><strong>Routing:</strong> Through sealed conduit along right
+interior wall to platform</li>
+<li><strong>Connections:</strong> Quick-disconnect couplers at tank and
+nozzle for easy detachment</li>
+</ul>
+<hr />
+<h2 data-number="1.7" id="launch-platform-assembly"><span class="header-section-number">1.7</span> LAUNCH PLATFORM ASSEMBLY</h2>
+<h3 data-number="1.7.1" id="platform-structure"><span class="header-section-number">1.7.1</span> Platform Structure</h3>
+<h4 data-number="1.7.1.1" id="overall-dimensions"><span class="header-section-number">1.7.1.1</span> Overall Dimensions</h4>
+<ul>
+<li><strong>Length:</strong> 84” (exterior trailer width)</li>
+<li><strong>Width:</strong> 60-72” (usable platform depth)</li>
+<li><strong>Height Above Roof:</strong> 30-36” (pilot standing height
+reference)</li>
+<li><strong>Material:</strong> Aluminum extrusion frame (lightweight
+structural)</li>
+<li><strong>Decking:</strong> Aluminum or composite grating
+(non-slip)</li>
+</ul>
+<h4 data-number="1.7.1.2" id="frame-construction"><span class="header-section-number">1.7.1.2</span> Frame Construction</h4>
+<pre><code>SIDE VIEW (Left/Driver Side):
+
+          PILOT AREA (Center-Front)
+         ╔════════════════════════════╗
+         ║  Safety Railing            ║  ← 36&quot; above existing roof
+         ║  Mesh Drone Protection     ║
+         ║                            ║
+    ┌────╫─┐ ┌──────────────────────┐ │
+    │    ║  │  Platform Deck        │ │  ← 30-36&quot; above existing roof
+    │    ║  │  (Aluminum extrusion) │ │
+    │    ║  │                       │ │
+    │    ║  └──────────────────────┘ │
+    │    ║         STAIRS            ↓
+    │    ║    (9&quot; wide, welded steel)
+    │    ║    (10 steps, 7&quot; rise)
+    │    ║
+    │ COMPOSITE ROOF (83&quot; interior height)
+    │ ╔═══════════════════════════════════╗
+    │ ║  1&quot;×1.5&quot; Steel Beams (24&quot; spacing)║
+    │ ╚═══════════════════════════════════╝
+    └────────────────────────────────────┘
+         FENDERS (58-62&quot; between, 9&quot; protrusion)</code></pre>
+<hr />
+<h2 data-number="1.8" id="stair-assembly"><span class="header-section-number">1.8</span> STAIR ASSEMBLY</h2>
+<h3 data-number="1.8.1" id="specifications"><span class="header-section-number">1.8.1</span> Specifications</h3>
+<ul>
+<li><strong>Width:</strong> 9” (between stringers)</li>
+<li><strong>Height per Step:</strong> 7” rise</li>
+<li><strong>Depth per Step:</strong> 10” run (minimum)</li>
+<li><strong>Number of Steps:</strong> 8-10 steps (depending on final
+platform height)</li>
+<li><strong>Material:</strong> ASTM A36 structural steel, fully
+welded</li>
+<li><strong>Handrail:</strong> 1.5” diameter steel pipe, 36” above
+treads</li>
+<li><strong>Attachment:</strong> Fully welded to trailer fender and
+frame base</li>
+</ul>
+<h3 data-number="1.8.2" id="step-details"><span class="header-section-number">1.8.2</span> Step Details</h3>
+<pre><code>           [Step Tread 10&quot; deep]
+        ┌──────────────────┐
+        │ Steel flat plate │  ← 3/8&quot; thick
+        │  (or diamond plate)
+        └──────────────────┘
+              ↑
+           7&quot; RISE
+              ↓
+        ┌──────────────────┐
+        │ Previous step    │
+        └──────────────────┘
+
+Stringer Profile (Side View):
+        ╱╲╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱  ← Handrail attachment
+       ╱  ╲════════════════
+      ╱    ╲════════════════
+     ╱      ╲════════════════  ← Welded tread
+    ╱        ╲════════════════
+   ╱          ╲════════════════
+  ╱            ╲════════════════
+ ╱              ╲
+╱────────────────┘  ← Welded base bracket (to fender/frame)</code></pre>
+<h3 data-number="1.8.3" id="structural-tubes"><span class="header-section-number">1.8.3</span> Structural Tubes</h3>
+<ul>
+<li><strong>Stringers (both sides):</strong> 2”×4” rectangular tube,
+3/16” wall</li>
+<li><strong>Treads:</strong> 3/8” thick steel plate or expanded
+metal</li>
+<li><strong>Handrail:</strong> 1.5” diameter steel pipe, Schedule
+40</li>
+<li><strong>Welds:</strong> Full penetration, FCAW or SMAW process</li>
+<li><strong>Paint/Finish:</strong> Powder coat or epoxy enamel (rust
+protection)</li>
+</ul>
+<hr />
+<h2 data-number="1.9" id="platform-superstructure"><span class="header-section-number">1.9</span> PLATFORM SUPERSTRUCTURE</h2>
+<h3 data-number="1.9.1" id="pilot-standing-area-front-center"><span class="header-section-number">1.9.1</span> Pilot Standing Area
+(Front-Center)</h3>
+<h4 data-number="1.9.1.1" id="dimensions"><span class="header-section-number">1.9.1.1</span> Dimensions</h4>
+<ul>
+<li><strong>Length:</strong> 48” (front to back, or approximately 4
+steps)</li>
+<li><strong>Width:</strong> 36” (center of 84” platform)</li>
+<li><strong>Height Above Deck:</strong> 36” (to top of safety
+railing)</li>
+<li><strong>Surface:</strong> Non-slip aluminum grating or composite
+decking</li>
+</ul>
+<h4 data-number="1.9.1.2" id="safety-railing"><span class="header-section-number">1.9.1.2</span> Safety Railing</h4>
+<pre><code>                    Safety Railing Assembly
+
+                    ┌───────────────────┐
+                    │  Upper Rail       │  ← 36&quot; above deck
+                    │  (1.5&quot; diameter)  │
+                    ├─────────────┬─────┤
+                    │  Mesh       │ Mesh │  ← Drone protection screen
+                    │  Screen     │     │     (1/2&quot; or 3/8&quot; holes)
+                    │  (48&quot;W×24&quot;H)│     │
+                    ├─────────────┴─────┤
+                    │  Lower Rail       │  ← ~12&quot; above deck
+                    │  (1.5&quot; diameter)  │
+                    └───────────────────┘</code></pre>
+<p><strong>Railing Components:</strong> - <strong>Upper Horizontal
+Rail:</strong> 1.5” diameter steel tube - <strong>Lower Horizontal
+Rail:</strong> 1.5” diameter steel tube (kick rail) - <strong>Vertical
+Supports:</strong> 1” diameter steel pipe, 12” spacing - <strong>Mesh
+Infill:</strong> 1/2” or 3/8” galvanized steel wire mesh (or
+polycarbonate) - <strong>Welds:</strong> All connections fully
+welded</p>
+<h3 data-number="1.9.2" id="drone-positioning-security"><span class="header-section-number">1.9.2</span> Drone Positioning &amp;
+Security</h3>
+<h4 data-number="1.9.2.1" id="on-platform-anchor-points"><span class="header-section-number">1.9.2.1</span> On-Platform Anchor
+Points</h4>
+<pre><code>        PLATFORM TOP VIEW (Pilot Area)
+
+    ┌──────────────────────────────┐
+    │  ┌───────────────────────┐   │
+    │  │  Mesh Drone Protection│   │  Anchor
+    │  │  Box (removable)      │   │  Point
+    │  └───┬──────────────────┬┘   │
+    │      │                  │    │
+    │   ● ANCHOR POINT #1     ●    │  ← Tie-down anchor
+    │      (corner)           (corner)
+    │                                │
+    │      PILOT STANDING AREA      │
+    │      (36&quot; × 48&quot;)              │
+    │                                │
+    │   ● ANCHOR POINT #2     ●    │  ← Tie-down anchor
+    │      (corner)           (corner)
+    │      │                  │    │
+    │  └───┴──────────────────┴┘   │
+    │                                │
+    └──────────────────────────────┘</code></pre>
+<p><strong>Anchor Point Specifications:</strong> -
+<strong>Type:</strong> Welded eye bolts or pad eyes (1/2” diameter
+minimum) - <strong>Locations:</strong> Four corners of protective box
+(or platform perimeter) - <strong>Load Rating:</strong> 500+ lbs each
+(verify with tie-down requirements) - <strong>Spacing:</strong> 48” ×
+36” (matches platform dimensions) - <strong>Attachment:</strong> Fully
+welded to platform frame, not bolted</p>
+<h4 data-number="1.9.2.2" id="removable-protective-box"><span class="header-section-number">1.9.2.2</span> Removable Protective
+Box</h4>
+<ul>
+<li><strong>Purpose:</strong> Drone security and weather protection
+during transport</li>
+<li><strong>Dimensions:</strong> ~54”L × 42”W × 30”H (approximate,
+drone-dependent)</li>
+<li><strong>Material:</strong> Aluminum frame + polycarbonate or
+composite panels</li>
+<li><strong>Mounting:</strong> Quick-release pins or latches (removable
+in &lt;5 minutes)</li>
+<li><strong>Ventilation:</strong> Mesh vents for generator heat
+dissipation</li>
+</ul>
+<hr />
+<h2 data-number="1.10" id="structural-integration-attachments"><span class="header-section-number">1.10</span> STRUCTURAL INTEGRATION &amp;
+ATTACHMENTS</h2>
+<h3 data-number="1.10.1" id="platform-to-trailer-connection"><span class="header-section-number">1.10.1</span> Platform-to-Trailer
+Connection</h3>
+<h4 data-number="1.10.1.1" id="welded-base-connections"><span class="header-section-number">1.10.1.1</span> Welded Base
+Connections</h4>
+<pre><code>Cross-section: Platform attachment to trailer roof
+
+Platform frame:    ══════════════╗
+Gusseted plate:   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱║
+Roof beam:        ════════════════╪══════════════════
+Welds:            ║ ║ ║ ║ ║ ║ ║ ║
+                  FILLET WELDS (1/4&quot; leg, continuous)
+Interior frame:   ════════════════════════════════════</code></pre>
+<p><strong>Attachment Method:</strong> 1. <strong>Gusset
+Plates:</strong> 1/2” thick steel, 12” × 12” (at each corner) 2.
+<strong>Welds:</strong> Full penetration fillet welds, 1/4” leg minimum
+3. <strong>Spacing:</strong> Welded at four corners (front-left,
+front-right, rear-left, rear-right) 4. <strong>Interior
+Support:</strong> 1” × 1.5” beams run perpendicular to platform,
+creating triangulation</p>
+<h3 data-number="1.10.2" id="stair-to-platform-connection"><span class="header-section-number">1.10.2</span> Stair-to-Platform
+Connection</h3>
+<pre><code>Top of stairs connects to platform front:
+
+      ═════════════════════════
+      │ Platform front beam    │
+      ├────────────────────────┤
+      │ Welded connection      │
+      │ (½&quot; gusset both sides) │
+      ├────────────────────────┤
+      │  Top step of stair     │
+      │  (9&quot; wide opening)     │
+      └────────────────────────┘
+         (allows foot transition)</code></pre>
+<hr />
+<h2 data-number="1.11" id="generator-exhaust-routing"><span class="header-section-number">1.11</span> GENERATOR EXHAUST ROUTING</h2>
+<h3 data-number="1.11.1" id="exhaust-path"><span class="header-section-number">1.11.1</span> Exhaust Path</h3>
+<pre><code>TOP VIEW (Interior Layout):
+
+    FRONT (V-Nose)
+    ┌────────────────────────────┐
+    │ Generator                  │
+    │ [in V-nose, front-left]    │
+    │                             │
+    └─────────┬──────────────────┘
+              │
+              │ Exhaust Pipe (2&quot; diameter)
+              │ Stainless steel or aluminized
+              │
+    ┌─────────┴──────────────────────┐
+    │         Routes through interior │
+    │         along right-side wall   │
+    │         (sealed conduit)        │
+    └──────────────────────────────┬──┘
+                                   │
+                           ╔═══════╩════════╗
+                           ║ RIGHT-SIDE WALL║
+                           ║  Opening: 3&quot;   ║
+                           ║  (12&quot; from rear)
+                           ╚════════════════╝
+                                   │
+                                   ↓
+                        Exits 12&quot; above roof level
+                        (away from operator area)</code></pre>
+<p><strong>Specifications:</strong> - <strong>Pipe Diameter:</strong>
+2-2.5” (match generator outlet) - <strong>Material:</strong> Stainless
+steel or aluminized steel - <strong>Wall Penetration:</strong> 3”
+diameter hole (sealed with heat-resistant gasket) -
+<strong>Termination:</strong> 90° elbow pointing downward/rearward -
+<strong>Insulation:</strong> High-temp wrap (if interior temperature
+&lt; 6” clearance) - <strong>Support:</strong> Clamps every 18” along
+routing path</p>
+<hr />
+<h2 data-number="1.12" id="weight-capacity-analysis"><span class="header-section-number">1.12</span> WEIGHT &amp; CAPACITY
+ANALYSIS</h2>
+<h3 data-number="1.12.1" id="component-weights-approximate"><span class="header-section-number">1.12.1</span> Component Weights
+(Approximate)</h3>
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 22%" />
+<col style="width: 19%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Component</th>
+<th>Empty</th>
+<th>Full</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBC Tank #1 (275 gal)</td>
+<td>300 lbs</td>
+<td>2,300 lbs</td>
+<td>@ 7.5 lbs/gal for water</td>
+</tr>
+<tr>
+<td>IBC Tank #2 (275 gal)</td>
+<td>300 lbs</td>
+<td>2,300 lbs</td>
+<td>@ 7.5 lbs/gal for water</td>
+</tr>
+<tr>
+<td>Cone-bottom Tank (75 gal)</td>
+<td>100 lbs</td>
+<td>625 lbs</td>
+<td>Additional mixing capacity</td>
+</tr>
+<tr>
+<td>Platform Frame</td>
+<td>800 lbs</td>
+<td>—</td>
+<td>Aluminum structure</td>
+</tr>
+<tr>
+<td>Stairs</td>
+<td>400 lbs</td>
+<td>—</td>
+<td>Welded steel</td>
+</tr>
+<tr>
+<td>Generator (6 kW)</td>
+<td>300 lbs</td>
+<td>—</td>
+<td>Gasoline-powered</td>
+</tr>
+<tr>
+<td>Protective Box</td>
+<td>200 lbs</td>
+<td>—</td>
+<td>Aluminum + panels</td>
+</tr>
+<tr>
+<td>Drone (typical)</td>
+<td>50-100 lbs</td>
+<td>—</td>
+<td>DJI Agras or similar</td>
+</tr>
+<tr>
+<td><strong>TOTALS</strong></td>
+<td><strong>2,450 lbs</strong></td>
+<td><strong>5,225+ lbs</strong></td>
+<td><strong>Exceeds 4,700 lbs at full capacity</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="1.12.2" id="weight-distribution-recommendations"><span class="header-section-number">1.12.2</span> Weight Distribution
+Recommendations</h3>
+<ol type="1">
+<li><strong>Primary tanks (IBC) over rear axles:</strong> Distributes
+4,600 lbs evenly</li>
+<li><strong>Generator in V-nose:</strong> ~300 lbs forward (load
+balancing)</li>
+<li><strong>Mixing tank off-center slightly</strong> to maintain tongue
+weight (10-15% of total)</li>
+<li><strong>Platform ballast:</strong> Minimize load when liquid is at
+maximum</li>
+</ol>
+<p><strong>⚠️ CRITICAL NOTE:</strong> Full liquid capacity (550 gallons)
+exceeds payload. Recommend operating at 400-450 gallons maximum, or
+upgrade trailer if full capacity required.</p>
+<h3 data-number="1.12.3" id="recommended-operating-configuration"><span class="header-section-number">1.12.3</span> Recommended Operating
+Configuration</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 26%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Reasoning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maximum Liquid Volume</strong></td>
+<td>400-450 gallons</td>
+<td>~3,500 lbs, leaves 1,200 lbs margin for platform, generator, drone,
+operator</td>
+</tr>
+<tr>
+<td><strong>Distribution</strong></td>
+<td>200 gal in each IBC, 50-75 gal in mixing tank</td>
+<td>Balanced approach, maximize spray mission duration</td>
+</tr>
+<tr>
+<td><strong>Total Payload</strong></td>
+<td>~4,500 lbs</td>
+<td>Safe operating margin, accounts for fuel in generator</td>
+</tr>
+<tr>
+<td><strong>Tongue Weight</strong></td>
+<td>10-12% of total</td>
+<td>~450-500 lbs (proper hitch loading for safe towing)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 data-number="1.13" id="materials-summary"><span class="header-section-number">1.13</span> MATERIALS SUMMARY</h2>
+<h3 data-number="1.13.1" id="structural-steel"><span class="header-section-number">1.13.1</span> Structural Steel</h3>
+<ul>
+<li><strong>Trailer Frame Beams:</strong> 1” × 1.5” ASTM A36</li>
+<li><strong>Stair Stringers:</strong> 2” × 4” rectangular tube, 3/16”
+wall</li>
+<li><strong>Handrails:</strong> 1.5” diameter Schedule 40 pipe</li>
+<li><strong>Gusset Plates:</strong> 1/2” thick ASTM A36 plate</li>
+<li><strong>All Welds:</strong> E7018 (SMAW) or ER70S-6 (FCAW)</li>
+</ul>
+<h3 data-number="1.13.2" id="platform-frame"><span class="header-section-number">1.13.2</span> Platform Frame</h3>
+<ul>
+<li><strong>Extrusions:</strong> 2” × 4” aluminum (6061-T6 alloy)</li>
+<li><strong>Fasteners:</strong> Stainless steel bolts/rivets (corrosion
+resistance)</li>
+<li><strong>Decking:</strong> Aluminum safety grating or composite deck
+plate</li>
+<li><strong>Finish:</strong> Powder coat (satin or textured,
+UV-resistant)</li>
+</ul>
+<h3 data-number="1.13.3" id="protective-finishing"><span class="header-section-number">1.13.3</span> Protective &amp;
+Finishing</h3>
+<ul>
+<li><strong>Rope Sealing:</strong> Spray foam or silicone caulk (exhaust
+penetration)</li>
+<li><strong>Mesh Screen:</strong> Galvanized steel wire (1/2” or 3/8”
+holes)</li>
+<li><strong>Protective Coatings:</strong> Epoxy primer + polyurethane
+topcoat (steel)</li>
+</ul>
+<hr />
+<h2 data-number="1.14" id="assembly-sequence-notes"><span class="header-section-number">1.14</span> ASSEMBLY SEQUENCE &amp;
+NOTES</h2>
+<h3 data-number="1.14.1" id="phase-1-trailer-preparation"><span class="header-section-number">1.14.1</span> Phase 1: Trailer
+Preparation</h3>
+<ol type="1">
+<li>Clean and prepare roof surface (remove any debris)</li>
+<li>Mark attachment points (four corners)</li>
+<li>Install backing plates or reinforcement if needed (inspect existing
+beams)</li>
+</ol>
+<h3 data-number="1.14.2" id="phase-2-platform-frame-fabrication-off-site"><span class="header-section-number">1.14.2</span> Phase 2: Platform Frame
+Fabrication (Off-Site)</h3>
+<ol type="1">
+<li>Cut and fit aluminum extrusion</li>
+<li>Assemble main frame (rectangular base)</li>
+<li>Weld gusset plates at attachment points</li>
+<li>Install decking and safety railing subassembly</li>
+<li>Powder coat all components</li>
+<li>Perform hydrostatic testing (if platform used as water
+containment)</li>
+</ol>
+<h3 data-number="1.14.3" id="phase-3-stair-fabrication-off-site"><span class="header-section-number">1.14.3</span> Phase 3: Stair Fabrication
+(Off-Site)</h3>
+<ol type="1">
+<li>Cut and bend steel tube for stringers</li>
+<li>Fit and tack all step treads</li>
+<li>Full penetration welds on all connections</li>
+<li>Verify step rise/run tolerance (±1/4”)</li>
+<li>Fabricate and weld mounting brackets</li>
+<li>Powder coat or apply epoxy finish</li>
+</ol>
+<h3 data-number="1.14.4" id="phase-4-platform-installation"><span class="header-section-number">1.14.4</span> Phase 4: Platform
+Installation</h3>
+<ol type="1">
+<li>Lift platform frame onto trailer roof (crane/equipment needed)</li>
+<li>Align four corner attachment points</li>
+<li>Tack-weld gusset plates to roof beams</li>
+<li>Perform final alignment (level check)</li>
+<li>Full penetration welds on all four corners</li>
+<li>Mount and weld stair assembly at rear-left corner</li>
+<li>Install safety railing and mesh screens</li>
+</ol>
+<h3 data-number="1.14.5" id="phase-5-utilities-integration"><span class="header-section-number">1.14.5</span> Phase 5: Utilities
+Integration</h3>
+<ol type="1">
+<li>Install generator in V-nose compartment</li>
+<li>Route and secure exhaust pipe through right-side wall</li>
+<li>Install pump and plumbing connections to IBC tanks</li>
+<li>Pressure test all hose connections (50 PSI minimum)</li>
+<li>Install fill nozzle on platform (center-front)</li>
+<li>Route electrical conduit for 120V/240V power</li>
+</ol>
+<h3 data-number="1.14.6" id="phase-6-testing-safety-verification"><span class="header-section-number">1.14.6</span> Phase 6: Testing &amp;
+Safety Verification</h3>
+<ol type="1">
+<li>Static load test on platform (500 lbs minimum, unloaded)</li>
+<li>Full system test with water at operating pressure</li>
+<li>Generator operation and exhaust isolation check</li>
+<li>Stair integrity and load rating verification (500+ lbs per
+step)</li>
+<li>Tie-down anchor strength verification</li>
+<li>Mobility and braking function check (if trailer equipped)</li>
+</ol>
+<hr />
+<h2 data-number="1.15" id="dimensional-callouts-reference"><span class="header-section-number">1.15</span> DIMENSIONAL CALLOUTS &amp;
+REFERENCE</h2>
+<h3 data-number="1.15.1" id="critical-measurement-points"><span class="header-section-number">1.15.1</span> Critical Measurement
+Points</h3>
+<p><strong>Stair Rise/Run:</strong> - Rise per step: 7.0” - Run per
+step: 10.0” - Total rise (10 steps): 70” - Total run (9 treads): 90”</p>
+<p><strong>Platform Heights (from ground):</strong> - Existing roof:
+~58-60” - Platform deck: ~90-96” (30-36” above roof) - Railing top:
+~126-132” (36” above deck) - Pilot eye level (standing): ~120-126”</p>
+<p><strong>Tank Clearances:</strong> - IBC tank clearance to roof:
+12-18” (for access) - Mixing tank access: 24” clearance on all sides -
+Generator service access: 30” clearance (front)</p>
+<p><strong>Door &amp; Opening Alignments:</strong> - Right-side door
+(32”W × 68”H): Does NOT interfere with IBC tanks - Rear door (76”W ×
+80”H): Full access for drone storage - Platform stairs: Located at
+rear-left corner (does not block right-side door)</p>
+<hr />
+<h2 data-number="1.16" id="operational-safety-notes"><span class="header-section-number">1.16</span> OPERATIONAL SAFETY NOTES</h2>
+<p>⚠️ <strong>Confined Space Risk:</strong> Interior may accumulate
+toxic fumes if not properly ventilated. Generator exhaust MUST exit
+through right wall. Operator must use in open air only.</p>
+<p>⚠️ <strong>Load Capacity:</strong> Platform is rated for pilot +
+drone (~150-200 lbs maximum). Do NOT exceed designed weight without
+structural analysis.</p>
+<p>⚠️ <strong>Electrical Hazard:</strong> All 120V/240V circuits must
+have proper GFCI protection. Generator bonding required if operating
+near conductive surfaces.</p>
+<p>⚠️ <strong>Tire &amp; Braking:</strong> Verify trailer brakes are
+functional. 4,600+ lbs liquid load requires adequate braking
+distance.</p>
+<p>⚠️ <strong>Wind Loading:</strong> Platform acts as a sail. DO NOT
+operate in sustained winds &gt;20 mph. When parked, deploy wind brakes
+or lower protective box.</p>
+<p>⚠️ <strong>Tie-Down Requirements:</strong> Platform and drone MUST be
+secured during transport. Verify all anchor points before towing.</p>
+<hr />
+<h2 data-number="1.17" id="maintenance-inspection-schedule"><span class="header-section-number">1.17</span> MAINTENANCE &amp; INSPECTION
+SCHEDULE</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 37%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Component</th>
+<th>Interval</th>
+<th>Task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Welds (stairs, platform)</td>
+<td>Annual</td>
+<td>Visual inspection, dye penetrant testing if cracks suspected</td>
+</tr>
+<tr>
+<td>Fasteners (bolts, rivets)</td>
+<td>Annual</td>
+<td>Torque verification, replacement if loose</td>
+</tr>
+<tr>
+<td>Mesh screen</td>
+<td>6 months</td>
+<td>Check for corrosion, replace if rust present</td>
+</tr>
+<tr>
+<td>Generator</td>
+<td>Per manufacturer</td>
+<td>Oil changes, filter replacement, fuel stabilization</td>
+</tr>
+<tr>
+<td>Hose/Fittings</td>
+<td>Annual</td>
+<td>Pressure test (50 PSI), replace if leaks found</td>
+</tr>
+<tr>
+<td>Trailer tires</td>
+<td>Annual</td>
+<td>Pressure check, tread depth, alignment</td>
+</tr>
+<tr>
+<td>Protective box seals</td>
+<td>6 months</td>
+<td>Check for weather degradation, reseal if necessary</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 data-number="1.18" id="build-timeline-cost-estimate"><span class="header-section-number">1.18</span> BUILD TIMELINE &amp; COST
+ESTIMATE</h2>
+<h3 data-number="1.18.1" id="timeline"><span class="header-section-number">1.18.1</span> Timeline</h3>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 41%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Duration</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Design &amp; Drawings</strong></td>
+<td>1-2 weeks</td>
+<td>Complete (delivered)</td>
+</tr>
+<tr>
+<td><strong>Material Procurement</strong></td>
+<td>2-3 weeks</td>
+<td>Order long-lead items in parallel</td>
+</tr>
+<tr>
+<td><strong>Fabrication (Off-Site)</strong></td>
+<td>4-6 weeks</td>
+<td>Platform frame, stairs, all subassemblies</td>
+</tr>
+<tr>
+<td><strong>Paint/Finishing</strong></td>
+<td>1 week</td>
+<td>Powder coat or epoxy finish</td>
+</tr>
+<tr>
+<td><strong>Installation (On-Site)</strong></td>
+<td>1-2 weeks</td>
+<td>Platform mounting, stair attachment, utility integration</td>
+</tr>
+<tr>
+<td><strong>Testing &amp; Commissioning</strong></td>
+<td>1 week</td>
+<td>Load tests, pressure tests, electrical safety checks</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>9-14 weeks</strong></td>
+<td>Can run procurement + fabrication in parallel</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="1.18.2" id="cost-estimate-preliminary"><span class="header-section-number">1.18.2</span> Cost Estimate
+(Preliminary)</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 30%" />
+<col style="width: 32%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Low Estimate</th>
+<th>High Estimate</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Materials</strong></td>
+<td>$5,000</td>
+<td>$8,000</td>
+<td>Steel, aluminum, fasteners, paint</td>
+</tr>
+<tr>
+<td><strong>Fabrication Labor</strong></td>
+<td>$3,000</td>
+<td>$5,000</td>
+<td>Cutting, bending, tacking, fitting</td>
+</tr>
+<tr>
+<td><strong>Welding &amp; Finishing</strong></td>
+<td>$1,000</td>
+<td>$2,000</td>
+<td>Welding labor, grinding, paint application</td>
+</tr>
+<tr>
+<td><strong>Installation Labor</strong></td>
+<td>$1,000</td>
+<td>$2,000</td>
+<td>On-site assembly, alignment, testing</td>
+</tr>
+<tr>
+<td><strong>Utilities &amp; Misc</strong></td>
+<td>$700</td>
+<td>$1,500</td>
+<td>Plumbing, electrical, hardware, sealants</td>
+</tr>
+<tr>
+<td><strong>Contingency (10%)</strong></td>
+<td>$1,070</td>
+<td>$1,900</td>
+<td>Unexpected issues, rework, expedited shipping</td>
+</tr>
+<tr>
+<td><strong>TOTAL PROJECT</strong></td>
+<td><strong>$11,770</strong></td>
+<td><strong>$20,400</strong></td>
+<td>Fabrication + installation only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional One-Time Costs (Not Included):</strong> -
+Generator: $500–$800 - Pump: $300–$500 - IBC Tanks (2×): $200–$400 -
+Drone: $10,000–$50,000+ (customer’s equipment)</p>
+<hr />
+<h1 data-number="2" id="technical-diagrams"><span class="header-section-number">2</span> TECHNICAL DIAGRAMS</h1>
+<h2 data-number="2.1" id="diagram-1-complete-side-elevation-leftdriver-side"><span class="header-section-number">2.1</span> DIAGRAM 1: COMPLETE SIDE
+ELEVATION (LEFT/DRIVER SIDE)</h2>
+<pre><code>                        PILOT STANDING AREA
+                     Safety Railing &amp; Mesh Screen
+                     ╔════════════════════════════╗
+                     ║        36&quot; above deck      ║
+                     ║      ┌────────────────┐    ║
+                     ║      │  Mesh Screen   │    ║
+                     ║      │  1/2&quot; holes    │    ║
+      Handrail       ║      │                │    ║
+      (1.5&quot; dia)     ║    ╔═╬════════════════╬═╗  ║
+      ┌─────────┐    ║    ║ │                │ ║  ║
+      │────────────────╬══╪═╧════════════════╧═╪══╬─ Railing top (36&quot;)
+      │       ║  ║    ║    ║  Platform Deck  ║ ║  ║ 
+      │       ║  ║    ║    ║  Aluminum Frame ║ ║  ║
+      │       ║  ║    ║    ║                 ║ ║  ║
+      └───────╫──┘    ║    ╚═════════════════╝ ║  ║
+              ║       ║         (84&quot; wide)    ║  ║
+              ║       ╚═════════════════════════╝  ║  Platform height
+              ║            Platform: 30-36&quot; above roof
+              ║
+              │ STAIRS (9&quot; wide, 10 steps)
+              │ Welded Steel Frame
+              │ 7&quot; rise, 10&quot; run per step
+            ╱─╫────────────────────────────────────────────────
+          ╱   ║
+        ╱     ║  Handrail bracket
+      ╱       ║  (welded to fender)
+    ╱         ║
+  ╱           ╫─────────────────────────────────────────────────
+╱ ┌───────────╨──────────────────────────────────────────┐
+│  COMPOSITE ROOF WITH 1&quot;×1.5&quot; BEAMS (24&quot; on-center)    │ 83&quot; interior
+│  ┌─────────────┬──────────────┬──────────────┬────────┤ 
+│  │  IBC Tank   │              │   IBC Tank   │Mixing  │
+│  │  #1 (Left)  │ [Generator]  │   #2 (Right) │ Tank   │
+│  │ 275 gal     │   (V-nose)   │  275 gal     │ 75 gal │
+│  │ 48×40×46&quot;   │              │ 48×40×46&quot;    │        │
+│  │ Over        │              │ Over         │ Cone-  │
+│  │ Left Axle   │              │ Right Axle   │ bottom │
+└──┴─────────────┴──────────────┴──────────────┴────────┘
+   │◄─────────────────────────  86&quot; + Tongue ────────────────┬┴─
+   │                                                          Hitch
+   └──────────────────┬──────────────────┬────────────────────┘
+           Fender     │                  │    Fender
+       (9&quot; protrusion)│                  │ (9&quot; protrusion)
+          58-62&quot; between fenders
+                    Wheel (205/75R15)</code></pre>
+<hr />
+<h2 data-number="2.2" id="diagram-2-top-down-plan-view-interior-layout"><span class="header-section-number">2.2</span> DIAGRAM 2: TOP-DOWN PLAN VIEW
+(INTERIOR LAYOUT)</h2>
+<pre><code>FRONT (V-NOSE) ≈ 50&quot; from front edge
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                       │
+│       GENERATOR &amp; CHARGER              CONE-BOTTOM MIXING TANK      │
+│       [6 kW Portable]                  [60-75 gal, pump system]      │
+│       └─ Exhaust pipe to               └─ Feed pump                  │
+│          RIGHT WALL (2.5&quot; dia)            connected to IBC tanks     │
+│                                                                       │
+│ ┌───────────────────────┐  INTERIOR BEAMS  ┌───────────────────────┐│
+│ │                       │  (1&quot;×1.5&quot; @24&quot;   │                       ││
+│ │   IBC Tank #1         │   spacing)       │   IBC Tank #2         ││
+│ │   (Left Side)         │  ║   ║   ║   ║   │   (Right Side)        ││
+│ │   275 gal             │  ║   ║   ║   ║   │   275 gal             ││
+│ │   48&quot;L×40&quot;W×46&quot;H      │  ║   ║   ║   ║   │   48&quot;L×40&quot;W×46&quot;H      ││
+│ │                       │  ║   ║   ║   ║   │                       ││
+│ │   Over Left Axle      │  ║   ║   ║   ║   │   Over Right Axle    ││
+│ └───────────────────────┘  ║   ║   ║   ║   └───────────────────────┘│
+│                            ║   ║   ║   ║                             │
+│  ┌─ Check Valve           ║   ║   ║   ║                             │
+│  │  (IBC port)            ║   ║   ║   ║                             │
+│  └─ Supply Pump ────────┐ ║   ║   ║   ║   Drain valves accessible  │
+│     (Electric)          │ ║   ║   ║   ║   │                         │
+│     10-15 GPM           └─║───║───║───║───┘                         │
+│                           ║   ║   ║   ║                             │
+│ Fill Nozzle Access (Platform, center-front)                         │
+│                                                                       │
+│ PLATFORM LEVEL  ┌─────────────────────────────────────────────┐   │
+│ (30-36&quot; above)  │    LAUNCH PLATFORM (84&quot;W × ~60&quot;D)          │   │
+│                 │    ┌────────────────────────────────┐      │   │
+│                 │    │  SAFETY RAILING &amp; MESH SCREEN │      │   │
+│                 │    ├────────────────────────────────┤      │   │
+│                 │    │    PILOT STANDING AREA         │      │   │
+│                 │    │    (48&quot; deep, center)         │      │   │
+│                 │    │                                │      │   │
+│                 │    │ ┌──────────────────────────┐  │      │   │
+│                 │    │ │  DRONE with protective   │  │      │   │
+│                 │    │ │  box (removable)         │  │      │   │
+│                 │    │ │  54&quot;L × 42&quot;W × 30&quot;H     │  │      │   │
+│                 │    │ │                          │  │      │   │
+│                 │    │ └──────────────────────────┘  │      │   │
+│                 │    │                                │      │   │
+│                 │    │    STAIRS ACCESS (rear-left)  │      │   │
+│                 │    └────────────────────────────────┘      │   │
+│                 └─────────────────────────────────────────────┘   │
+│                                                                       │
+└─────────────────────────────────────────────────────────────────────┘</code></pre>
+<hr />
+<h2 data-number="2.3" id="diagram-3-stair-assembly-section-detail"><span class="header-section-number">2.3</span> DIAGRAM 3: STAIR ASSEMBLY
+SECTION DETAIL</h2>
+<pre><code>SIDE VIEW - Welded Steel Stair Frame
+
+                          Platform Deck (36&quot; high above roof)
+                          ┌────────────────────────────────────────┐
+                          │ Handrail attachment point   Step #10   │
+                          │ (welded, both sides)        (top tread)│
+                          │                            ┌─────────┐ │
+                          │ ┌──────────────────────────┤  10&quot;W   │ │
+                          │ │  Handrail (1.5&quot; diameter) │  run   │ │
+                          │ │  Steel pipe, continuous   └─────────┘ │
+                          ╱╱│╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱│
+                        ╱  │  │                              Step #9 │
+                      ╱    │  │  7&quot;                         ┌────────┤
+                    ╱      │  │  rise                       │  10&quot;W  │
+                  ╱        │  │  per                        │ run    │
+                ╱          │  │  step                       └────────┤
+              ╱            │  │                              Step #8 │
+            ╱              │  │  ╔═════════════════════════╦════════╗
+          ╱                │  │  ║ Tread material:         ║        ║
+        ╱                  │  │  ║ 3/8&quot; steel diamond     ║        ║
+      ╱                    │  │  ║ plate or flat bar      ║        ║
+    ╱                      │  │  ║                        ║        ║
+  ╱     ┌──────────────┐   │  │  ║ Tread width: 9&quot;       ║        ║
+╱───────┤  STRINGER    │   │  │  ║                        ║        ║
+│  2&quot;×4&quot;│  TUBE 3/16&quot;  │   │  │  ╚════════════════════════╩════════╝
+│  Rec. │  wall,       │   └──┼───┐  
+│  ASTM │  Both sides) │  Step #2  │
+│  A36  │              │      ┌────┤
+│       │  Welded      │      │ 10&quot;│
+│       │  connection  │      │    │
+│       │  points:     │      └────┤
+│       │              │  Step #1  │
+│       │  • Top       │  (1st step│
+│       │  • Every     │   above   │
+│       │    step      │   trailer │
+│       │  • Bottom    │   deck)   │
+│       │              │           │
+└───┬───┴──────────────┘───────┐───┘
+    │                          │
+    │   BASE BRACKET           │
+    │   (welded to fender)     │
+    │                          │
+    └──────────────┬───────────┘
+                   ▼
+            TRAILER FENDER
+            (9&quot; protrusion)</code></pre>
+<hr />
+<h2 data-number="2.4" id="diagram-4-front-elevation-view"><span class="header-section-number">2.4</span> DIAGRAM 4: FRONT ELEVATION
+VIEW</h2>
+<pre><code>                       PLATFORM FRONT ASSEMBLY
+                       
+                    ╔══════════════════════════╗
+                    ║   SAFETY RAILING        ║  ← 36&quot; above platform
+                    ║   (1.5&quot; diameter pipe)  ║
+              ┌─────╫──────────────────────────╫─────┐
+              │     ║                          ║     │
+              │     ║  ┌────────────────────┐  ║     │
+              │     ║  │ MESH DRONE SCREEN  │  ║     │
+              │     ║  │ 1/2&quot; or 3/8&quot; holes │  ║     │  Mesh area:
+              │     ║  │                    │  ║     │  84&quot;W × 24&quot;H
+              │     ║  │ Protects operators │  ║     │
+              │     ║  │ from propeller      │  ║     │
+              │     ║  │ contact             │  ║     │
+              │     ║  └────────────────────┘  ║     │
+              │     ║      ▲                   ║     │
+              │     ║      │ 24&quot; height        ║     │
+              │     ║      ▼                   ║     │
+              │ ╔═══╫══════════════════════════╫═══╗ │
+              │ ║   ║   PLATFORM DECK (84&quot;W)   ║   ║ │  ← Platform
+              │ ║   ║   Aluminum safety        ║   ║ │     surface
+              │ ║   ║   grating or composite   ║   ║ │
+              │ ║   ║                          ║   ║ │
+              │ ║   ║      ┌────────────────┐  ║   ║ │
+              │ ║   ║      │  PILOT AREA    │  ║   ║ │
+              │ ║   ║      │  (48&quot; front)   │  ║   ║ │
+              │ ║   ║      │                │  ║   ║ │
+              │ ║   ║      │ Standing       │  ║   ║ │
+              │ ║   ║      │ Position       │  ║   ║ │
+              │ ║   ║      │                │  ║   ║ │
+              │ ║   ║      └────────────────┘  ║   ║ │
+              │ ║   ║                          ║   ║ │
+              │ ╚═══╫══════════════════════════╫═══╝ │  ← 30-36&quot; above
+              │     ║   STAIR ACCESS           ║     │     existing roof
+              │     ║   (Rear-left corner)     ║     │
+              │ ┌───╫─ ┌─────────┐             ║ ────┤
+              │ │   ║  │ Step #1 │             ║    │ │
+              │ │   ║  │ Step 2-N│             ║    │ │
+              │ │   ║  └─────────┘             ║    │ │
+              └─┴───┴──────────────────────────┴────┴─┘
+                │ FENDER │               │ FENDER │
+                │         ◄─── 84&quot; total width ───►│
+                │  9&quot; protrusion              9&quot; protrusion
+                │ 58-62&quot; between fenders</code></pre>
+<hr />
+<h2 data-number="2.5" id="diagram-5-interior-plumbing-generator-routing"><span class="header-section-number">2.5</span> DIAGRAM 5: INTERIOR PLUMBING
+&amp; GENERATOR ROUTING</h2>
+<pre><code>LIQUID SYSTEM OVERVIEW
+
+    IBC TANK #1 (Left)           IBC TANK #2 (Right)
+    275 gallons                  275 gallons
+    ┌──────────────┐             ┌──────────────┐
+    │ Top fill:    │             │ Top fill:    │
+    │ 2&quot; cap area  │             │ 2&quot; cap area  │
+    │              │             │              │
+    │ Lower drain: │             │ Lower drain: │
+    │ 1.5&quot; outlet  │             │ 1.5&quot; outlet  │
+    └──────┬───────┘             └──────┬───────┘
+           │                             │
+           │  1&quot; suction hose            │  1&quot; suction hose
+           │  (with check valve)         │  (with check valve)
+           └─────────┬─────────────────┬─┘
+                     │                 │
+                     └────┬────────────┘
+                          │
+                          ▼
+                    ╔═════════════╗
+                    ║   PUMP      ║  ← Electric diaphragm or
+                    ║ 10-15 GPM   ║    centrifugal pump
+                    ║             ║    120V or 240V power
+                    ║  (Electric) ║    from generator
+                    ╚──────┬──────╝
+                           │
+                           │ 1.5&quot; discharge hose
+                           │ (high-pressure rated)
+                           ▼
+        ┌──────────────────────────────────────┐
+        │   CONE-BOTTOM MIXING TANK            │
+        │   60-75 gallons, 36&quot;H × 24&quot;Dia      │
+        │   (Front section, left of V-nose)   │
+        │                                      │
+        │   • Drain valve (bottom)             │
+        │   • Suction port for spray system    │
+        │   • Fill nozzle from pump (above)    │
+        │   • Level gauge (side)               │
+        └──────┬───────────────────────────────┘
+               │
+               │ Discharge to nozzle
+               │ (pressurized line)
+               ▼
+        ╔═════════════════════════════╗
+        ║   PLATFORM FILL NOZZLE      ║
+        ║   (Center-front, visible)   ║
+        ║   Quick-disconnect coupling ║
+        ║   (hose connects here)      ║
+        ║                             ║
+        ║   Connects to spray system  ║
+        ║   and/or refill portable    ║
+        ║   spray tanks               ║
+        ╚═════════════════════════════╝
+
+
+GENERATOR EXHAUST ROUTING
+
+    GENERATOR in V-NOSE
+    ┌─────────────────────────┐
+    │  6 kW Portable Gen      │
+    │  └─ 2.5&quot; exhaust outlet │
+    │     (top of unit)       │
+    └────────┬────────────────┘
+             │
+             │ 2.5&quot; stainless steel pipe
+             │ (routed horizontally)
+             │
+    ┌────────┴──────────────────────────────┐
+    │    INTERIOR ROUTING (along right wall)│
+    │                                       │
+    │    Exhaust pipe clips every 18&quot;       │
+    │    Routed 12-18&quot; from ground          │
+    │    (below IBC tank level)             │
+    │                                       │
+    │    Sealed conduit or heat wrap        │
+    │    (if within 6&quot; of interior)         │
+    │                                       │
+    │    Descends slightly for drainage     │
+    │                                       │
+    └────────┬──────────────────────────────┘
+             │
+             │ Exits through right-side wall
+             │ 12&quot; from rear
+             │
+    ┌────────┴────────────┐
+    │  WALL PENETRATION   │
+    │  3&quot; diameter hole   │
+    │  Heat-resistant     │
+    │  gasket seal        │
+    │  Caulked with       │
+    │  silicone/foam      │
+    │                     │
+    └────────┬────────────┘
+             │
+             ▼
+    ┌────────────────────────┐
+    │  90° ELBOW TERMINATION │
+    │  Points downward       │
+    │  4&quot; above roof level   │
+    │  (away from operator)  │
+    └────────────────────────┘</code></pre>
+<hr />
+<h2 data-number="2.6" id="diagram-6-weight-distribution-load-analysis"><span class="header-section-number">2.6</span> DIAGRAM 6: WEIGHT DISTRIBUTION
+&amp; LOAD ANALYSIS</h2>
+<pre><code>SIDE-VIEW WEIGHT DISTRIBUTION (LOADED)
+
+        PLATFORM
+        (empty) ~800 lbs           DRONE &amp; PROTECTIVE BOX
+                                   ~150-200 lbs
+        ╔════════════════════════╗
+        ║                        ║  
+        ║    STAIRS ~400 lbs     ║
+        ║                        ║
+    ┌───╫────────────────────────╫────┐
+    │   ║      GENERATOR          ║    │
+    │   ║      ~300 lbs           ║    │
+    │   │      (front-left)       │    │
+    │   │                         │    │
+    │   │  CONE-BOTTOM TANK       │    │
+    │   │  ~600 lbs (full)        │    │
+    │   │  (front area)           │    │
+    │   │                         │    │
+    │   │ ┌─────────┬─────────┐   │    │
+    │   │ │ IBC #1  │ IBC #2  │   │    │
+    │   │ │ 2,300   │ 2,300   │   │    │
+    │   │ │ lbs ea. │ lbs ea. │   │    │
+    │   │ └─────────┴─────────┘   │    │
+    │   │                         │    │
+    └───┴─────────────────────────┴────┘
+        ▲  Left Axle          ▲  Right Axle
+        │  ~2,600 lbs load    │  ~2,600 lbs load
+        
+    TOTAL LOADED WEIGHT: ~5,225+ lbs (EXCEEDS 4,700 lbs capacity)
+    
+    ⚠️  RECOMMENDED MAXIMUM OPERATING LIQUID: 400-450 gallons (~3,500 lbs)
+
+
+AXLE LOAD COMPARISON
+
+    EMPTY TRAILER:  ~500-600 lbs per axle (minimal cargo)
+    
+    WITH FULL TANKS: ~2,600 lbs per axle
+    (IBC #1 &amp; #2 @ 2,300 lbs ea)
+    
+    + Generator, pump, mixing tank: +600 lbs
+    Distribution across center area: balanced
+    
+    TONGUE WEIGHT: ~400-500 lbs (10-12% of total)</code></pre>
+<hr />
+<h1 data-number="3" id="build-summary-next-steps"><span class="header-section-number">3</span> BUILD SUMMARY &amp; NEXT
+STEPS</h1>
+<h2 data-number="3.1" id="project-status-design-complete"><span class="header-section-number">3.1</span> Project Status: Design
+Complete</h2>
+<p>All technical specifications, drawings, and documentation are
+complete and ready for fabricator quotes.</p>
+<h3 data-number="3.1.1" id="key-design-strengths"><span class="header-section-number">3.1.1</span> Key Design Strengths</h3>
+<p>✅ Full 84” platform width for stable drone launch/landing ✅
+Elevated pilot station (30-36” above roof = superior visibility) ✅
+Integrated 550-gallon storage (400-450 gal recommended operating volume)
+✅ Welded steel construction (low maintenance, high durability) ✅
+Protected pilot area (railing + mesh screen) ✅ Quick-access fill system
+(center-front nozzle) ✅ Detailed fabrication drawings (ready for quoted
+build)</p>
+<h3 data-number="3.1.2" id="recommended-next-steps"><span class="header-section-number">3.1.2</span> Recommended Next Steps</h3>
+<h4 data-number="3.1.2.1" id="phase-1-pre-construction-weeks-1-2"><span class="header-section-number">3.1.2.1</span> Phase 1: Pre-Construction
+(Weeks 1-2)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Present design drawings and
+specifications to fabricators</label></li>
+<li><label><input type="checkbox"></input>Obtain detailed labor quotes
+(fabrication, welding, installation)</label></li>
+<li><label><input type="checkbox"></input>Verify trailer structural integrity
+(inspect roof beams, frame welds)</label></li>
+<li><label><input type="checkbox"></input>Identify local welding/fabrication
+shops (meet to review plans)</label></li>
+<li><label><input type="checkbox"></input>Confirm generator model and exhaust
+specifications</label></li>
+</ul>
+<h4 data-number="3.1.2.2" id="phase-2-procurement-weeks-2-3"><span class="header-section-number">3.1.2.2</span> Phase 2: Procurement (Weeks
+2-3)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Place orders for long-lead items
+(aluminum extrusion, steel tube)</label></li>
+<li><label><input type="checkbox"></input>Arrange delivery schedule
+(coordinate with fabricator availability)</label></li>
+<li><label><input type="checkbox"></input>Procure fasteners, paint, sealants,
+electrical components</label></li>
+<li><label><input type="checkbox"></input>Confirm generator and pump
+specifications with manufacturer</label></li>
+</ul>
+<h4 data-number="3.1.2.3" id="phase-3-fabrication-weeks-3-9"><span class="header-section-number">3.1.2.3</span> Phase 3: Fabrication (Weeks
+3-9)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Fabricator begins platform frame
+assembly (off-site)</label></li>
+<li><label><input type="checkbox"></input>Parallel: Stair fabrication and
+welding</label></li>
+<li><label><input type="checkbox"></input>Schedule dye penetrant testing (PT)
+on platform welds</label></li>
+<li><label><input type="checkbox"></input>Powder coat or epoxy finish all
+components</label></li>
+<li><label><input type="checkbox"></input>Perform hydrostatic pressure test on
+plumbing subassembly</label></li>
+</ul>
+<h4 data-number="3.1.2.4" id="phase-4-installation-weeks-9-11"><span class="header-section-number">3.1.2.4</span> Phase 4: Installation
+(Weeks 9-11)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Verify trailer is level and on solid
+ground</label></li>
+<li><label><input type="checkbox"></input>Lift and position platform frame
+(crane required, ~2,000 lbs)</label></li>
+<li><label><input type="checkbox"></input>Align and tack-weld platform to roof
+beams</label></li>
+<li><label><input type="checkbox"></input>Attach stair assembly (rear-left
+corner)</label></li>
+<li><label><input type="checkbox"></input>Install railing and mesh screen
+subassembly</label></li>
+<li><label><input type="checkbox"></input>Route plumbing, electrical, exhaust
+through trailer interior</label></li>
+</ul>
+<h4 data-number="3.1.2.5" id="phase-5-commissioning-weeks-11-14"><span class="header-section-number">3.1.2.5</span> Phase 5: Commissioning
+(Weeks 11-14)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Perform static load test (500 lbs
+distributed on platform)</label></li>
+<li><label><input type="checkbox"></input>Pressure test plumbing system (50
+PSI minimum, 5 minutes)</label></li>
+<li><label><input type="checkbox"></input>Electrical safety check (GFCI
+outlets, generator bonding, breaker function)</label></li>
+<li><label><input type="checkbox"></input>Generator exhaust isolation test
+(ensure no interior fumes)</label></li>
+<li><label><input type="checkbox"></input>Stair load rating verification (step
+by step, 500+ lbs per step)</label></li>
+<li><label><input type="checkbox"></input>Full system test with water (fill
+IBC tanks, run pump, verify nozzle flow)</label></li>
+<li><label><input type="checkbox"></input>Safety briefing and operator
+training</label></li>
+</ul>
+<hr />
+<h2 data-number="3.2" id="design-assumptions-limitations"><span class="header-section-number">3.2</span> Design Assumptions &amp;
+Limitations</h2>
+<h3 data-number="3.2.1" id="key-assumptions"><span class="header-section-number">3.2.1</span> Key Assumptions</h3>
+<ol type="1">
+<li><strong>Trailer Roof Structural Integrity:</strong> Composite roof
+with 1”×1.5” steel beams can support 350 lbs per corner gusset weld</li>
+<li><strong>Standard Enclosed Trailer:</strong> Design assumes
+dual-axle, single-door or double-door configuration</li>
+<li><strong>Generator in V-Nose:</strong> V-nose compartment is 48”+
+deep and accessible</li>
+<li><strong>Water-Based Spray Solution:</strong> Liquid density assumed
+8-8.5 lbs/gallon</li>
+</ol>
+<h3 data-number="3.2.2" id="design-limitations"><span class="header-section-number">3.2.2</span> Design Limitations</h3>
+<ol type="1">
+<li><strong>Payload Constraint:</strong> 550 gallons liquid + platform
+exceeds 4,700 lbs capacity
+<ul>
+<li><strong>Mitigation:</strong> Operate at 400-450 gallons maximum</li>
+</ul></li>
+<li><strong>Wind Loading:</strong> Platform not designed for sustained
+winds &gt;20 mph</li>
+<li><strong>Confined Space Risk:</strong> Interior may accumulate toxic
+fumes without proper ventilation</li>
+<li><strong>Tire/Brake Capacity:</strong> Verify towing vehicle has
+adequate brakes for loaded weight</li>
+</ol>
+<hr />
+<h2 data-number="3.3" id="reference-documentation"><span class="header-section-number">3.3</span> Reference Documentation</h2>
+<h3 data-number="3.3.1" id="included-files"><span class="header-section-number">3.3.1</span> Included Files</h3>
+<p><strong>1. propsuav-build-summary.md</strong> - Executive overview,
+design decisions, cost/timeline estimates</p>
+<p><strong>2. propsuav-platform-technical-specs.md</strong> - Complete
+technical specification, materials list, assembly sequence, maintenance
+schedule - 20,600+ words</p>
+<p><strong>3. propsuav-platform-ascii-diagrams.txt</strong> - 8 detailed
+ASCII technical diagrams with dimensional callouts - 30,600+ words</p>
+<p><strong>4. trailer-specs.md</strong> - Existing trailer dimensions,
+payload capacity, constraints</p>
+<p><strong>5. PropsUAV-Platform-Design-Package.pdf</strong> (This
+Document) - Professional consolidated PDF with all content, diagrams,
+and specifications</p>
+<hr />
+<h2 data-number="3.4" id="professional-standards-compliance"><span class="header-section-number">3.4</span> Professional Standards &amp;
+Compliance</h2>
+<h3 data-number="3.4.1" id="standards-referenced"><span class="header-section-number">3.4.1</span> Standards Referenced</h3>
+<ul>
+<li><strong>ASTM A36:</strong> Structural Steel specification</li>
+<li><strong>AWS D1.1:</strong> Structural Welding Code - Steel</li>
+<li><strong>NFPA 70:</strong> National Electrical Code (NEC)</li>
+<li><strong>ANSI A10.48:</strong> Safety Practices with Mobile Elevated
+Work Platforms</li>
+</ul>
+<h3 data-number="3.4.2" id="recommended-professional-inspections"><span class="header-section-number">3.4.2</span> Recommended Professional
+Inspections</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>Structural Engineer
+Review:</strong> Verify gusset weld design and load path</label></li>
+<li><label><input type="checkbox"></input><strong>Electrical
+Inspector:</strong> Validate GFCI protection, generator
+bonding</label></li>
+<li><label><input type="checkbox"></input><strong>Welder
+Certification:</strong> Ensure AWS D1.1 certification (structural
+steel)</label></li>
+<li><label><input type="checkbox"></input><strong>Hydraulic/Plumbing
+Inspector:</strong> Pressure test and certification of hose
+assembly</label></li>
+</ul>
+<hr />
+<h2 data-number="3.5" id="conclusion"><span class="header-section-number">3.5</span> Conclusion</h2>
+<p>This design provides a <strong>complete, buildable solution</strong>
+for PropsUAV’s mobile drone spraying operation. The elevated platform
+offers optimal pilot positioning, the dual IBC storage system provides
+extended range, and the integrated power system enables autonomous
+operation.</p>
+<p><strong>Build Cost:</strong> $11,770–$20,400 (fabrication +
+installation, 9-14 weeks)</p>
+<p><strong>Next Action:</strong> Distribute design package to 2-3 local
+fabricators for detailed labor quotes and timeline confirmation.</p>
+<hr />
+<p><em>Design completed: May 2026</em> <em>Ready for fabrication &amp;
+procurement</em> <em>All drawings and specifications included</em></p>
+<hr />
+<p><strong>Document Prepared By:</strong> Avest Ltd
+<strong>For:</strong> PropsUAV Platform Design &amp; Build
+<strong>Date:</strong> May 2026 <strong>Status:</strong> Complete –
+Ready for Fabrication</p>
+</body>
+</html>

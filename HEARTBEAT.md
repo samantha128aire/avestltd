@@ -1,11 +1,31 @@
 # HEARTBEAT.md
 
-## 📈 Stock Monitoring (Weekdays 7-9 AM CST ONLY)
-**Skip weekends and after-hours. Market: 8:30 AM - 3:00 PM CST**
+## 📈 Stock Monitoring (Weekdays, Market Days Only)
+**Skip weekends, after-hours, AND market holidays. Market: 8:30 AM - 3:00 PM CST**
 
-**TSLA** - Search "TSLA Tesla stock news" (last 24h)
+### 🚫 NYSE Market Holidays 2026 (skip ALL stock/SPX monitoring these days)
+- Jan 1 — New Year's Day
+- Jan 19 — MLK Day
+- Feb 16 — Presidents' Day
+- Apr 3 — Good Friday
+- May 25 — Memorial Day ⬅️ Monday May 25, 2026 (upcoming)
+- Jul 3 — Independence Day (observed)
+- Sep 7 — Labor Day
+- Nov 26 — Thanksgiving Day
+- Nov 27 — Early close 1 PM ET (half day)
+- Dec 24 — Early close 1 PM ET (half day)
+- Dec 25 — Christmas Day
+
+**TSLA** (7-9 AM CST) - Search "TSLA Tesla stock news" (last 24h)
 - Check for: Major moves (>5%), earnings, launches, regulatory issues
 - **Only alert if significant** — routine trading = no notification
+
+**SPX Calendar Analysis** (2:00 PM CT / 3:00 PM ET) - **Market days only**
+- Check: Google Sheets "SPX Double Calendar Strategy Analysis - Version 2.0 (Corrected)"
+- Review: Excel spreadsheet 'Theta Trades' tab for currently open positions
+- Analyze: Current SPX drift against positions
+- Recommend: Actions per strategy guidelines (adjust, close, hold, etc.)
+- Alert: Send analysis + recommendations if action needed
 
 **MSFT** - Check if trading near $390
 - Alert if within $5 of target ($385-$395)

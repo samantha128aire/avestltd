@@ -1,0 +1,658 @@
+================================================================================
+PropsUAV DRONE LAUNCH PLATFORM - QUICK REFERENCE CARD
+================================================================================
+
+PROJECT OVERVIEW
+================================================================================
+Mobile drone spray platform on enclosed trailer with integrated liquid storage,
+generator power, and elevated pilot control station.
+
+Status: DESIGN COMPLETE — Ready for Fabrication Quotes
+Timeline: 9-14 weeks (2 design + 3 procurement + 4-6 fab + 1-2 install + 1 test)
+Budget: $11,770–$20,400 (fabrication & installation, excludes equipment)
+
+
+SPECIFICATIONS SUMMARY
+================================================================================
+
+TRAILER:
+  Length:           163" + 23" V-nose = 186" total
+  Width:            84" (exterior)
+  Interior Height:  83"
+  Payload Capacity: 4,700 lbs
+  Axles:            Dual rear (typical configuration)
+
+PLATFORM:
+  Elevation:        30-36" above existing roof
+  Width:            84" (full trailer width)
+  Usable Depth:     ~60-72" (stairs occupy rear section)
+  Material:         Aluminum 6061-T6 frame + composite decking
+  Weight Empty:     ~800 lbs
+
+STAIRS (Welded Steel):
+  Width:            9" between stringers
+  Rise per step:    7" (standard stair dimension)
+  Run per step:     10" (tread depth)
+  Total steps:      8-10
+  Handrail height:  36" above treads
+  Material:         ASTM A36 steel, fully welded
+  Load rating:      500+ lbs per step
+
+SAFETY RAILING:
+  Upper rail:       1.5" diameter steel pipe, 36" high
+  Lower rail:       1.5" diameter steel pipe, 12" high (kick protection)
+  Mesh screen:      1/2" galvanized wire, 24"H (drone protection)
+  Anchor points:    Four corners for tie-down (1/2" eye bolts)
+
+LIQUID STORAGE:
+  IBC Tank #1:      275 gallons, left side (over left axle)
+  IBC Tank #2:      275 gallons, right side (over right axle)
+  Mixing tank:      60-75 gallons, cone-bottom (front section)
+  Total capacity:   550-610 gallons
+  ⚠️  MAX RECOMMENDED: 400-450 gallons (leaves payload margin)
+  Pump:             10-15 GPM electric (120V/240V)
+  Fill nozzle:      Quick-disconnect, center-front platform
+
+POWER SYSTEM:
+  Generator:        6 kW, 120V/240V output (in V-nose)
+  Pump circuit:     Dedicated 240V (suction from IBC, discharge to mixing tank)
+  Platform outlets: 120V duplex (GFCI protected) on platform
+  Exhaust:          2.5" stainless pipe exits through right-side wall (12" from rear)
+  Conduit:          1" flexible, routed along interior beams
+
+
+STRUCTURAL MATERIALS
+================================================================================
+
+STEEL (ASTM A36):
+  ├─ Stair stringers:     2"×4" rectangular tube, 3/16" wall
+  ├─ Handrail:            1.5" diameter Schedule 40 pipe (continuous)
+  ├─ Vertical supports:   1" diameter Schedule 40 pipe (12" spacing)
+  ├─ Gusset plates:       1/2" thick steel, 12"×12" (four corners)
+  └─ All connections:     E7018 welded (SMAW) or ER70S-6 (FCAW)
+
+ALUMINUM (6061-T6):
+  ├─ Platform frame:      2"×4" extrusions
+  ├─ Decking:             Safety grating (5"×5" pattern) or composite
+  └─ Finish:              Powder coat (preferred) or epoxy + polyurethane
+
+FASTENERS & HARDWARE:
+  └─ All exterior:        Stainless steel (corrosion resistance)
+
+
+WEIGHT ANALYSIS
+================================================================================
+
+COMPONENT WEIGHTS (Approximate):
+  IBC Tank #1 (full):         2,300 lbs (275 gal @ 7.5 lbs/gal)
+  IBC Tank #2 (full):         2,300 lbs
+  Cone-bottom tank (full):      600 lbs (75 gal @ 8 lbs/gal)
+  Generator (dry fuel):         300 lbs
+  Platform frame:               800 lbs
+  Pump & plumbing:             150 lbs
+  Protective box:              200 lbs
+  Drone (typical):              75 lbs
+  Pilot + equipment:           250 lbs
+  ──────────────────────────────────────
+  TOTAL (at full capacity):  7,175 lbs
+
+⚠️  EXCEEDS 4,700 LBS CAPACITY BY ~2,475 LBS
+
+RECOMMENDED OPERATING CONFIGURATION:
+  Maximum liquid:         400-450 gallons (~3,500 lbs)
+  Left axle load:         ~2,600 lbs
+  Right axle load:        ~2,600 lbs
+  Total loaded weight:    ~4,500 lbs (safe margin)
+  Tongue weight:          10-12% = ~450-500 lbs
+
+
+COST BREAKDOWN
+================================================================================
+
+Materials:              $5,000–$8,000
+  ├─ Structural steel & aluminum
+  ├─ Fasteners & paint
+  ├─ Plumbing & electrical
+  └─ Conduit & fittings
+
+Fabrication Labor:      $3,000–$5,000
+  ├─ Cutting & bending
+  ├─ Tacking & fitting
+  └─ Assembly
+
+Welding & Finishing:    $1,000–$2,000
+  ├─ Welding labor
+  ├─ Grinding & cleanup
+  └─ Paint application
+
+Installation Labor:     $1,000–$2,000
+  ├─ On-site assembly
+  ├─ Alignment & testing
+  └─ Utility integration
+
+Utilities & Misc:       $700–$1,500
+  ├─ Plumbing system
+  ├─ Electrical wiring
+  └─ Sealants & hardware
+
+Contingency (10%):      $1,070–$1,900
+
+TOTAL PROJECT:          $11,770–$20,400
+                        (Fabrication + installation only)
+
+ADDITIONAL EQUIPMENT (Not Included):
+  Generator:            $500–$800
+  Pump:                 $300–$500
+  IBC Tanks (2×):       $200–$400
+  Drone:                $10,000–$50,000+
+
+
+TIMELINE & PHASES
+================================================================================
+
+Week 1-2:   DESIGN & PLANNING
+            ├─ Present designs to fabricators
+            ├─ Request detailed labor quotes
+            ├─ Inspect trailer structural integrity
+            └─ Confirm equipment specifications
+
+Week 2-3:   MATERIAL PROCUREMENT (Parallel with design)
+            ├─ Order long-lead items (aluminum, steel tube)
+            ├─ Arrange delivery schedule
+            ├─ Procure fasteners, paint, electrical
+            └─ Confirm generator & pump specs
+
+Week 3-9:   FABRICATION (Off-site)
+            ├─ Platform frame assembly
+            ├─ Stair fabrication & welding
+            ├─ Dye penetrant testing (PT) on welds
+            ├─ Powder coat or epoxy finish
+            └─ Pressure test plumbing subassembly
+
+Week 9-11:  INSTALLATION (On-site)
+            ├─ Mount platform frame (crane required, ~2,000 lbs)
+            ├─ Attach stair assembly
+            ├─ Install railing & mesh screen
+            └─ Route plumbing, electrical, exhaust
+
+Week 11-14: COMMISSIONING & TESTING
+            ├─ Static load testing (500 lbs distributed)
+            ├─ Pressure testing (50 PSI minimum, 5 min)
+            ├─ Electrical safety verification
+            ├─ Generator exhaust isolation test
+            ├─ Stair load verification (500+ lbs per step)
+            └─ Full system test with water
+
+TOTAL: 9–14 weeks (can parallelize procurement + fabrication)
+
+
+DIMENSIONS & CALLOUTS
+================================================================================
+
+PLATFORM HEIGHT:        30-36" above existing roof
+PILOT EYE LEVEL:        ~120-126" from ground (standing position)
+RAILING TOP:            ~126-132" from ground
+
+STAIR GEOMETRY:
+  Rise per step:        7.0" (consistent across all steps)
+  Run per step:         10.0" (tread depth)
+  Total rise (10 steps):70"
+  Total run (9 treads): 90"
+  Slope angle:          ~35 degrees
+
+IBC TANK DIMENSIONS:
+  Length:               ~48"
+  Width:                ~40"
+  Height:               ~46"
+  Placement:            Side-by-side over rear/mid axles
+
+DOOR CLEARANCES:
+  Right-side door:      32"W × 68"H (15" from front) — Does NOT interfere with tanks
+  Rear door:            76"W × 80"H (full access for drone storage)
+  Platform stairs:      Located at rear-left corner (does not block right-side door)
+
+GENERATOR EXHAUST EXIT:
+  Location:             Right-side wall, 12" from rear
+  Height above roof:    4" (extends above roofline)
+  Direction:            90° elbow pointing downward/rearward
+
+
+KEY DESIGN DECISIONS
+================================================================================
+
+✓ PLATFORM ELEVATION (30-36"):
+  Why:     Optimal pilot eye level for drone visibility & control
+  Trade:   Requires substantial structural steel but maximizes safety
+  Result:  Superior operational precision
+
+✓ STAIR PLACEMENT (Rear-left corner):
+  Why:     Driver's side (left) avoids right-side door interference
+  Result:  Stairs in safe zone (outside liquid tanks)
+
+✓ WELDED STEEL STAIRS (vs. bolt-on):
+  Why:     Permanent durability, no maintenance, higher load rating
+  Result:  Integrated with trailer frame, no loosening fasteners
+
+✓ DUAL IBC TANKS (Over axles):
+  Why:     Optimal weight distribution, centers 4,600+ lbs on suspension
+  Result:  Minimizes tongue weight imbalance, improves towing stability
+  Note:    Full capacity (550 gal) exceeds 4,700 lbs → recommend 400-450 gal max
+
+✓ ALUMINUM PLATFORM (vs. steel):
+  Why:     Reduces weight (~200 lbs vs. 500 lbs for steel)
+  Result:  Improves payload margin for liquid & equipment
+
+✓ RIGHT-SIDE EXHAUST EXIT (vs. rear):
+  Why:     Rear exit would block drone storage; right-side maintains access
+  Result:  Exhaust vents away from pilot area (on center-front platform)
+
+
+SAFETY REQUIREMENTS
+================================================================================
+
+⚠️  CRITICAL SAFETY ITEMS:
+
+1. CONFINED SPACE HAZARD
+   → Generator exhaust MUST exit through right-side wall
+   → Operator must use platform in open air ONLY
+   → DO NOT operate in enclosed areas (risk of toxic fumes)
+
+2. WIND LOADING
+   → Platform acts as sail (84"W × 30"H visible profile)
+   → DO NOT operate in sustained winds >20 mph
+   → Platform may become unstable; deploy wind brakes if needed
+
+3. ELECTRICAL HAZARD
+   → All 120V circuits MUST have GFCI protection
+   → Generator bonding required (safety ground connection)
+   → Wet environment risk (liquid spraying, water from tanks)
+
+4. TIRE & BRAKING
+   → Loaded trailer: ~5,200 lbs (exceeds many small vehicles)
+   → Verify towing vehicle rated for 8,000+ lbs combined
+   → Verify trailer brakes are functional (longer stopping distance ~250 feet @ 60 mph)
+   → Maintain 150+ feet following distance on highways
+
+5. TRANSPORT SECURITY
+   → Platform & drone MUST be secured with ratchet straps (4 minimum)
+   → Use four anchor points (corners of protective box)
+   → Verify tie-downs before towing (visual inspection)
+
+6. LOAD CAPACITY
+   → Platform rated for pilot + drone (200 lbs max additional equipment)
+   → DO NOT exceed this weight without structural re-analysis
+   → Verify all equipment is properly secured during flight ops
+
+
+MATERIALS CHECKLIST
+================================================================================
+
+STEEL (Order from steel supplier):
+  ☐ 2"×4" rectangular tube, 3/16" wall, ASTM A36
+  ☐ 1.5" diameter Schedule 40 pipe (handrail)
+  ☐ 1" diameter Schedule 40 pipe (vertical supports)
+  ☐ 1/2" thick ASTM A36 plate (gussets)
+  ☐ Welding rod: E7018 or ER70S-6
+
+ALUMINUM (Order from metal supplier):
+  ☐ 2"×4" extrusion, 6061-T6 alloy (~400-500 linear feet)
+  ☐ Safety grating or composite decking (~80 sq ft)
+
+FASTENERS (Stainless steel):
+  ☐ 1/2" bolts, nuts, washers
+  ☐ Rivets (if using composite decking)
+  ☐ Electrical connectors & conduit
+
+PAINT & FINISH:
+  ☐ Powder coat (preferred, UV-resistant) or
+  ☐ Epoxy primer + polyurethane topcoat
+
+PLUMBING:
+  ☐ 1-1.5" polyurethane hose (high-pressure rated)
+  ☐ Quick-disconnect couplers
+  ☐ Check valves (IBC tank outlets)
+  ☐ Bulkhead connectors
+  ☐ Drain kits
+
+ELECTRICAL:
+  ☐ 1" flexible conduit (~100 feet)
+  ☐ 10 AWG copper wire
+  ☐ 120V duplex outlets (GFCI)
+  ☐ Breakers & switches
+
+MISCELLANEOUS:
+  ☐ Silicone caulk (heat-resistant)
+  ☐ Sealant foam
+  ☐ Mesh screen material (1/2" or 3/8" galvanized wire)
+
+
+FABRICATION CHECKLIST
+================================================================================
+
+PRE-FABRICATION:
+  ☐ Confirm trailer dimensions & condition
+  ☐ Inspect existing roof beams for damage
+  ☐ Identify fabrication shop & sign contract
+  ☐ Schedule material deliveries
+
+PLATFORM FRAME:
+  ☐ Cut aluminum extrusion to length
+  ☐ Fit main rectangular frame
+  ☐ Install gusset plates at four corners
+  ☐ Drill mounting holes for decking
+  ☐ Assemble safety railing subassembly
+  ☐ Powder coat all components
+
+STAIR ASSEMBLY:
+  ☐ Cut & bend steel tube for stringers
+  ☐ Fit all step treads (diamond plate or flat bar)
+  ☐ Weld tread to stringers (full penetration)
+  ☐ Fabricate handrail assembly
+  ☐ Fabricate mounting brackets for base
+  ☐ Weld all connections
+  ☐ Verify step rise/run tolerance (±1/4")
+  ☐ Powder coat or apply epoxy finish
+
+UTILITY SYSTEMS:
+  ☐ Assemble plumbing: IBC connections, pump inlet/outlet, hoses
+  ☐ Assemble electrical: conduit, wire, outlets, switches
+  ☐ Test plumbing at 50 PSI (5 minutes minimum)
+  ☐ Verify electrical continuity (multimeter test)
+
+QUALITY CONTROL:
+  ☐ Dye penetrant testing (PT) on all platform welds
+  ☐ Visual inspection of all stair welds
+  ☐ Pressure test at 50 PSI on plumbing
+  ☐ Paint adhesion test on finished surfaces
+  ☐ Bolt torque verification on assembled joints
+
+
+INSTALLATION CHECKLIST
+================================================================================
+
+SITE PREPARATION:
+  ☐ Park trailer on level ground
+  ☐ Engage brakes
+  ☐ Deploy stabilizer jacks (if equipped)
+  ☐ Verify surrounding clearance (crane access)
+
+PLATFORM MOUNTING:
+  ☐ Inspect trailer roof beams (confirm no corrosion/cracks)
+  ☐ Mark attachment points (four corners)
+  ☐ Position platform frame on roof (crane required, ~2,000 lbs lift)
+  ☐ Align four gusset plate connections
+  ☐ Tack-weld gussets to roof beams
+  ☐ Perform final alignment (level check)
+  ☐ Full penetration welds on all four corners
+
+STAIR INSTALLATION:
+  ☐ Position stair assembly at rear-left corner
+  ☐ Align mounting brackets to fender/frame base
+  ☐ Tack-weld base brackets
+  ☐ Verify stair angle (~35 degrees)
+  ☐ Full penetration welds on base connections
+  ☐ Mount handrail (continuous welding on both sides)
+
+RAILING & MESH:
+  ☐ Install upper horizontal rail
+  ☐ Install lower horizontal rail
+  ☐ Install vertical supports (12" spacing)
+  ☐ Attach mesh screen (welded or bolted to frame)
+  ☐ Verify no gaps >4" (sphere rule — prevent finger insertion)
+
+UTILITIES:
+  ☐ Mount generator in V-nose
+  ☐ Route exhaust pipe through right-side wall (sealed penetration)
+  ☐ Install pump & connect to IBC tank outlets
+  ☐ Install fill nozzle on platform (center-front)
+  ☐ Route electrical conduit along interior beams
+  ☐ Install 120V outlets on platform (GFCI-protected)
+  ☐ Install tie-down anchor points (four corners)
+
+
+TESTING & COMMISSIONING
+================================================================================
+
+STRUCTURAL TESTS:
+  ☐ Static load test: 500 lbs distributed on platform (visually inspect no deflection)
+  ☐ Stair load verification: 500+ lbs on each step (test all steps)
+  ☐ Weld inspection: Dye penetrant test (PT) on all platform welds
+  ☐ Bolt verification: Torque check on all fastened connections
+
+PLUMBING TESTS:
+  ☐ Pressure test at 50 PSI minimum (5 minutes duration)
+  ☐ Visual inspection for leaks (damp spots = failure)
+  ☐ Fill nozzle flow test (verify pump delivery to platform)
+  ☐ Tank drain valve operation (test all drain points)
+
+ELECTRICAL TESTS:
+  ☐ Generator output test (multimeter: 120V & 240V)
+  ☐ Generator bonding verification (ground continuity)
+  ☐ GFCI outlet test (press test button, verify breaker trips)
+  ☐ Pump motor operation (listen for prime, verify no grinding)
+  ☐ Platform outlet safety (verify GFCI protection)
+
+OPERATIONAL TESTS:
+  ☐ Generator warm-up (5 minutes idle)
+  ☐ Pump operation (start with IBC drain valve open)
+  ☐ Full system test with water (fill mixing tank, verify nozzle flow)
+  ☐ Generator exhaust isolation (smell test: no interior odor)
+  ☐ Operator safety briefing (review railing, stairs, mesh screen)
+
+SIGN-OFF:
+  ☐ Inspector sign-off (structural)
+  ☐ Electrician sign-off (GFCI & bonding)
+  ☐ Plumber sign-off (pressure test certification)
+  ☐ Fabricator final walk-through
+  ☐ Customer acceptance
+
+
+OPERATING PROCEDURES
+================================================================================
+
+PRE-FLIGHT SETUP (15-20 minutes):
+
+1. Position & Stabilize
+   ☐ Park on level ground
+   ☐ Engage brakes
+   ☐ Deploy jacks
+   ☐ Check wind <20 mph
+
+2. Generate Power
+   ☐ Start generator
+   ☐ 5-minute warm-up
+   ☐ Verify 120V/240V output
+   ☐ Confirm exhaust clear (visual)
+
+3. Fill Mixing Tank
+   ☐ Open IBC drain valve #1
+   ☐ Start pump
+   ☐ Fill cone-bottom tank to 75%
+   ☐ Close drain valve
+
+4. Climb Stairs
+   ☐ Ascend to platform
+   ☐ Unlock protective box
+   ☐ Position drone on deck
+   ☐ Secure with ratchet straps
+
+5. Drone Prep
+   ☐ Connect battery to charger
+   ☐ Perform preflight checks (gimbal, propellers, GPS, pump)
+   ☐ Fill hopper from platform nozzle
+
+6. Final Safety Check
+   ☐ Verify railing integrity
+   ☐ Check mesh screen (no tears)
+   ☐ Confirm platform is level
+   ☐ Clear loose objects
+   ☐ Brief team on safety zone
+
+IN-FLIGHT OPERATIONS:
+  ☐ Stand at pilot position (center-front)
+  ☐ Monitor drone altitude & spray pressure
+  ☐ Return to platform at 30% battery reserve
+  ☐ Land safely on platform center
+  ☐ Stop all rotors before approach
+  ☐ Refill hopper & swap battery
+  ☐ Repeat flight pattern
+
+POST-FLIGHT SHUTDOWN (10 minutes):
+  ☐ Power down drone completely
+  ☐ Lock protective box
+  ☐ Close IBC drain valves
+  ☐ Stop pump & generator
+  ☐ Allow 2-minute idle cool-down
+  ☐ Turn off all outlets
+  ☐ Descend stairs
+  ☐ Secure trailer for transport
+
+
+MAINTENANCE SCHEDULE
+================================================================================
+
+ANNUAL (Every 12 months):
+  ☐ Visual inspection of all welds (stairs, platform corners)
+  ☐ Dye penetrant testing (PT) on any suspect welds
+  ☐ Fastener torque verification (bolts, rivets)
+  ☐ Mesh screen inspection (replace if rust present)
+  ☐ Hose/fitting pressure test (50 PSI, 5 min)
+  ☐ Tire pressure & tread depth check
+  ☐ Trailer brake inspection & test
+  ☐ Generator service (oil change, filter replacement)
+
+EVERY 6 MONTHS:
+  ☐ Mesh screen visual inspection (corrosion check)
+  ☐ Protective box seals check (weather degradation)
+  ☐ Drain valve operation test (verify no sticking)
+  ☐ Platform grating inspection (debris removal, safety check)
+
+AS-NEEDED:
+  ☐ Hose replacement (if cracks, leaks, or degradation found)
+  ☐ Fastener replacement (if loose or corroded)
+  ☐ Paint touch-up (if rust or damage appears)
+  ☐ Seal reapplication (exhaust penetration, caulking)
+
+
+TROUBLESHOOTING QUICK GUIDE
+================================================================================
+
+PLATFORM ASSEMBLY ISSUES:
+
+Issue: Platform rocks or feels unstable
+  Cause: Loose welds or fasteners
+  Check: Verify all four corner gusset welds are tight
+  Fix: Re-weld if cracks found; torque bolts if assembly is bolted
+
+Issue: Stair treads are slippery
+  Cause: Smooth steel or contamination
+  Fix: Apply non-slip coating (aluminum oxide tape or grit)
+
+Issue: Protective box won't latch
+  Cause: Misalignment during assembly
+  Fix: Check hinge alignment; adjust pins or brackets
+
+
+PLUMBING ISSUES:
+
+Issue: Pump won't prime (no water flow)
+  Cause: Air lock or suction line leak
+  Check: Verify IBC drain valve is open; listen for sucking sound
+  Fix: Loosen suction line fitting, let water drain (burps air), retighten
+
+Issue: Slow flow at nozzle
+  Cause: Clogged filter or low tank level
+  Check: Verify mixing tank is full; inspect filter (remove trash)
+  Fix: Replace filter element; refill tank
+
+Issue: Pressure gauge reads zero (should show 10-20 PSI)
+  Cause: Gauge malfunction or pump not running
+  Check: Verify pump is running (listen for motor); check gauge valve
+  Fix: Replace gauge if confirmed faulty; verify 240V power to pump
+
+
+ELECTRICAL ISSUES:
+
+Issue: 120V outlets not working
+  Cause: GFCI breaker tripped or generator off
+  Check: Press "reset" button on GFCI outlet; verify generator is running
+  Fix: Check for water/moisture in outlet area (hazard); correct condition before re-arming
+
+Issue: Generator is running but outlets show no voltage
+  Cause: Generator output breaker off or faulty
+  Check: Locate generator output breaker (should be in ON position)
+  Fix: Switch to ON; if trips immediately, generator may be overloaded (check amp draw)
+
+Issue: Pump motor doesn't start
+  Cause: 240V circuit breaker off or loose connection
+  Check: Locate circuit breaker (should be in ON position); inspect connections
+  Fix: Switch breaker ON; if trips again, check for short circuit (call electrician)
+
+
+WEATHER & ENVIRONMENTAL ISSUES:
+
+Issue: Generator exhaust smell detected on platform
+  Cause: Right-side wall exit blocked or wind direction issue
+  Check: Inspect exhaust exit for debris; check wind direction
+  Fix: Clear obstruction; reposition trailer to vent away from platform
+
+Issue: Platform is wet/slippery after rain
+  Cause: Water accumulation on composite decking
+  Check: Inspect for standing water or poor drainage
+  Fix: Improve drainage; apply non-slip coating; allow air dry before use
+
+
+CONTACT & SUPPORT
+================================================================================
+
+For Fabrication Questions:
+  1. Check Technical Specifications (dimensions, materials)
+  2. Reference ASCII Diagrams (assembly sequence, callouts)
+  3. Review CAD Drawings (spatial layout, connections)
+  4. Contact design team with specific clarifications needed
+
+For Installation Questions:
+  1. Follow Installation Checklist (step-by-step process)
+  2. Reference Assembly Sequence in Technical Specs
+  3. Verify all tools & equipment available before starting
+  4. Call in professional if unsure of welding, electrical, or structural work
+
+For Operational Questions:
+  1. Review Operating Procedures section
+  2. Check Maintenance Schedule for routine tasks
+  3. Consult Troubleshooting Guide for specific issues
+  4. Contact equipment manufacturer (generator, pump, etc.)
+
+
+FINAL CHECKLIST BEFORE FIRST USE
+================================================================================
+
+☐ All welds inspected & dye penetrant tested
+☐ All fasteners torqued to specification
+☐ Plumbing pressure tested @ 50 PSI
+☐ Electrical system verified (voltages, GFCI, bonding)
+☐ Generator exhaust exit clear & away from operator area
+☐ Platform decking clean & non-slip surface verified
+☐ Safety railing secure (no gaps >4" per sphere rule)
+☐ Mesh screen intact (no holes or tears)
+☐ Stairs all steps verified safe (no loose treads, handrail solid)
+☐ Anchor points secure (four tie-down points functional)
+☐ Protective box latches working
+☐ Fill nozzle flow tested
+☐ Drain valves operable
+☐ Pump primes & delivers flow
+☐ Generator fuel level & oil level checked
+☐ Trailer tires properly inflated
+☐ Trailer brakes tested & functional
+☐ Team briefed on safety procedures
+☐ Site clearance verified (no overhead obstacles)
+☐ Weather check (wind <20 mph)
+
+🎯 READY TO OPERATE
+
+
+================================================================================
+END OF QUICK REFERENCE CARD
+================================================================================
+Keep this card for on-site reference during assembly, commissioning, and operations.
+Print if desired for field use.

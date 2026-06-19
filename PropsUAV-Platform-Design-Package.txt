@@ -1,0 +1,633 @@
+================================================================================
+                  PropsUAV DRONE LAUNCH PLATFORM
+                    Design Package - Complete Technical Documentation
+                                May 2026
+================================================================================
+
+PREPARED FOR: Avest Ltd
+STATUS: Complete -- Ready for Fabrication
+BUILD COST: $11,770–$20,400 (fabrication + installation, 9-14 weeks)
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+PropsUAV Drone Launch Platform is a complete, buildable system for operating 
+high-capacity agricultural spray drones from a mobile trailer-based launch facility.
+
+All technical specifications, drawings, and documentation are included in this package.
+
+KEY SPECIFICATIONS:
+• Platform Elevation: 30-36" above existing roof
+• Liquid Storage: 550 gallons (400-450 gal recommended operating)
+• Trailer Dimensions: 163" + 23" V-nose, 84" wide, 83" interior height
+• Payload Capacity: 4,700 lbs available
+• Build Timeline: 9-14 weeks
+• Cost Estimate: $11,770–$20,400
+
+DESIGN HIGHLIGHTS:
+✓ Full 84" platform width for stable drone launch/landing
+✓ Elevated pilot station with optimal visibility (120-126" eye level)
+✓ Integrated 550-gallon storage (400-450 gal recommended operating volume)
+✓ Welded steel construction (low maintenance, high durability)
+✓ Protected pilot area (railing + mesh screen)
+✓ Quick-access fill system (center-front nozzle)
+✓ Detailed fabrication drawings ready for fabricator quotes
+
+================================================================================
+PROJECT OVERVIEW
+================================================================================
+
+Mobile drone spraying platform mounted on enclosed trailer with integrated 
+liquid storage, generator power, and elevated pilot control station.
+
+DESIGN DELIVERABLES:
+
+1. Technical Drawings (6 High-Resolution Views)
+   - Isometric 3D View: Complete assembly with platform, stairs, tanks, generator
+   - Top-Down Plan View: Interior layout with tank placement and framing
+   - Side Elevation (Left/Driver Side): Stairs, platform height, railing
+   - Front Elevation View: Full platform width (84"), pilot position
+   - Detailed Stair Section: Welded steel frame, 9" width, 7" rise/10" run
+   - Interior Layout Detail: Tank dimensions, pump routing, exhaust path
+
+2. Comprehensive Technical Specification Document
+   - Trailer specifications
+   - Interior layout details
+   - Launch platform assembly
+   - Stair assembly specifications
+   - Structural integration methods
+   - Generator exhaust routing
+   - Weight and capacity analysis
+   - Materials list
+   - Assembly sequence (6 phases)
+   - Maintenance schedule
+   - Cost estimates and timeline
+
+3. ASCII Technical Diagrams
+   - 8 detailed ASCII diagrams with dimensional callouts
+   - 30,600+ words of technical documentation
+
+================================================================================
+TRAILER SPECIFICATIONS
+================================================================================
+
+EXTERIOR DIMENSIONS:
+  Total Length: 186" (163" + 23" V-nose)
+  Exterior Width: 84"
+  Interior Height: 83"
+  Payload Available: 4,700 lbs
+
+STRUCTURAL COMPONENTS:
+  • Frame Material: Steel tube frame (welded construction)
+  • Interior Framing: 1" × 1.5" steel beams, spaced 24" on-center
+  • Roof: Composite structure (existing)
+  • Fenders: Steel, 58-62" between fenders, 9" protrusion
+  • Tires: 205/75R15 (dual rear axle configuration)
+
+DOOR OPENINGS:
+  • Rear Door: 76"W × 80"H (center rear)
+  • Right-Side Door: 32"W × 68"H (15" from front)
+
+================================================================================
+INTERIOR LAYOUT
+================================================================================
+
+LIQUID STORAGE SYSTEM:
+
+Primary Storage (Two IBC Tanks):
+  • Position: Over rear and mid axles (side-by-side)
+  • Capacity Each: 275 gallons
+  • Dimensions Each: ~48"L × 40"W × 46"H
+  • Material: Plastic IBC containers with steel frames
+  • Weight Each: ~300 lbs (empty), ~2,300 lbs (full)
+
+Mixing/Application Tank:
+  • Capacity: 60-75 gallons
+  • Type: Cone-bottom tank with drain valve
+  • Position: Front area (left side, forward of V-nose generator)
+  • Dimensions: ~36"H × 24" diameter
+  • Material: Polyethylene or similar
+  • Purpose: Secondary mixing and metering
+
+POWER SYSTEM:
+
+Generator:
+  • Location: V-nose compartment (front-left)
+  • Type: Gasoline/propane portable generator
+  • Power Output: 5-7 kW recommended (for pump + accessories)
+  • Exhaust Routing: Through right-side wall (away from operator)
+  • Battery Charging: Integrated charger, 120V outlet access
+
+Electrical System:
+  • Primary Outlets: Two 120V duplex outlets on platform
+  • Pump Power: Dedicated 240V or 120V circuit
+  • Lighting: LED work lights on platform (optional)
+  • Cable Routing: Through conduit along interior beams
+
+PUMPING & DISTRIBUTION:
+
+Main Supply Pump:
+  • Type: Electric diaphragm or centrifugal pump
+  • Flow Rate: 10-15 GPM (verify with spraying equipment)
+  • Power: 120V or 240V (match generator capacity)
+  • Suction: From lower port of primary IBC tanks (via check valve)
+  • Discharge: To mixing tank or directly to spray nozzle
+
+Plumbing Overview:
+  IBC Tank #1 (Left) ──┐
+                        ├──→ [Check Valve] ──→ [Pump] ──→ Mixing Tank ──→ [Fill Nozzle]
+  IBC Tank #2 (Right) ─┘
+
+Fill Nozzle:
+  • Location: Center-front of launch platform (accessible to pilot)
+  • Type: Quick-disconnect coupling
+  • Connection: Easy detachment for refueling spray equipment
+
+================================================================================
+LAUNCH PLATFORM ASSEMBLY
+================================================================================
+
+PLATFORM STRUCTURE:
+
+Overall Dimensions:
+  • Length: 84" (exterior trailer width)
+  • Width: 60-72" (usable platform depth)
+  • Height Above Roof: 30-36" (pilot standing height reference)
+  • Material: Aluminum extrusion frame (lightweight structural)
+  • Decking: Aluminum or composite grating (non-slip)
+
+STAIR ASSEMBLY (Welded Steel):
+
+Specifications:
+  • Width: 9" (between stringers)
+  • Height per Step: 7" rise
+  • Depth per Step: 10" run (minimum)
+  • Number of Steps: 8-10 steps (depending on final platform height)
+  • Material: ASTM A36 structural steel, fully welded
+  • Handrail: 1.5" diameter steel pipe, 36" above treads
+  • Attachment: Fully welded to trailer fender and frame base
+
+Structural Tubes:
+  • Stringers (both sides): 2"×4" rectangular tube, 3/16" wall
+  • Treads: 3/8" thick steel plate or expanded metal
+  • Handrail: 1.5" diameter steel pipe, Schedule 40
+  • Welds: Full penetration, FCAW or SMAW process
+  • Paint/Finish: Powder coat or epoxy enamel (rust protection)
+
+PILOT STANDING AREA (Front-Center):
+
+Dimensions:
+  • Length: 48" (front to back)
+  • Width: 36" (center of 84" platform)
+  • Height Above Deck: 36" (to top of safety railing)
+  • Surface: Non-slip aluminum grating or composite decking
+
+Safety Railing:
+  • Upper Horizontal Rail: 1.5" diameter steel tube
+  • Lower Horizontal Rail: 1.5" diameter steel tube (kick rail)
+  • Vertical Supports: 1" diameter steel pipe, 12" spacing
+  • Mesh Infill: 1/2" or 3/8" galvanized steel wire mesh
+  • Welds: All connections fully welded
+
+DRONE POSITIONING & SECURITY:
+
+On-Platform Anchor Points:
+  • Type: Welded eye bolts or pad eyes (1/2" diameter minimum)
+  • Locations: Four corners of protective box (or platform perimeter)
+  • Load Rating: 500+ lbs each
+  • Spacing: 48" × 36" (matches platform dimensions)
+  • Attachment: Fully welded to platform frame
+
+Removable Protective Box:
+  • Purpose: Drone security and weather protection during transport
+  • Dimensions: ~54"L × 42"W × 30"H (approximate, drone-dependent)
+  • Material: Aluminum frame + polycarbonate or composite panels
+  • Mounting: Quick-release pins or latches (removable in <5 minutes)
+  • Ventilation: Mesh vents for generator heat dissipation
+
+================================================================================
+STRUCTURAL INTEGRATION & ATTACHMENTS
+================================================================================
+
+PLATFORM-TO-TRAILER CONNECTION:
+
+Welded Base Connections:
+  • Gusset Plates: 1/2" thick steel, 12" × 12" (at each corner)
+  • Welds: Full penetration fillet welds, 1/4" leg minimum
+  • Spacing: Welded at four corners (front-left, front-right, rear-left, rear-right)
+  • Interior Support: 1" × 1.5" beams run perpendicular to platform, creating triangulation
+
+STAIR-TO-PLATFORM CONNECTION:
+
+Top of stairs connects to platform front:
+  • Platform front beam with welded connection
+  • ½" gusset both sides
+  • Top step of stair (9" wide opening allows foot transition)
+
+================================================================================
+GENERATOR EXHAUST ROUTING
+================================================================================
+
+EXHAUST PATH:
+
+Generator in V-Nose (front-left):
+  ↓ (2.5" stainless steel pipe)
+Interior Routing (along right wall):
+  • Routed 12-18" from ground (below IBC tank level)
+  • Sealed conduit or heat wrap (if within 6" of interior)
+  • Descends slightly for drainage
+  ↓ (Exits through right-side wall, 12" from rear)
+WALL PENETRATION:
+  • 3" diameter hole
+  • Heat-resistant gasket seal
+  • Caulked with silicone/foam
+  ↓ (90° ELBOW TERMINATION)
+  • Points downward
+  • 4" above roof level
+  • Away from operator area
+
+Specifications:
+  • Pipe Diameter: 2-2.5" (match generator outlet)
+  • Material: Stainless steel or aluminized steel
+  • Wall Penetration: 3" diameter hole (sealed with heat-resistant gasket)
+  • Termination: 90° elbow pointing downward/rearward
+  • Insulation: High-temp wrap (if interior temperature < 6" clearance)
+  • Support: Clamps every 18" along routing path
+
+================================================================================
+WEIGHT & CAPACITY ANALYSIS
+================================================================================
+
+COMPONENT WEIGHTS (APPROXIMATE):
+
+| Component | Empty | Full | Notes |
+|-----------|-------|------|-------|
+| IBC Tank #1 (275 gal) | 300 lbs | 2,300 lbs | @ 7.5 lbs/gal water |
+| IBC Tank #2 (275 gal) | 300 lbs | 2,300 lbs | @ 7.5 lbs/gal water |
+| Cone-bottom Tank (75 gal) | 100 lbs | 625 lbs | Additional mixing |
+| Platform Frame | 800 lbs | — | Aluminum structure |
+| Stairs | 400 lbs | — | Welded steel |
+| Generator (6 kW) | 300 lbs | — | Gasoline-powered |
+| Protective Box | 200 lbs | — | Aluminum + panels |
+| Drone (typical) | 50-100 lbs | — | DJI Agras or similar |
+| TOTALS | 2,450 lbs | 5,225+ lbs | Exceeds 4,700 lbs at full |
+
+⚠ CRITICAL NOTE: Full liquid capacity (550 gallons) EXCEEDS payload.
+   RECOMMEND OPERATING AT 400-450 GALLONS MAXIMUM to maintain safe margin.
+
+WEIGHT DISTRIBUTION:
+  • Primary tanks (IBC) over rear axles: Distributes 4,600 lbs evenly
+  • Generator in V-nose: ~300 lbs forward (load balancing)
+  • Mixing tank off-center slightly: maintains tongue weight (10-15% of total)
+  • Platform ballast: Minimize load when liquid is at maximum
+
+RECOMMENDED OPERATING CONFIGURATION:
+
+| Metric | Value | Reasoning |
+|--------|-------|-----------|
+| Maximum Liquid Volume | 400-450 gallons | ~3,500 lbs, leaves 1,200 lbs margin |
+| Distribution | 200 gal in each IBC, 50-75 gal in mixing | Balanced approach |
+| Total Payload | ~4,500 lbs | Safe operating margin |
+| Tongue Weight | 10-12% of total | ~450-500 lbs (proper hitch loading) |
+
+AXLE LOAD COMPARISON:
+  • Left Axle: ~2,600 lbs load
+  • Right Axle: ~2,600 lbs load
+  • Total Loaded Weight: ~5,225+ lbs (EXCEEDS 4,700 lbs capacity)
+
+================================================================================
+MATERIALS SUMMARY
+================================================================================
+
+STRUCTURAL STEEL:
+  • Trailer Frame Beams: 1" × 1.5" ASTM A36
+  • Stair Stringers: 2" × 4" rectangular tube, 3/16" wall
+  • Handrails: 1.5" diameter Schedule 40 pipe
+  • Gusset Plates: 1/2" thick ASTM A36 plate
+  • All Welds: E7018 (SMAW) or ER70S-6 (FCAW)
+
+PLATFORM FRAME:
+  • Extrusions: 2" × 4" aluminum (6061-T6 alloy)
+  • Fasteners: Stainless steel bolts/rivets (corrosion resistance)
+  • Decking: Aluminum safety grating or composite deck plate
+  • Finish: Powder coat (satin or textured, UV-resistant)
+
+PROTECTIVE & FINISHING:
+  • Rope Sealing: Spray foam or silicone caulk (exhaust penetration)
+  • Mesh Screen: Galvanized steel wire (1/2" or 3/8" holes)
+  • Protective Coatings: Epoxy primer + polyurethane topcoat (steel)
+
+LONG-LEAD ITEMS (Order First):
+  • Aluminum Extrusion (2"×4", 6061-T6): ~400-500 linear feet ($1,500-2,000)
+  • Structural Steel Tube (2"×4" rectangle, 3/16" wall ASTM A36): ~200 linear feet ($800-1,000)
+  • Steel Pipe (1.5" and 1" diameter, Schedule 40): ~200 linear feet ($400-600)
+  • Composite Decking or Aluminum Grating: ~80 sq ft ($800-1,200)
+
+================================================================================
+ASSEMBLY SEQUENCE
+================================================================================
+
+PHASE 1: TRAILER PREPARATION (Week 1)
+  1. Clean and prepare roof surface (remove any debris)
+  2. Mark attachment points (four corners)
+  3. Install backing plates or reinforcement if needed
+
+PHASE 2: PLATFORM FRAME FABRICATION (Off-Site, Weeks 2-4)
+  1. Cut and fit aluminum extrusion
+  2. Assemble main frame (rectangular base)
+  3. Weld gusset plates at attachment points
+  4. Install decking and safety railing subassembly
+  5. Powder coat all components
+  6. Perform hydrostatic testing if needed
+
+PHASE 3: STAIR FABRICATION (Off-Site, Weeks 2-4)
+  1. Cut and bend steel tube for stringers
+  2. Fit and tack all step treads
+  3. Full penetration welds on all connections
+  4. Verify step rise/run tolerance (±1/4")
+  5. Fabricate and weld mounting brackets
+  6. Powder coat or apply epoxy finish
+
+PHASE 4: PLATFORM INSTALLATION (On-Site, Weeks 5-6)
+  1. Lift platform frame onto trailer roof (crane required, ~2,000 lbs)
+  2. Align four corner attachment points
+  3. Tack-weld gusset plates to roof beams
+  4. Perform final alignment (level check)
+  5. Full penetration welds on all four corners
+  6. Mount and weld stair assembly at rear-left corner
+  7. Install safety railing and mesh screens
+
+PHASE 5: UTILITIES INTEGRATION (On-Site, Weeks 6-7)
+  1. Install generator in V-nose compartment
+  2. Route and secure exhaust pipe through right-side wall
+  3. Install pump and plumbing connections to IBC tanks
+  4. Pressure test all hose connections (50 PSI minimum)
+  5. Install fill nozzle on platform (center-front)
+  6. Route electrical conduit for 120V/240V power
+
+PHASE 6: TESTING & SAFETY VERIFICATION (Weeks 7-8)
+  1. Static load test on platform (500 lbs minimum, unloaded)
+  2. Full system test with water at operating pressure
+  3. Generator operation and exhaust isolation check
+  4. Stair integrity and load rating verification (500+ lbs per step)
+  5. Tie-down anchor strength verification
+  6. Mobility and braking function check
+
+================================================================================
+DIMENSIONAL CALLOUTS & REFERENCE
+================================================================================
+
+CRITICAL MEASUREMENT POINTS:
+
+Stair Rise/Run:
+  • Rise per step: 7.0"
+  • Run per step: 10.0"
+  • Total rise (10 steps): 70"
+  • Total run (9 treads): 90"
+
+Platform Heights (from ground):
+  • Existing roof: ~58-60"
+  • Platform deck: ~90-96" (30-36" above roof)
+  • Railing top: ~126-132" (36" above deck)
+  • Pilot eye level (standing): ~120-126"
+
+Tank Clearances:
+  • IBC tank clearance to roof: 12-18" (for access)
+  • Mixing tank access: 24" clearance on all sides
+  • Generator service access: 30" clearance (front)
+
+Door & Opening Alignments:
+  • Right-side door (32"W × 68"H): Does NOT interfere with IBC tanks
+  • Rear door (76"W × 80"H): Full access for drone storage
+  • Platform stairs: Located at rear-left corner (does not block right-side door)
+
+================================================================================
+OPERATIONAL SAFETY NOTES
+================================================================================
+
+⚠ CONFINED SPACE RISK: 
+   Interior may accumulate toxic fumes if not properly ventilated. Generator 
+   exhaust MUST exit through right wall. Operator must use in open air only.
+
+⚠ LOAD CAPACITY: 
+   Platform is rated for pilot + drone (~150-200 lbs maximum). Do NOT exceed 
+   designed weight without structural analysis.
+
+⚠ ELECTRICAL HAZARD: 
+   All 120V/240V circuits must have proper GFCI protection. Generator bonding 
+   required if operating near conductive surfaces.
+
+⚠ TIRE & BRAKING: 
+   Verify trailer brakes are functional. 4,600+ lbs liquid load requires 
+   adequate braking distance (~250 feet @ 60 mph).
+
+⚠ WIND LOADING: 
+   Platform acts as a sail. DO NOT operate in sustained winds >20 mph. When 
+   parked, deploy wind brakes or lower protective box.
+
+⚠ TIE-DOWN REQUIREMENTS: 
+   Platform and drone MUST be secured during transport. Verify all anchor 
+   points before towing (4 ratchet straps minimum).
+
+================================================================================
+MAINTENANCE & INSPECTION SCHEDULE
+================================================================================
+
+| Component | Interval | Task |
+|-----------|----------|------|
+| Welds (stairs, platform) | Annual | Visual inspection, dye penetrant testing if cracks suspected |
+| Fasteners (bolts, rivets) | Annual | Torque verification, replacement if loose |
+| Mesh screen | 6 months | Check for corrosion, replace if rust present |
+| Generator | Per manufacturer | Oil changes, filter replacement, fuel stabilization |
+| Hose/Fittings | Annual | Pressure test (50 PSI), replace if leaks found |
+| Trailer tires | Annual | Pressure check, tread depth, alignment |
+| Protective box seals | 6 months | Check for weather degradation, reseal if necessary |
+
+================================================================================
+BUILD TIMELINE & COST ESTIMATE
+================================================================================
+
+TIMELINE:
+
+| Phase | Duration | Tasks |
+|-------|----------|-------|
+| Design & Drawings | 1-2 weeks | Complete (delivered) |
+| Material Procurement | 2-3 weeks | Order long-lead items in parallel |
+| Fabrication (Off-Site) | 4-6 weeks | Platform frame, stairs, all subassemblies |
+| Paint/Finishing | 1 week | Powder coat or epoxy finish |
+| Installation (On-Site) | 1-2 weeks | Platform mounting, stair attachment, utility integration |
+| Testing & Commissioning | 1 week | Load tests, pressure tests, electrical safety checks |
+| TOTAL | 9-14 weeks | Can run procurement + fabrication in parallel |
+
+PARALLELIZATION RECOMMENDATION:
+  • Weeks 1-3: Design phase + Material ordering (start procurement immediately)
+  • Weeks 3-8: Fabrication begins while materials arrive
+  • Weeks 8-10: On-site installation (coordinate with fabrication completion)
+  • Weeks 10-14: Testing, adjustments, commissioning
+
+Critical Path: Material delivery + Fabrication time = 6-9 weeks
+
+COST ESTIMATE (PRELIMINARY):
+
+| Category | Low Estimate | High Estimate | Notes |
+|----------|--------------|---------------|-------|
+| Materials | $5,000 | $8,000 | Steel, aluminum, fasteners, paint |
+| Fabrication Labor | $3,000 | $5,000 | Cutting, bending, tacking, fitting |
+| Welding & Finishing | $1,000 | $2,000 | Welding labor, grinding, paint application |
+| Installation Labor | $1,000 | $2,000 | On-site assembly, alignment, testing |
+| Utilities & Misc | $700 | $1,500 | Plumbing, electrical, hardware, sealants |
+| Contingency (10%) | $1,070 | $1,900 | Unexpected issues, rework, expedited shipping |
+| TOTAL PROJECT | $11,770 | $20,400 | Fabrication + installation only |
+
+ADDITIONAL ONE-TIME COSTS (NOT INCLUDED):
+  • Generator: $500–$800
+  • Pump: $300–$500
+  • IBC Tanks (2×): $200–$400
+  • Drone: $10,000–$50,000+ (customer's equipment)
+
+================================================================================
+NEXT STEPS & RECOMMENDATIONS
+================================================================================
+
+PHASE 1: PRE-CONSTRUCTION (Weeks 1-2)
+  ☐ Present design drawings and specifications to fabricators
+  ☐ Obtain detailed labor quotes (fabrication, welding, installation)
+  ☐ Verify trailer structural integrity (inspect roof beams, frame welds)
+  ☐ Identify local welding/fabrication shops (meet to review plans)
+  ☐ Confirm generator model and exhaust specifications
+
+PHASE 2: PROCUREMENT (Weeks 2-3)
+  ☐ Place orders for long-lead items (aluminum extrusion, steel tube)
+  ☐ Arrange delivery schedule (coordinate fabricator availability)
+  ☐ Procure fasteners, paint, sealants, electrical components
+  ☐ Confirm generator and pump specifications with manufacturer
+
+PHASE 3: FABRICATION (Weeks 3-9)
+  ☐ Fabricator begins platform frame assembly (off-site)
+  ☐ Parallel: Stair fabrication and welding
+  ☐ Schedule dye penetrant testing (PT) on platform welds
+  ☐ Powder coat or epoxy finish all components
+  ☐ Perform hydrostatic pressure test on plumbing subassembly
+
+PHASE 4: INSTALLATION (Weeks 9-11)
+  ☐ Verify trailer is level and on solid ground
+  ☐ Lift and position platform frame (crane required, ~2,000 lbs)
+  ☐ Align and tack-weld platform to roof beams
+  ☐ Attach stair assembly (rear-left corner)
+  ☐ Install railing and mesh screen subassembly
+  ☐ Route plumbing, electrical, exhaust through trailer interior
+
+PHASE 5: COMMISSIONING (Weeks 11-14)
+  ☐ Perform static load test (500 lbs distributed on platform)
+  ☐ Pressure test plumbing system (50 PSI minimum, 5 minutes)
+  ☐ Electrical safety check (GFCI outlets, generator bonding, breaker function)
+  ☐ Generator exhaust isolation test (ensure no interior fumes)
+  ☐ Stair load rating verification (step by step, 500+ lbs per step)
+  ☐ Full system test with water (fill IBC tanks, run pump, verify nozzle flow)
+  ☐ Safety briefing and operator training
+
+================================================================================
+DESIGN ASSUMPTIONS & LIMITATIONS
+================================================================================
+
+KEY ASSUMPTIONS:
+  1. Trailer Roof Structural Integrity: Assumed composite roof with 1"×1.5" 
+     steel beams can support 350 lbs per corner gusset weld
+     ACTION REQUIRED: Inspect existing roof beams for corrosion, cracks, 
+     or delamination before build
+
+  2. Standard Enclosed Trailer Configuration: Design assumes dual-axle, single-door 
+     or double-door trailer
+     VARIATION: Triple-axle trailers may require additional bracing
+
+  3. Generator in V-Nose: Assumes V-nose compartment is 48"+ deep and accessible
+     CONSTRAINT: If V-nose is <36" deep, generator must relocate to front 
+     of main interior
+
+  4. Water-Based Spray Solution: Liquid density assumed 8-8.5 lbs/gallon
+     NOTE: Oil-based or fertilizer solutions may be heavier (8.5-9 lbs/gal)
+
+DESIGN LIMITATIONS:
+  1. Payload Constraint: 4,700 lbs capacity is exceeded by 550 gallons liquid + platform
+     MITIGATION: Operate at 400-450 gallons maximum to maintain safe payload margin
+
+  2. Wind Loading: Platform acts as sail; NOT designed for sustained winds >20 mph
+     RECOMMENDATION: Deploy wind brakes or lower protective box in high-wind conditions
+
+  3. Confined Space Risk: Interior may accumulate toxic fumes without proper ventilation
+     REQUIREMENT: Generator MUST exit through right wall; operating only in open air
+
+  4. Tire/Brake Capacity: Loaded trailer weight (~5,200 lbs) requires adequate 
+     towing vehicle (3,000+ lbs)
+     VERIFICATION: Confirm towing vehicle has brakes rated for 8,000+ lbs combined weight
+
+================================================================================
+PROFESSIONAL INSPECTIONS RECOMMENDED
+================================================================================
+
+Before Final Build:
+  ☐ Structural Engineer Review: Verify gusset weld design and load path analysis
+  ☐ Electrical Inspector: Validate GFCI protection, generator bonding, conduit sizing
+  ☐ Welder Certification: Ensure fabricator is certified (AWS D1.1 structural steel)
+  ☐ Hydraulic/Plumbing Inspector: Pressure test and certification of hose assembly
+
+Standards Referenced:
+  • ASTM A36: Structural Steel specification
+  • ASTM A1011: Steel, carbon, structural, hot-rolled
+  • AWS D1.1: Structural Welding Code - Steel
+  • D1.2: Code for Welding Aluminum Alloys
+  • NFPA 70: National Electrical Code (NEC)
+  • ANSI A10.48: Criteria for Safety Practices with Mobile Elevating Work Platforms
+
+================================================================================
+CONCLUSION
+================================================================================
+
+This design provides a COMPLETE, BUILDABLE SOLUTION for PropsUAV's mobile drone 
+spraying operation. The elevated platform offers optimal pilot positioning, the 
+dual IBC storage system provides extended range, and the integrated power system 
+enables autonomous operation.
+
+KEY STRENGTHS:
+✓ Full 84" platform width (stable drone launch/landing)
+✓ Elevated pilot station (30-36" above roof = superior visibility)
+✓ Integrated 550-gallon storage (400-450 gal recommended operating volume)
+✓ Welded construction (low maintenance, high durability)
+✓ Protected pilot area (railing + mesh screen)
+✓ Quick-access fill system (center-front nozzle)
+✓ Detailed fabrication drawings (ready for quoted build)
+
+BUILD COST: $11,770–$20,400 (fabrication + installation, 9-14 weeks)
+
+NEXT ACTION: Distribute design package to 2-3 local fabricators for detailed 
+labor quotes and timeline confirmation.
+
+================================================================================
+REFERENCE DOCUMENTATION
+================================================================================
+
+INCLUDED FILES:
+  1. propsuav-build-summary.md (comprehensive build overview)
+  2. propsuav-platform-technical-specs.md (20,600+ word specification document)
+  3. propsuav-platform-ascii-diagrams.txt (30,600+ word ASCII technical diagrams)
+  4. trailer-specs.md (existing trailer dimensions & constraints)
+  5. propsuav-master-document.md (consolidated markdown source)
+  6. PropsUAV-Platform-Design-Package.txt (this text document)
+
+TECHNICAL DRAWINGS:
+  • Isometric 3D assembly view
+  • Top-down interior plan view
+  • Side elevation (left/driver side)
+  • Front elevation view
+  • Detailed stair section
+  • Interior equipment layout detail
+
+================================================================================
+
+Design completed: May 2026
+Prepared for: Avest Ltd
+Status: Complete -- Ready for Fabrication
+All specifications, drawings, and documentation included.
+
+================================================================================

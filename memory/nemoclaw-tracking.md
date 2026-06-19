@@ -1,212 +1,191 @@
-# NemoClaw Monitoring Report
-
-**Date:** April 27, 2026, 10:00 AM CST  
-**Last Updated:** 2026-04-27T15:00 UTC  
-**Status:** Tracking — NO immediate notification required
+# NemoClaw Tracking & Analysis
+**Last Updated:** 2026-06-08 10:00 AM CST  
+**Monitor Status:** Active (Cron: ba1ac61d-7da2-48b2-86ae-98ca0dd88b09)
 
 ---
 
 ## Executive Summary
-
-**NemoClaw** is NVIDIA's enterprise security wrapper around OpenClaw, launched March 16, 2026 at GTC 2026 in **early-access alpha**. It addresses OpenClaw's documented security vulnerabilities with kernel-level sandboxing but is **NOT production-ready** yet for most organizations.
-
-**Key Takeaway for AvestAI:** NemoClaw presents no immediate competitive threat or integration opportunity. Our focus should remain on OpenClaw (which we currently deploy), with a watchpoint for NemoClaw's Q3-Q4 2026 maturity milestones.
+**NemoClaw is NOT a competing agent framework.** It's a deployment security wrapper for OpenClaw (and Hermes) created by NVIDIA. It runs agent sandboxes inside OpenShell with managed inference, hardened blueprints, and network policy controls. **No competitive threat identified; potential integration opportunity for enterprise security.**
 
 ---
 
-## 1. FEATURE PARITY WITH OPENCLAW
+## What Is NemoClaw?
+- **GitHub:** https://github.com/NVIDIA/NemoClaw
+- **Status:** Alpha-stage open source (Apache 2.0)
+- **Primary Function:** Secure sandbox runtime for OpenClaw and Hermes agents
+- **Parent Stack:** NVIDIA OpenShell + NemoClaw + Agent Runtime
+- **Not:** An alternative agent framework; explicitly lists OpenClaw as default agent
 
-### OpenClaw (Current)
-- **Foundation**: Autonomous AI agent framework (MIT license)
-- **Stars**: 321,000+ GitHub stars, 1,075 contributors
-- **Architecture**: TypeScript/Node.js, runs on Windows/macOS/Linux
-- **Hardware**: ~1.5 GB RAM, 1 vCPU minimum
-- **Status**: Production-ready (with security caveats)
-- **Core Features**:
-  - 25+ messaging integrations (WhatsApp, Telegram, Slack, Discord, iMessage, etc.)
-  - 50+ native SaaS integrations
-  - Model-agnostic (Claude, GPT-4o, Gemini, local models via Ollama)
-  - Skill registry: 13,729 community skills (19% estimated malicious)
-  - Multi-step agentic execution (ReAct loop)
-  - Persistent memory (Markdown-based)
-  - Local execution for privacy
-
-### NemoClaw (Alpha)
-- **Foundation**: Kernel-level security wrapper around OpenClaw
-- **Architecture**: Runs OpenClaw inside containerized sandbox (Ubuntu 22.04+ only)
-- **Hardware**: 8 GB RAM minimum (16 GB recommended), 4 vCPU, Docker required
-- **Status**: Alpha / early-access (NVIDIA warns "not production-ready")
-- **Additional Features**:
-  - NVIDIA OpenShell runtime (kernel-level isolation)
-  - Privacy router (strips PII before cloud API calls)
-  - YAML-defined policy enforcement
-  - Full audit logging for every agent action
-  - Defaults to Nemotron 3 Super 120B (open-source LLM)
-  - Immutable, digest-verified deployment (5-stage: resolve→verify→plan→apply→status)
-
-**Feature Parity**: NemoClaw is NOT a replacement for OpenClaw — it's a security layer that runs the same agent with stricter controls. No new agentic capabilities. Net: **OpenClaw's feature set unchanged.**
+### Key Architecture Components
+1. **OpenShell Integration** — Sandboxed container environment
+2. **Hardened Blueprint** — Pre-configured security policies
+3. **Routed Inference** — Managed model provider routing (supports local + cloud)
+4. **Network Policy** — Baseline rules + operator approval flow for egress
+5. **Lifecycle Management** — Single CLI for sandbox provisioning/updates
 
 ---
 
-## 2. ADVANTAGES & DISADVANTAGES FOR SMALL BUSINESS
+## Feature Comparison: NemoClaw vs OpenClaw (Native)
 
-### For AvestAI Use Cases (Drone Spraying, SkyRanger Marketing, Customer Services)
-
-#### OpenClaw Advantages (Current)
-✅ **Deployed now, mature ecosystem**  
-✅ **50+ integrations available** (Google Workspace, Slack, email, calendar)  
-✅ **Flexible deployment** (runs on our Mac Mini, VPS, or Docker)  
-✅ **No security infrastructure overhead**  
-✅ **Custom skill development** (low barrier for internal automation)  
-
-#### OpenClaw Disadvantages (We're Already Living With)
-⚠️ **4 active CVEs in 2026** (RCE, SSRF, auth bypass, path traversal)  
-⚠️ **~900 malicious skills in ClawHub** (20% of registry)  
-⚠️ **Plaintext credential storage** (API keys, OAuth tokens in .md/.json files)  
-⚠️ **Internet-exposed instances**: 135,000+ public-facing, no auth  
-⚠️ **Persistent memory injection risk**: Malware fragments can persist across sessions  
-
-#### NemoClaw Advantages (When Mature)
-✅ **Kernel-level sandboxing** (agent cannot access outside /sandbox, /tmp)  
-✅ **Audit trail** (every tool call, API request, network attempt logged)  
-✅ **Privacy router** (local models handle sensitive data, cloud models for generic queries)  
-✅ **Policy enforcement** (YAML-defined, not bypassable by compromised agent)  
-✅ **Out-of-process security** (walls are part of building, not movable furniture)  
-
-#### NemoClaw Disadvantages (For Small Business)
-❌ **Alpha software** (expect bugs, breaking changes)  
-❌ **Linux-only** (Ubuntu 22.04+, no macOS/Windows)  
-❌ **High infrastructure floor** (8 GB RAM, Docker, managed Linux server)  
-❌ **DGX hardware pricing** (if you want GPU acceleration, $300k+)  
-❌ **Complex management overhead** (YAML policies, immutable deployments)  
-❌ **Narrower integration focus** (built for enterprise stack: SAP, Salesforce, ServiceNow)  
-❌ **No scheduled tasks yet** (background execution while system sleeps not supported)  
+| Feature | NemoClaw | OpenClaw Native | Use Case |
+|---------|----------|-----------------|----------|
+| **Agent Framework** | Wrapper/Runner | Native framework | NemoClaw wraps OpenClaw |
+| **Security Model** | Sandboxed (container-based) | Native system access | Enterprise/multi-tenant |
+| **Network Policy** | Explicit rules + approval | Gateway-level | Org-wide compliance |
+| **Inference Routing** | Managed/routed | Direct provider | Cost/latency control |
+| **Tool Isolation** | Strong (container boundaries) | Moderate | Untrusted integrations |
+| **Setup Complexity** | Higher (OpenShell prerequisite) | Lower (native) | Small teams |
+| **Production Hardness** | Alpha (early stage) | Mature (production) | Stability requirement |
 
 ---
 
-### Honest Assessment for AvestAI (as of April 2026)
+## Current Status & Releases
 
-**OpenClaw (Now)**: Works fine for us. We're small enough that the CVEs aren't a practical risk IF:
-- We don't expose our agent to the internet (we don't)
-- We don't install untrusted ClawHub skills (we don't)
-- We keep credentials externally managed (we do)
+### Latest Information (June 2026)
+- **No formal releases yet** — Project is alpha, no tagged versions on GitHub
+- **Documentation exists** but points to NVIDIA docs site (docs.nvidia.com/nemoclaw)
+  - Site structure shows full feature docs but some 404s suggest incomplete deployment
+- **Current Priorities:**
+  - Improve install & onboarding reliability
+  - Strengthen sandbox hardening + credential handling
+  - Validate local/routed inference (local LLMs + cloud providers)
+  - Align docs with agent skills
+- **Community:** Discord (discord.gg/XFpfPv9Uvx), GitHub Discussions, limited response SLA (best effort)
 
-**NemoClaw (Later)**: Could be valuable when it matures **IF**:
-- We scale to enterprise customer deployments (managing customer data)
-- We need audit compliance (currently not required)
-- We're running agents on shared infrastructure (currently single-tenant)
-
-**Verdict**: NemoClaw is a "watch and evaluate Q3 2026" — not an immediate pivot.
-
----
-
-## 3. SHOULD AVESTAI ADOPT OR INTEGRATE?
-
-### Current Recommendation: NO CHANGE (Stay on OpenClaw)
-
-#### Why Not NemoClaw Now?
-1. **Alpha status kills it** — NVIDIA itself warns against production use. Procurement will block it.
-2. **Infrastructure mismatch** — We don't have dedicated Linux servers for always-on agents.
-3. **Complexity tax** — YAML policies, immutable deployments, managed containerization. Too much ops overhead for a 3-person business.
-4. **No immediate customer need** — Our drone spraying and marketing use cases don't require enterprise audit trails.
-5. **Cost-to-benefit terrible right now** — Infrastructure + enterprise licensing will exceed our OpenClaw + API token costs.
-
-#### Why Keep OpenClaw?
-1. **It's working** — We've deployed agents for customer discovery calls, lead scoring, document management.
-2. **Mature ecosystem** — ClawHub skills (carefully vetted), GitHub docs, Stack Overflow support.
-3. **Cost-efficient** — Free software + API token pay-as-you-go.
-4. **Flexible deployment** — Works on our existing hardware.
+### Recent Activity
+- **Status:** Actively maintained but NOT feature-complete (alpha label)
+- **Release cadence:** Unknown (no releases tagged)
+- **Momentum:** Moderate — security-focused, not feature-driven
 
 ---
 
-### Future Integration Points (Q3-Q4 2026+)
+## Supported Agents
+1. **OpenClaw** (default) — Full integration
+2. **Hermes** (via get-hermes.ai) — Supported via env var `NEMOCLAW_AGENT=hermes`
 
-**If/When NemoClaw Reaches Beta**:
-- **Evaluate for cloud-hosted customer agent service** — if we ever offer an AI agent as a paid product to drone operators or other SMBs, NemoClaw's audit trails + policy enforcement become valuable
-- **Consider for Salesforce/HubSpot integration** — NemoClaw's enterprise stack focus means better-built connectors (in progress)
-- **Audit trail value** — if AvestAI itself becomes regulated (unlikely in near term), NemoClaw's comprehensive logging justifies the infrastructure overhead
-
-**Integration Strategy** (NOT recommended now, but track for 2027):
-- Run NemoClaw as a separate, isolated agent for data-sensitive workflows (customer contracts, financial projections)
-- Keep OpenClaw for internal automation (email triage, calendar management, research)
-- Hybrid approach avoids all-or-nothing migration during alpha
+**Not supported:** Other agent frameworks (Anthropic's Claude, LangChain agents, etc.)
 
 ---
 
-## 4. COMPETITIVE LANDSCAPE & IMPLICATIONS
+## Technical Capabilities for AvestAI Evaluation
 
-### Three-Way Comparison (March 2026)
+### Advantages for AvestAI
+1. **Multi-tenant Safety** — If building SaaS for drone/aircraft customers, NemoClaw isolates workloads
+2. **Network Compliance** — Hardened baseline policies; useful for regulated industries (FAA, state licensing)
+3. **Cost Control** — Routed inference allows centralized GPU management or provider switching
+4. **Credential Isolation** — Sandboxes prevent API key leaks across customers
+5. **Audit Trail** — Network policy approval flow provides compliance logging
 
-| Criterion | OpenClaw | NemoClaw | Claude Cowork* |
-|-----------|----------|----------|---|
-| **Status** | Production (CVEs but deployed) | Alpha | Research preview (macOS/Windows only) |
-| **Deployment** | 10 min | 20-30 min + Docker | Native app (VM isolation) |
-| **Security Model** | App-level (API whitelist) | Kernel-level (OpenShell sandbox) | Hardware VM isolation |
-| **For SMB** | Deployable, risky | Not ready yet | Deployable, no IT team needed |
-| **Audit Trail** | Basic logs | Full traceability | Not yet in compliance API |
-| **Extensibility** | 13K+ skills | Enterprise integrations TBD | Plugin system, 20+ connectors |
+### Disadvantages/Limitations for AvestAI
+1. **Alpha Maturity** — Not production-ready; frequent breaking changes likely
+2. **Complexity Overhead** — Requires OpenShell + Docker/container understanding
+3. **Single-User Incompatibility** — Designed for multi-tenant/enterprise; overkill for Chance's solo operations
+4. **No Competitive Advantage** — Only beneficial if AvestAI becomes B2B SaaS platform (e.g., "white-label drone AI")
+5. **Inference Routing Complexity** — Would need to manage model APIs; adds ops burden
+6. **Documentation Gaps** — Early-stage docs suggest incomplete feature coverage
 
-*Claude Cowork: Anthropic's VM-based agent (different architecture entirely, not a competitor)
-
-### Key Threat Assessment
-- **OpenClaw adoption speed** continues to explode (fastest-growing open-source project ever, 250K stars in 60 days)
-- **Enterprise security concerns** are REAL (4 active CVEs, 135K+ exposed instances, malware in skill registry)
-- **NemoClaw positioning** = "safe OpenClaw for enterprises" — if it ships Q4 2026, it will become the default for any regulated organization
-- **Windows/macOS exclusion** = deliberate enterprise choice (controlled OS environment, not consumer devices)
-
-### Why This Matters for AvestAI
-- OpenClaw will bifurcate: hobbyist/startup sector (us today) vs. enterprise sector (NemoClaw tomorrow)
-- If we ever want to **sell AI services to enterprise customers**, we'll need NemoClaw
-- If we stay **internal-only**, OpenClaw remains optimal
+### Small Business Use Case (Current AvestAI Model)
+**Not Recommended.** NemoClaw targets enterprise teams managing multiple customers/agents. Chance's current workflow:
+- Solo operation (Chance + Salvi running Avest internally)
+- Single OpenClaw instance per device
+- No multi-tenant isolation needed
+- Native OpenClaw is simpler, more mature
 
 ---
 
-## 5. MONITORING MILESTONES
+## Community & Adoption
 
-### Timeline (NVIDIA's Public Statements)
-- **Q2 2026** (now): Alpha, rough edges, GTC partner integrations begin
-- **Q3 2026**: Beta evaluation window opens; researchers get early access
-- **Q4 2026**: Production-ready possible (NVIDIA's target)
-- **2027+**: Enterprise deployment at scale (after Gartner analysts give thumbs-up)
+### GitHub Activity
+- **Repository:** github.com/NVIDIA/NemoClaw
+- **No releases/tags** yet (alpha only)
+- **Issues/PRs:** Limited (early stage)
+- **Discussions:** Exists but sparse
 
-### What to Watch
-- [ ] **GitHub release notes** (github.com/NVIDIA/NemoClaw) — any non-alpha tag signals maturity
-- [ ] **Launch partner announcements** (Adobe, Salesforce, SAP, CrowdStrike, etc.) — when first production deployments go live
-- [ ] **Security audits** — wait for third-party pen-test results (Gartner/Forrester)
-- [ ] **Pricing disclosure** — enterprise tier licensing model TBD
-- [ ] **macOS/Windows support** — if NVIDIA adds non-Linux, it signals broader SMB targeting
-
-### Next Review
-- **Q3 2026 (July)**: Check GitHub for beta tag; if released, assign someone to pilot evaluation
-- **Q4 2026 (October)**: If production-ready by then, formal decision: integrate for enterprise customer scenarios?
+### Visibility
+- Not mentioned in major AI/DevOps press
+- No adoption announcements visible
+- Discord community size unknown (estimate: <500 members)
+- Academic/enterprise interest likely (NVIDIA position)
 
 ---
 
-## 6. NOTIFICATION TRIGGER CRITERIA
+## Competitive Analysis: OpenClaw vs NemoClaw vs Alternatives
 
-**NOTIFY CHANCE IF**:
-1. ✅ NemoClaw hits production-ready status (non-alpha release)
-2. ✅ Any major OpenClaw CVE affects our deployment
-3. ✅ AvestAI lands enterprise customer requiring audit compliance
-4. ✅ Significant feature released that benefits drone spraying or SkyRanger customers
-5. ✅ NVIDIA announces macOS/Windows support (signals SMB pivot)
+### Is NemoClaw a Threat to OpenClaw?
+**No.** NemoClaw *uses* OpenClaw as the default agent. They are complementary:
+- **OpenClaw** = Agent framework (what Chance runs)
+- **NemoClaw** = Secure runtime wrapper (for teams deploying OpenClaw to customers)
 
-**DO NOT NOTIFY IF**:
-- ❌ Alpha release notes posted (we know it exists)
-- ❌ GTC partnerships announced (expected and already covered)
-- ❌ Blog posts comparing features (info-only, no action needed)
-- ❌ Security advice (we're already private-deployed, not exposed)
+### Real Competitors to OpenClaw (for AvestAI)
+1. **Hermes** (hermes.ai) — Direct competitor; also alpha, smaller community
+2. **LangChain Agents** — Feature-rich but less agentic autonomy
+3. **Anthropic Claude Projects** — Closed ecosystem, no local control
+4. **Custom Python Scripts** — Zero cost, no alignment
+
+**NemoClaw doesn't compete with any of these; it secures OpenClaw deployments.**
+
+---
+
+## Recommendation: Should AvestAI Adopt NemoClaw?
+
+### Short Answer
+**Not now.** Revisit when:
+1. AvestAI pivots to B2B/SaaS (white-label drone AI for other operators)
+2. NemoClaw reaches stable release (v1.0)
+3. Use case requires multi-tenant isolation or regulatory compliance
+
+### Long Answer
+**Current State:**
+- Chance runs Avest as a personal business (solo drone ops + aircraft sales)
+- No customer-facing AI deployments yet
+- Native OpenClaw is sufficient and simpler
+
+**If AvestAI Becomes SaaS:**
+- e.g., "Spray-AI as a Service" — white-label drone routing for regional sprayers
+- e.g., "SkyRanger Sales Portal" — portal for aircraft buyers to configure kits
+- **Then:** NemoClaw becomes valuable for isolating per-customer agents, managing API quotas, enforcing compliance
+
+**For Now:**
+- Keep native OpenClaw
+- Monitor NemoClaw quarterly for stable release
+- Watch for enterprise adoption signals (press, case studies)
+
+---
+
+## Monitoring Plan
+
+### Check Frequency
+**Monthly** (lighter than weekly given alpha status)
+
+### Watch For
+1. **First stable release (v1.0)** — Signals production-ready
+2. **Adoption announcements** — Fortune 500 deployments, case studies
+3. **Feature completeness** — All docs pages live, fewer 404s
+4. **Inference integrations** — New cloud provider support (Groq, Together AI, etc.)
+5. **Security audits** — Third-party security review published
+6. **OpenClaw integration changes** — Any API breaks for agent compatibility
+
+### Notification Threshold
+**Notify Chance only if:**
+- ✅ Stable release (v1.0) published
+- ✅ Major enterprise adoption (e.g., "Deploy OpenClaw safely for 1000 customers")
+- ✅ Feature prevents AvestAI customers from adopting (unlikely)
+- ✅ Security vulnerability in NemoClaw affecting OpenClaw
+- ❌ Alpha updates, roadmap changes, community discussions
+
+---
+
+## File History
+| Date | Event | Status |
+|------|-------|--------|
+| 2026-06-08 | Initial research & repo analysis | Complete |
+| 2026-06-08 | Feature parity assessment | Complete |
+| 2026-06-08 | Small business evaluation | No adoption recommended |
 
 ---
 
 ## References
-
-- **Second Talent** (2026-04-22): "NemoClaw vs OpenClaw: What's the Difference?" — Comprehensive architecture comparison
-- **ThoughtMinds** (2026-04-15): "OpenClaw vs NemoClaw: Best AI Agent for 2026" — Security deep-dive
-- **Bosio Digital** (2026-03-28): "OpenClaw vs NemoClaw vs Claude Cowork Comparison" — Mid-market deployment focus
-- **NVIDIA Official** (2026-03-16): NemoClaw launch at GTC 2026 + OpenShell documentation
-- **GitHub**: OpenClaw (321K stars, MIT), NemoClaw (4.6K stars, Apache 2.0, early-access)
-
----
-
-**DISPOSITION**: ✓ Monitoring — No escalation needed. Report filed for Q3 review.
+- **Official Repo:** https://github.com/NVIDIA/NemoClaw
+- **OpenClaw:** https://openclaw.ai
+- **NVIDIA OpenShell:** https://github.com/NVIDIA/OpenShell
+- **NVIDIA NeMo (unrelated):** https://github.com/NVIDIA/NeMo
