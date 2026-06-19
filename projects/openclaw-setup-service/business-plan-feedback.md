@@ -76,7 +76,7 @@
 |------|-------|----------------|-------------|
 | **Basic Setup** | $695 | Customer provides Mac Mini. Core OpenClaw setup, 3 integrations (email, calendar, messaging), 15-day support. | $695 (100%) |
 | **Standard** | $1,295 | New Mac Mini M2 + Standard setup + 5 integrations + 30-day support + remote access. | ~$696 (54%) |
-| **Premium** | $1,795 | New Mac Mini M2 Pro + Premium setup + unlimited integrations + custom skills (2 included) + 60-day support + priority response. | ~$1,096 (61%) |
+| **Premium** | $1,795 | New Mac Mini M4 + Premium set up + unlimited integrations + custom skills (2 included) + 60-day support + priority response. | ~$1,096 (61%) |
 | **Enterprise** | $2,500+ | Mac Studio or custom hardware + business integrations (CRM, accounting, team tools) + 90-day support + monthly check-ins. | ~$1,800+ (72%) |
 
 **Why This Works:**

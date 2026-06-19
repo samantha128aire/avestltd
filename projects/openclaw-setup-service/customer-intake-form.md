@@ -16,7 +16,7 @@
 
 ## Hardware Selection
 - [ ] **Purchase new Mac Mini from us ($1,295 + tax)**
-  - Model preference: [ ] M2 base [ ] M2 Pro [ ] M4 (if available)
+  - Model preference: [ ] Mac Mini M4 (standard) [ ] Mac Mini M4 (512GB SSD)
 - [ ] **Send my existing Mac Mini for setup ($695)**
   - Mac Mini model/year: ___________________________
   - Serial number: ___________________________

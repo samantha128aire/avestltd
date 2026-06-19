@@ -22,7 +22,7 @@
 ### New Mac Mini (Purchased from Us)
 - [ ] Unbox and inspect Mac Mini
 - [ ] Document serial number in customer file
-- [ ] Verify model matches order (M2/M2 Pro/M4)
+- [ ] Verify model matches order (Mac Mini M4)
 - [ ] Test power-on and initial boot
 - [ ] Connect to internet (Ethernet preferred for setup)
 - [ ] Run Apple Diagnostics (hold D during startup)

@@ -57,8 +57,8 @@ Your Mac Mini arrives ready to go. We walk you through remote access, and you're
 | Basic Setup | Standard Setup ⭐ | Premium Setup |
 |-------------|------------------|---------------|
 | **$695** | **$1,295** | **$1,795** |
-| You provide Mac Mini | New Mac Mini M2 included | New Mac Mini M2 Pro included |
-| Core OpenClaw setup | Core OpenClaw setup | Premium OpenClaw setup |
+| You provide Mac Mini | New Mac Mini M4 included | New Mac Mini M4 included |
+| Core OpenClaw setup | Core OpenClaw setup | Premium set up |
 | 3 integrations | 5 integrations | Unlimited integrations |
 | 15-day support | 30-day support | 60-day support |
 | Remote access setup | Remote access setup | Priority remote access |
@@ -391,7 +391,7 @@ We can develop custom skills for:
 **Perfect for:** Power users, demanding workflows, businesses
 
 **What's Included:**
-- ✅ **New Mac Mini M2 Pro included** (16GB RAM, 512GB SSD — faster, more powerful)
+- ✅ **New Mac Mini M4 included** (16GB RAM, 512GB SSD — twice the storage)
 - ✅ OpenClaw installation & advanced configuration
 - ✅ **Unlimited integrations** (we'll connect everything you use)
 - ✅ Remote access setup with priority support
@@ -481,7 +481,7 @@ We can develop custom skills for:
 | Feature | Basic | Standard | Premium |
 |---------|-------|----------|---------|
 | **Price** | $695 | $1,295 | $1,795 |
-| **Hardware** | Your Mac Mini | Mac Mini M2 | Mac Mini M2 Pro |
+| **Hardware** | Your Mac Mini | Mac Mini M4 | Mac Mini M4 |
 | **Integrations** | 3 | 5 | Unlimited |
 | **Support Duration** | 15 days | 30 days | 60 days |
 | **Support Channels** | Email & chat | Email, phone, remote | Email, phone, video, remote (priority) |
@@ -549,7 +549,7 @@ We learn about:
 ### **Day 1: Hardware Preparation**
 
 **Standard/Premium customers:**
-- We order your Mac Mini (M2 or M2 Pro)
+- We order your Mac Mini M4
 - Unit arrives at our facility (typically next-day)
 - Inspect for any shipping damage
 - Document serial number
@@ -833,7 +833,7 @@ This is your central hub for guides, tutorials, troubleshooting, and support.
 #### **Your Mac Mini Setup**
 
 **What's included:**
-- Mac Mini (M2 or M2 Pro)
+- Mac Mini M4
 - Power cable
 - Pre-configured OpenClaw AI assistant
 - All integrations installed & tested
