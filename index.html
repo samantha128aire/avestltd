@@ -49,54 +49,41 @@
         </nav>
     </header>
 
+    <!-- Video Pitch Section -->
+    <section class="section" style="background-color: #0a0a0a; padding: 50px 20px;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 12px;">See AvestAI in Action</h2>
+            <p style="color: #aaa; margin-bottom: 30px; font-size: 17px;">Watch how your personal AI assistant can transform your workday</p>
+            <!-- VIDEO PLACEHOLDER: Replace src with your YouTube embed URL when ready -->
+            <!-- Example: src="https://www.youtube.com/embed/YOUR_VIDEO_ID" -->
+            <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; background-color: #1a1a2e; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border: 2px dashed #00a8e8;">
+                <div style="text-align: center; color: #aaa;">
+                    <div style="font-size: 64px; margin-bottom: 16px;">▶️</div>
+                    <p style="font-size: 20px; font-weight: 600; color: white; margin-bottom: 8px;">Video Coming Soon</p>
+                    <p style="font-size: 15px;">An intro video pitch will appear here</p>
+                    <!-- UNCOMMENT BELOW when YouTube video is ready:
+                    <iframe 
+                        width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                        title="AvestAI Introduction"
+                        style="position: absolute; top:0; left:0; width:100%; height:100%;"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <img src="assets/images/logo-transparent-512.png" alt="AvestAI Logo" class="hero-logo" width="400" height="400">
             <h1>Personal AI for Business Owners<br>Who Value Their Time</h1>
             <p class="subheading">We configure your AI assistant on a Mac Mini, test everything, and provide 30 days of hand-holding support. US-based, security-vetted, personal service.</p>
-
-            <!-- Audio Player -->
-            <div style="margin: 30px auto 10px; max-width: 420px;">
-                <div style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 50px; padding: 14px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer;" onclick="toggleAudio()" id="audioPlayer">
-                    <button id="playPauseBtn" aria-label="Play" style="background: white; border: none; border-radius: 50%; width: 44px; height: 44px; min-width: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-                        <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0078d4"><polygon points="5,3 19,12 5,21"/></svg>
-                        <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0078d4" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-                    </button>
-                    <div style="flex:1;">
-                        <div style="color: white; font-weight: 700; font-size: 15px; letter-spacing: 0.5px; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">🎧 Listen</div>
-                        <div style="background: rgba(0,0,0,0.3); border-radius: 4px; height: 5px; margin-top: 7px; position: relative;">
-                            <div id="progressBar" style="background: #00d4ff; border-radius: 4px; height: 5px; width: 0%; transition: width 0.5s linear;"></div>
-                        </div>
-                    </div>
-                    <div id="audioTimer" style="color: rgba(255,255,255,0.9); font-size: 13px; min-width: 36px; text-align: right; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">0:00</div>
-                </div>
-                <audio id="avestaiAudio" src="assets/audio/avestai-intro.mp3" preload="none"></audio>
-            </div>
-            <script>
-                const audio = document.getElementById('avestaiAudio');
-                const playIcon = document.getElementById('playIcon');
-                const pauseIcon = document.getElementById('pauseIcon');
-                const progressBar = document.getElementById('progressBar');
-                const audioTimer = document.getElementById('audioTimer');
-                function toggleAudio() {
-                    if (audio.paused) { audio.play(); playIcon.style.display='none'; pauseIcon.style.display='block'; }
-                    else { audio.pause(); playIcon.style.display='block'; pauseIcon.style.display='none'; }
-                }
-                audio.addEventListener('timeupdate', function() {
-                    if (audio.duration) {
-                        progressBar.style.width = (audio.currentTime / audio.duration * 100) + '%';
-                        const m = Math.floor(audio.currentTime/60);
-                        const s = Math.floor(audio.currentTime%60).toString().padStart(2,'0');
-                        audioTimer.textContent = m + ':' + s;
-                    }
-                });
-                audio.addEventListener('ended', function() {
-                    playIcon.style.display='block'; pauseIcon.style.display='none'; progressBar.style.width='0%'; audioTimer.textContent='0:00';
-                });
-            </script>
-
-            <div class="cta-buttons" style="margin-top: 20px;">
+            <div class="cta-buttons">
                 <a href="contact.html" class="btn btn-primary">Get Started</a>
                 <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
             </div>
@@ -285,6 +272,40 @@
         </div>
     </section>
 
+    <!-- AvestAI Pilot -->
+    <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #0a3d62 100%); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">🚀 AvestAI Pilot — Get Started Today</h2>
+                <p class="subheading" style="color: #aaa;">Start using your personal AI <em>today</em> — no hardware wait required</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; background-color: rgba(255,255,255,0.05); border: 2px solid #00a8e8; border-radius: 16px; padding: 40px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: space-between;">
+                    <div style="flex: 1; min-width: 260px;">
+                        <div style="font-size: 48px; font-weight: 800; color: #00a8e8; margin-bottom: 4px;">$295</div>
+                        <div style="color: #aaa; margin-bottom: 24px;">+ Anthropic API subscription (~$20–60/mo)</div>
+                        <ul class="pricing-features" style="color: #ddd;">
+                            <li>Access your personal AI through iMessage — right now</li>
+                            <li>90 days of full access via your API key</li>
+                            <li>No Mac Mini needed — works from your phone</li>
+                            <li>Same AI that runs the complete system</li>
+                            <li>Personalized setup & onboarding call</li>
+                            <li>Email & chat support included</li>
+                        </ul>
+                        <div style="margin-top: 24px; padding: 16px; background-color: rgba(0,168,232,0.15); border-radius: 8px; border-left: 4px solid #00a8e8;">
+                            <strong style="color: #00a8e8;">💳 Credit Toward Full System</strong><br>
+                            <span style="color: #ccc;">Purchase a complete setup within 30 days and your $295 is fully credited.</span>
+                        </div>
+                    </div>
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <a href="pilot.html" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px;">Start Today →</a>
+                        <p style="color: #aaa; font-size: 14px; margin-top: 12px;">Instant setup · No hardware wait</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Preview -->
     <section class="section pricing">
         <div class="container">
@@ -296,7 +317,7 @@
                 <!-- Basic -->
                 <div class="pricing-card">
                     <h3>Basic Setup</h3>
-                    <div class="price">$895</div>
+                    <div class="price">$695</div>
                     <p>You provide Mac Mini</p>
                     <ul class="pricing-features">
                         <li>Core OpenClaw setup</li>
@@ -312,7 +333,7 @@
                 <div class="pricing-card featured">
                     <div class="featured-badge">⭐ Most Popular</div>
                     <h3>Standard Setup</h3>
-                    <div class="price">$1,495</div>
+                    <div class="price">$1,595</div>
                     <p>Mac Mini M4—your hardware, your home</p>
                     <ul class="pricing-features">
                         <li>Complete setup & testing</li>
@@ -327,10 +348,10 @@
                 <!-- Premium -->
                 <div class="pricing-card">
                     <h3>Premium Setup</h3>
-                    <div class="price">$1,995</div>
-                    <p>New Mac Mini M2 Pro included</p>
+                    <div class="price">$1,795</div>
+                    <p>New Mac Mini M4 included</p>
                     <ul class="pricing-features">
-                        <li>Premium OpenClaw setup</li>
+                        <li>Premium set up</li>
                         <li>Unlimited integrations</li>
                         <li>60-day support</li>
                         <li>Priority remote access</li>
@@ -422,13 +443,52 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section class="section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p class="subheading">Real experiences from real people</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                <!-- VIDEO TESTIMONIAL PLACEHOLDER: Replace inner div with YouTube iframe when Jim's video is ready -->
+                <!-- Example: <iframe width="100%" style="aspect-ratio:16/9;" src="https://www.youtube.com/embed/JIM_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+                <div style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="background-color: #1a1a2e; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-bottom: 3px solid #00a8e8;">
+                        <div style="text-align: center; color: #aaa;">
+                            <div style="font-size: 48px; margin-bottom: 8px;">🎬</div>
+                            <p style="color: white; font-weight: 600;">Video Testimonial</p>
+                            <p style="font-size: 13px;">Coming soon</p>
+                        </div>
+                    </div>
+                    <div style="padding: 24px;">
+                        <p style="font-style: italic; color: #555; line-height: 1.7; margin-bottom: 16px;">"I was skeptical at first, but within the first week I was already saving hours every day. The setup was seamless and the support has been excellent."</p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 44px; height: 44px; background-color: #00a8e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 18px;">J</div>
+                            <div>
+                                <div style="font-weight: 700;">Jim Sweeney</div>
+                                <div style="font-size: 13px; color: #888;">Business Owner, Massachusetts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more testimonial cards here as they come in -->
+                <div style="background-color: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 2px dashed #ccc; min-height: 200px;">
+                    <div style="font-size: 40px; margin-bottom: 12px;">⭐</div>
+                    <p style="color: #888; font-size: 16px;">More reviews coming as our customers share their stories</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 20px;">Be Our Next Success Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="section">
         <div class="container" style="text-align: center;">
             <h2>Ready to Get Started?</h2>
             <p class="subheading" style="margin-bottom: 40px;">Join the personal AI revolution today</p>
             <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Fill Out Intake Form</a>
+                <a href="pilot.html" class="btn btn-primary">🚀 Try It Today — $295</a>
                 <a href="https://calendly.com/samantha128aire/avestai-discovery-call" target="_blank" class="btn btn-secondary">Schedule Free Consultation</a>
             </div>
             <p style="margin-top: 30px; color: var(--medium-gray);">
