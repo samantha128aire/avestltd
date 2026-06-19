@@ -56,25 +56,20 @@
         <div class="container" style="text-align: center;">
             <h2 style="color: white; margin-bottom: 12px;">See AvestAI in Action</h2>
             <p style="color: #aaa; margin-bottom: 30px; font-size: 17px;">Watch how your personal AI assistant can transform your workday</p>
-            <!-- VIDEO PLACEHOLDER: Replace src with your YouTube embed URL when ready -->
-            <!-- Example: src="https://www.youtube.com/embed/YOUR_VIDEO_ID" -->
-            <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; background-color: #1a1a2e; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border: 2px dashed #00a8e8;">
-                <div style="text-align: center; color: #aaa;">
-                    <div style="font-size: 64px; margin-bottom: 16px;">▶️</div>
-                    <p style="font-size: 20px; font-weight: 600; color: white; margin-bottom: 8px;">Video Coming Soon</p>
-                    <p style="font-size: 15px;">An intro video pitch will appear here</p>
-                    <!-- UNCOMMENT BELOW when YouTube video is ready:
-                    <iframe 
-                        width="100%" height="100%" 
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                        title="AvestAI Introduction"
-                        style="position: absolute; top:0; left:0; width:100%; height:100%;"
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                    -->
-                </div>
+            <!-- VIDEO: Replace with YouTube iframe embed when uploaded to YouTube -->
+            <!-- Example: <iframe width="100%" style="aspect-ratio:9/16;max-width:420px;" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+            <div style="position: relative; width: 100%; max-width: 420px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,168,232,0.3);">
+                <video
+                    controls
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    style="width: 100%; display: block; aspect-ratio: 9/16;"
+                    poster="assets/images/logo-transparent-512.png">
+                    <source src="samantha-commercial.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
@@ -286,7 +281,7 @@
                     <div style="flex: 1; min-width: 260px;">
                         <div style="font-size: 48px; font-weight: 800; color: #00a8e8; margin-bottom: 4px;">$295</div>
                         <div style="color: #aaa; margin-bottom: 24px;">+ Anthropic API subscription (~$20–60/mo)</div>
-                        <ul class="pricing-features" style="color: #ddd;">
+                        <ul class="pricing-features" style="color: #ffffff;">
                             <li>Access your personal AI through iMessage — right now</li>
                             <li>90 days of full access via your API key</li>
                             <li>No Mac Mini needed — works from your phone</li>
